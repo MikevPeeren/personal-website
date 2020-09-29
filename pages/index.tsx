@@ -22,7 +22,7 @@ const Home = (): ReactElement => {
       <main>
         <div className="flex flex-wrap md items-center h-screen">
           <div className="bg-white w-full md:w-1/2 h-screen">
-            <div className="mx-32 p-4">
+            <div className="mx-16 md:mx-32 p-4">
               <h1 className="text-6xl font-bold mt-16">Mike van Peeren</h1>
 
               <div className="flex mt-16 font-light text-gray-500">
@@ -37,7 +37,7 @@ const Home = (): ReactElement => {
                 patience.
               </div>
             </div>
-            <div className="mx-32 p-4">
+            <div className="mx-16 md:mx-32 p-4">
               <div className="flex flex-column">
                 <div className="cursor-pointer pr-2" title="LinkedIn">
                   <Link href="https://www.linkedin.com/in/mikevpeeren/">
