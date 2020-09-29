@@ -39,7 +39,7 @@ const Home = (): ReactElement => {
             </div>
             <div className="mx-32 p-4">
               <div className="flex flex-column">
-                <div className="cursor-pointer pr-2" title="LinkedIn">
+                <div className="cursor-pointer px-2" title="LinkedIn">
                   <Link href="https://www.linkedin.com/in/mikevpeeren/">
                     <FontAwesomeIcon className="h-6" icon={['fab', 'linkedin']} />
                   </Link>
