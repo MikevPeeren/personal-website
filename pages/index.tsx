@@ -45,17 +45,17 @@ const Home = (): ReactElement => {
                   </Link>
                 </div>
                 <div className="cursor-pointer px-2" title="GitLab">
-                  <Link href="https://www.linkedin.com/in/mikevpeeren/">
+                  <Link href="https://gitlab.com/MikevPeeren/">
                     <FontAwesomeIcon className="h-6" icon={['fab', 'gitlab']} />
                   </Link>
                 </div>
                 <div className="cursor-pointer px-2" title="Github">
-                  <Link href="https://www.linkedin.com/in/mikevpeeren/">
+                  <Link href="https://github.com/MikevPeeren/">
                     <FontAwesomeIcon className="h-6" icon={['fab', 'github']} />
                   </Link>
                 </div>
                 <div className="cursor-pointer px-2" title="Medium">
-                  <Link href="https://www.linkedin.com/in/mikevpeeren/">
+                  <Link href="https://medium.com/@mikevpeeren/">
                     <FontAwesomeIcon className="h-6" icon={['fab', 'medium']} />
                   </Link>
                 </div>
