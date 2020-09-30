@@ -33,7 +33,7 @@ const Home = (): ReactElement => {
               </div>
 
               <div className="description w-full sm: md:w-2/3 mt-16 text-gray-500 text-sm">
-                My website is currently undergoing scheduled maintenance. It should be back shortly. Thanks you for your
+                My website is currently undergoing scheduled maintenance. It should be back shortly. Thank you for your
                 patience.
               </div>
             </div>
