@@ -62,9 +62,9 @@ const Home = (): ReactElement => {
               </div>
             </div>
           </div>
-          <div className="bg-white w-full md:w-1/2 h-screen">
+          {/* <div className="bg-white w-full md:w-1/2 h-screen">
             <img src="./mikevpeeren.jpg" className="h-screen w-full" alt="" />
-          </div>
+          </div> */}
         </div>
       </main>
 
