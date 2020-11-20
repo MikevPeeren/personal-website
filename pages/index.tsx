@@ -20,55 +20,76 @@ const Home = (): ReactElement => {
       </Head>
 
       <main>
-        <div className="flex flex-wrap md items-center h-screen">
-          <div className="bg-white w-full md:w-1/2 h-screen">
-            <div className="mx-16 md:mx-32 p-4">
-              <h1 className="text-6xl font-bold mt-16">Mike van Peeren</h1>
+        <div className="min-h-screen py-6 flex flex-col justify-center sm:py-12">
+          <div className="relative py-3 sm:max-w-6xl sm:mx-auto">
+            <div className="absolute inset-0 bg-gradient-to-r from-red-300 to-yellow-100 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 rounded-3xl"></div>
 
-              <div className="flex mt-16 font-light text-gray-500">
-                <div className="pr-4">
-                  <span className="uppercase">Currently</span>
-                  <p className="text-2xl text-gray-900 font-semibold pt-2">Under Construction...</p>
+            <div className="relative bg-white px-4 py-10 my-2 shadow-lg rounded-3xl">
+              <div className="xl:w-3/5 lg:w-4/5 sm:w-3/4 sm:ml-10">
+                <div className="container h-4 mb-8">
+                  <nav className="flex justify-between">
+                    <div className="rounded-full h-6 w-6 mr-4 sm:ml-4 bg-red-300" />
+                    <ul className="flex flex-row items-center">
+                      <li className="pr-3 sm:pr-5 uppercase text-xs">
+                        <a>Home</a>
+                      </li>
+                      <li className="pr-3 sm:pr-5 uppercase text-xs">
+                        <a>Porfolio</a>
+                      </li>
+                      <li className="pr-3 sm:pr-5 uppercase text-xs">
+                        <a>Contact</a>
+                      </li>
+                      <li className="pr-3 sm:pr-5 uppercase text-xs">
+                        <a>About</a>
+                      </li>
+                    </ul>
+                  </nav>
                 </div>
-              </div>
-
-              <div className="description w-full sm: md:w-2/3 mt-16 text-gray-500 text-sm">
-                My website is currently undergoing scheduled maintenance. It should be back shortly. Thank you for your
-                patience.
-              </div>
-            </div>
-            <div className="mx-16 md:mx-32 p-4">
-              <div className="flex flex-column">
-                <div className="cursor-pointer pr-2" title="LinkedIn">
-                  <Link href="https://www.linkedin.com/in/mikevpeeren/">
-                    <FontAwesomeIcon className="h-6" icon={['fab', 'linkedin']} />
-                  </Link>
+                <div className="py-10 sm:px-4">
+                  <div className="text-2xl text-red-400 uppercase tracking-widest py-1">Mike van Peeren</div>
+                  <div className="text-l tracking-widest py-1">Full Stack Developer & Software Enthusiast</div>
+                  <div className="py-10">
+                    My website is currently undergoing scheduled maintenance. It should be back shortly. Thank you for
+                    your patience.
+                  </div>
                 </div>
-                <div className="cursor-pointer px-2" title="GitLab">
-                  <Link href="https://gitlab.com/MikevPeeren/">
-                    <FontAwesomeIcon className="h-6" icon={['fab', 'gitlab']} />
-                  </Link>
-                </div>
-                <div className="cursor-pointer px-2" title="Github">
-                  <Link href="https://github.com/MikevPeeren/">
-                    <FontAwesomeIcon className="h-6" icon={['fab', 'github']} />
-                  </Link>
-                </div>
-                <div className="cursor-pointer px-2" title="Medium">
-                  <Link href="https://medium.com/@mikevpeeren/">
-                    <FontAwesomeIcon className="h-6" icon={['fab', 'medium']} />
-                  </Link>
+                <div className="sm:py-12">
+                  <div className="xl:text-center lg:text-left md:text-center sm:text-center text-center m-2 uppercase tracking-widest">
+                    My Social Accounts
+                  </div>
+                  <div className="flex flex-column items-center justify-center xl:items-center lg:items-start xl:justify-center lg:justify-start md:justify-center">
+                    <div className="cursor-pointer m-2 text-gray-400" title="LinkedIn">
+                      <Link href="https://www.linkedin.com/in/mikevpeeren/">
+                        <FontAwesomeIcon className="h-6" icon={['fab', 'linkedin']} />
+                      </Link>
+                    </div>
+                    <div className="cursor-pointer m-2" title="GitLab">
+                      <Link href="https://gitlab.com/MikevPeeren/">
+                        <FontAwesomeIcon className="h-6 text-gray-400" icon={['fab', 'gitlab']} />
+                      </Link>
+                    </div>
+                    <div className="cursor-pointer m-2" title="Github">
+                      <Link href="https://github.com/MikevPeeren/">
+                        <FontAwesomeIcon className="h-6 text-gray-400" icon={['fab', 'github']} />
+                      </Link>
+                    </div>
+                    <div className="cursor-pointer m-2" title="Medium">
+                      <Link href="https://medium.com/@mikevpeeren/">
+                        <FontAwesomeIcon className="h-6 text-gray-400" icon={['fab', 'medium']} />
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          {/* <div className="bg-white w-full md:w-1/2 h-screen">
-            <img src="./mikevpeeren.jpg" className="h-screen w-full" alt="" />
-          </div> */}
+          <div className="hidden md:block fixed bottom-0 xl:left-2/4 lg:right-auto md:left-96 sm:left-80 xl:visible">
+            <img className="" src="./miketrnS.png"></img>
+          </div>
         </div>
       </main>
 
-      <footer></footer>
+      {/* <footer></footer> */}
     </div>
   );
 };
