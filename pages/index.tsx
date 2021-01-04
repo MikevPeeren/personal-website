@@ -83,9 +83,9 @@ const Home = (): ReactElement => {
               </div>
             </div>
           </div>
-          <div className="hidden md:block fixed bottom-0 xl:left-2/4 lg:right-auto md:left-96 sm:left-80 xl:visible">
+          {/* <div className="hidden md:block fixed bottom-0 xl:left-2/4 lg:right-auto md:left-96 sm:left-80 xl:visible">
             <img className="" src="./miketrnS.png"></img>
-          </div>
+          </div> */}
         </div>
       </main>
 
