@@ -20,72 +20,74 @@ const Home = (): ReactElement => {
       </Head>
 
       <main>
-        <div className="min-h-screen py-6 flex flex-col justify-center sm:py-12">
-          <div className="relative py-3 sm:max-w-6xl sm:mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-r from-red-300 to-yellow-100 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 rounded-3xl"></div>
+        <div className="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
+          <div id="profile" className="w-full lg:w-5/5 rounded-lg shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
+            <div className="p-4 md:p-12 text-center lg:text-left z-1">
+              <div className="ProfilePicture block rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"></div>
 
-            <div className="relative bg-white px-4 py-10 my-2 shadow-lg rounded-3xl">
-              <div className="xl:w-3/5 lg:w-4/5 sm:w-3/4 sm:ml-10">
-                <div className="container h-4 mb-8">
-                  <nav className="flex justify-between">
-                    <div className="rounded-full h-6 w-6 mr-4 sm:ml-4 bg-red-300" />
-                    <ul className="flex flex-row items-center">
-                      <li className="pr-3 sm:pr-5 uppercase text-xs">
-                        <a>Home</a>
-                      </li>
-                      <li className="pr-3 sm:pr-5 uppercase text-xs">
-                        <a>Porfolio</a>
-                      </li>
-                      <li className="pr-3 sm:pr-5 uppercase text-xs">
-                        <a>Contact</a>
-                      </li>
-                      <li className="pr-3 sm:pr-5 uppercase text-xs">
-                        <a>About</a>
-                      </li>
-                    </ul>
-                  </nav>
+              <h1 className="text-3xl font-bold pt-8 lg:pt-0">Mike van Peeren</h1>
+              <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
+              <p className="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
+                <svg
+                  className="h-4 fill-current text-green-700 pr-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z" />
+                </svg>
+                Full Stack Engineer 💻 - NodeJS Enthusiast 💡
+              </p>
+              <p className="pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
+                <svg
+                  className="h-4 fill-current text-green-700 pr-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z" />
+                </svg>
+                Tilburg, Noord Brabant - 51.560596° N, 5.0919143° E
+              </p>
+              <p className="pt-8 text-sm">
+                I love creating applications that have a social impact on the world of it's consumers. This provides a
+                sense of meaningfulness for me in my work and pushes me to deliver results as close to perfection as
+                possible. My drive for perfection also pushes me to keep myself up to date about new innovations and
+                developments in my line of work and to always learn from colleagues and the big WorldWideWeb.
+              </p>
+
+              <div className="pt-12 pb-8">
+                <button className="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full">
+                  Get In Touch
+                </button>
+              </div>
+
+              <div className="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
+                <div className="cursor-pointer m-2" title="LinkedIn">
+                  <Link href="https://www.linkedin.com/in/mikevpeeren/">
+                    <FontAwesomeIcon className="h-6 text-green-700" icon={['fab', 'linkedin']} />
+                  </Link>
                 </div>
-                <div className="py-10 sm:px-4">
-                  <div className="text-2xl text-red-400 uppercase tracking-widest py-1">Mike van Peeren</div>
-                  <div className="text-l tracking-widest py-1">Full Stack Developer & Software Enthusiast</div>
-                  <div className="py-10">
-                    My website is currently undergoing scheduled maintenance. It should be back shortly. Thank you for
-                    your patience.
-                  </div>
+                <div className="cursor-pointer m-2" title="GitLab">
+                  <Link href="https://gitlab.com/MikevPeeren/">
+                    <FontAwesomeIcon className="h-6 text-green-700" icon={['fab', 'gitlab']} />
+                  </Link>
                 </div>
-                <div className="sm:py-12">
-                  <div className="xl:text-center lg:text-left md:text-center sm:text-center text-center m-2 uppercase tracking-widest">
-                    My Social Accounts
-                  </div>
-                  <div className="flex flex-column items-center justify-center xl:items-center lg:items-start xl:justify-center lg:justify-start md:justify-center">
-                    <div className="cursor-pointer m-2 text-gray-400" title="LinkedIn">
-                      <Link href="https://www.linkedin.com/in/mikevpeeren/">
-                        <FontAwesomeIcon className="h-6" icon={['fab', 'linkedin']} />
-                      </Link>
-                    </div>
-                    <div className="cursor-pointer m-2" title="GitLab">
-                      <Link href="https://gitlab.com/MikevPeeren/">
-                        <FontAwesomeIcon className="h-6 text-gray-400" icon={['fab', 'gitlab']} />
-                      </Link>
-                    </div>
-                    <div className="cursor-pointer m-2" title="Github">
-                      <Link href="https://github.com/MikevPeeren/">
-                        <FontAwesomeIcon className="h-6 text-gray-400" icon={['fab', 'github']} />
-                      </Link>
-                    </div>
-                    <div className="cursor-pointer m-2" title="Medium">
-                      <Link href="https://medium.com/@mikevpeeren/">
-                        <FontAwesomeIcon className="h-6 text-gray-400" icon={['fab', 'medium']} />
-                      </Link>
-                    </div>
-                  </div>
+                <div className="cursor-pointer m-2" title="Github">
+                  <Link href="https://github.com/MikevPeeren/">
+                    <FontAwesomeIcon className="h-6 text-green-700" icon={['fab', 'github']} />
+                  </Link>
+                </div>
+                <div className="cursor-pointer m-2" title="Medium">
+                  <Link href="https://medium.com/@mikevpeeren/">
+                    <FontAwesomeIcon className="h-6 text-green-700" icon={['fab', 'medium']} />
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
-          {/* <div className="hidden md:block fixed bottom-0 xl:left-2/4 lg:right-auto md:left-96 sm:left-80 xl:visible">
-            <img className="" src="./miketrnS.png"></img>
-          </div> */}
+
+          <div className="absolute top-0 right-0 h-12 w-18 p-4">
+            <button className="js-change-theme focus:outline-none">🌙</button>
+          </div>
         </div>
       </main>
 
