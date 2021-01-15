@@ -6,6 +6,7 @@ import { ReactElement } from 'react';
 
 // Components
 import SocialMedia from './components/SocialMedia';
+import Content from './components/Content';
 
 // Constants
 import { HEADER, TITLE, LOCATION, FIRST_PARAGRAPH, GET_IN_TOUCH } from '../constants/general';
@@ -19,7 +20,7 @@ const Home = (): ReactElement => {
     <div>
       <Head>
         <title>{HEADER}</title>
-        <link rel="icon" href="./favicon.ico" />
+        <link rel="icon" href="./favicon.png" />
       </Head>
 
       <main>
@@ -50,7 +51,7 @@ const Home = (): ReactElement => {
                 </svg>
                 {LOCATION}
               </p>
-              <p className="pt-8 text-sm">{FIRST_PARAGRAPH}</p>
+              <Content />
 
               <div className="pt-12 pb-8">
                 <button
