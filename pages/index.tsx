@@ -1,5 +1,6 @@
 // Next.JS
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 // React
 import { ReactElement } from 'react';
@@ -24,11 +25,15 @@ const Home = (): ReactElement => {
     window.open('mailto:mikevpeeren@hotmail.com?subject=Contact Form MikevPeeren.nl&body=Hello Mike,');
   };
 
+  const site = 'https://www.mikevpeeren.nl';
+  const canURL = site + useRouter().pathname;
+
   return (
     <div>
       <Head>
         <title>{META_TITLE}</title>
         <link rel="icon" href="./favicon.png" />
+        <link rel="canonical" href={canURL} />
         <meta name="title" content={META_TITLE} />
         <meta name="description" content={META_DESCRIPTION} />
         <meta property="og:title" content={META_TITLE} />
