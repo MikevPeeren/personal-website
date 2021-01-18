@@ -1,6 +1,6 @@
 export const HEADER: string = 'Mike van Peeren';
 
-export const META_TITLE: string = 'Mike van Peeren - Full Stack Developer - Living in Tilburg - Working at Blink';
+export const META_TITLE: string = 'Mike van Peeren - Full Stack Developer, Tilburg - Working @ Blink';
 export const META_DESCRIPTION: string =
   'JavaScript | ES6 | ES7 | ESM| TypeScript | React | NodeJS | Next.js | SQL(MySQL) | NoSQL(MongoDB) | Express | WebPack | CSS | SASS | TailwindCSS | HTML5 | Google Cloud | Jest | GitLab | CI | CD';
 
