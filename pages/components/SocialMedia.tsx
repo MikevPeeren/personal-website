@@ -8,24 +8,24 @@ const SocialMedia = () => {
   return (
     <div className="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
       <div className="cursor-pointer animate-pulse m-2" title="LinkedIn">
-        <Link href="https://www.linkedin.com/in/mikevpeeren/">
+        <a href="https://www.linkedin.com/in/mikevpeeren/">
           <FontAwesomeIcon className="h-10 text-green-700" icon={['fab', 'linkedin']} />
-        </Link>
+        </a>
       </div>
       <div className="cursor-pointer animate-pulse m-2" title="GitLab">
-        <Link href="https://gitlab.com/MikevPeeren/">
+        <a href="https://gitlab.com/MikevPeeren/">
           <FontAwesomeIcon className="h-10 text-green-700" icon={['fab', 'gitlab']} />
-        </Link>
+        </a>
       </div>
       <div className="cursor-pointer animate-pulse m-2" title="Github">
-        <Link href="https://github.com/MikevPeeren/">
+        <a href="https://github.com/MikevPeeren/">
           <FontAwesomeIcon className="h-10 text-green-700" icon={['fab', 'github']} />
-        </Link>
+        </a>
       </div>
       <div className="cursor-pointer animate-pulse m-2" title="Medium">
-        <Link href="https://medium.com/@mikevpeeren/">
+        <a href="https://medium.com/@mikevpeeren/">
           <FontAwesomeIcon className="h-10 text-green-700" icon={['fab', 'medium']} />
-        </Link>
+        </a>
       </div>
     </div>
   );
