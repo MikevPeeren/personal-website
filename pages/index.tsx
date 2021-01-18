@@ -9,7 +9,15 @@ import SocialMedia from './components/SocialMedia';
 import Content from './components/Content';
 
 // Constants
-import { HEADER, TITLE, LOCATION, FIRST_PARAGRAPH, GET_IN_TOUCH } from '../constants/general';
+import {
+  HEADER,
+  META_TITLE,
+  META_DESCRIPTION,
+  TITLE,
+  LOCATION,
+  FIRST_PARAGRAPH,
+  GET_IN_TOUCH,
+} from '../constants/general';
 
 const Home = (): ReactElement => {
   const openEmail = () => {
@@ -19,15 +27,15 @@ const Home = (): ReactElement => {
   return (
     <div>
       <Head>
-        <title>Mike van Peeren - Full Stack Developer - Living in Tilburg - Working at Blink</title>
+        <title>{META_TITLE}</title>
         <link rel="icon" href="./favicon.png" />
-        <meta name="title" content="Mike van Peeren - Full Stack Developer - Living in Tilburg - Working at Blink" />
-        <meta name="description" content="Your description" />
-        <meta
-          property="og:title"
-          content="Mike van Peeren Full(MERN) Stack Developer Woonachtend in Tilburg, Werkzaam bij Blink"
-        />
-        <meta property="og:description" content="Your description" />
+        <meta name="title" content={META_TITLE} />
+        <meta name="description" content={META_DESCRIPTION} />
+        <meta property="og:title" content={META_TITLE} />
+        <meta property="og:description" content={META_DESCRIPTION} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.mikevpeeren.nl/" />
+        <meta property="og:image" content="https://www.mikevpeeren.nl/mikevpeeren.jpg" />
         <meta http-equiv="content-language" content="en-us" />
       </Head>
 

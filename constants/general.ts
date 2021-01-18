@@ -1,5 +1,9 @@
 export const HEADER: string = 'Mike van Peeren';
 
+export const META_TITLE: string = 'Mike van Peeren - Full Stack Developer - Living in Tilburg - Working at Blink';
+export const META_DESCRIPTION: string =
+  'JavaScript | ES6 | ES7 | ESM| TypeScript | React | NodeJS | Next.js | SQL(MySQL) | NoSQL(MongoDB) | Express | WebPack | CSS | SASS | TailwindCSS | HTML5 | Google Cloud | Jest | GitLab | CI | CD';
+
 export const TITLE: string = 'Full Stack Engineer 💻 - NodeJS Enthusiast 💡';
 export const LOCATION: string = 'Tilburg, Noord Brabant - 51.560596° N, 5.0919143° E';
 export const GET_IN_TOUCH: string = 'Get In Touch';
