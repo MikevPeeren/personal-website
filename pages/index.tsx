@@ -35,7 +35,7 @@ const Home = (): ReactElement => {
         <meta property="og:description" content={META_DESCRIPTION} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.mikevpeeren.nl/" />
-        <meta property="og:image" content="https://www.mikevpeeren.nl/mikevpeeren.jpg" />
+        <meta property="og:image" content="https://www.mikevpeeren.nl/mikevpeeren.webp" />
         <meta http-equiv="content-language" content="en-us" />
       </Head>
 
