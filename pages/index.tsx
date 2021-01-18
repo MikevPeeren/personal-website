@@ -41,9 +41,9 @@ const Home = (): ReactElement => {
 
       <main>
         <div className="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
-          <div id="profile" className="w-full lg:w-5/5 rounded-lg shadow-2xl bg-white mx-6 lg:mx-0">
+          <div id="profile" className="w-full lg:w-5/5 rounded-lg shadow-2xl bg-white mx-10 lg:mx-0">
             <div className="p-4 md:p-12 text-center lg:text-left z-1">
-              <div className="ProfilePicture block opacity-90 rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"></div>
+              <div className="ProfilePicture block opacity-90 rounded-full shadow-xl mx-auto mb-5 -mt-16 h-48 w-48 bg-cover bg-center"></div>
               <div className="opacity-75">
                 <h1 className="text-3xl font-bold pt-8 lg:pt-0">{HEADER}</h1>
                 <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
