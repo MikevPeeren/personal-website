@@ -2,12 +2,17 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
+// External
+import classNames from 'classNames';
+
 // React
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
+
+// Hooks
+import { useMediaQuery } from '../custom-hooks/useMediaQuery.ts';
 
 // Components
 import SocialMedia from './components/SocialMedia';
-import Content from './components/Content';
 
 // Constants
 import {
@@ -21,18 +26,52 @@ import {
 } from '../constants/general';
 
 const Home = (): ReactElement => {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  // We need this in order to open the Menu on default on screens larger than LG
+  const isTailwindLG = useMediaQuery('(min-width: 1024px)');
+
+  // Setting Cannonical for SEO
+  const site = 'https://www.mikevpeeren.nl';
+  const canURL = site + useRouter().pathname;
+
+  /**
+   * Open the default email client in order to send an email
+   */
   const openEmail = () => {
     window.open('mailto:mikevpeeren@hotmail.com?subject=Contact Form MikevPeeren.nl&body=Hello Mike,');
   };
 
-  const site = 'https://www.mikevpeeren.nl';
-  const canURL = site + useRouter().pathname;
+  /**
+   * Set the state on the menu
+   */
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu);
+  };
+
+  // Initializing menu
+  const navBarClassNames = classNames({
+    'NavBar__menu items-center flex-grow lg:flex': true,
+    'lg:transition-none lg:translate-x-0 ease-in-out duration-1000 transform': true,
+    'translate-x-0': openMenu,
+    '-translate-x-full': !openMenu,
+  });
+
+  const navBarMenuItems = classNames({
+    hidden: !openMenu && !isTailwindLG,
+    'NavBar__menu--content ml-auto flex flex-col lg:flex-row': true,
+  });
 
   return (
     <div>
       <Head>
         <title>{META_TITLE}</title>
-        <link rel="icon" href="./favicon.png" />
+        <link rel="icon" href="./favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
+          rel="stylesheet"
+        />
         <link rel="canonical" href={canURL} />
         <meta name="title" content={META_TITLE} />
         <meta name="description" content={META_DESCRIPTION} />
@@ -41,57 +80,76 @@ const Home = (): ReactElement => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.mikevpeeren.nl/" />
         <meta property="og:image" content="https://www.mikevpeeren.nl/mikevpeeren.webp" />
-        <meta http-equiv="content-language" content="en-us" />
+        <meta httpEquiv="content-language" content="en-us" />
       </Head>
 
       <main>
-        <div className="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
-          <div id="profile" className="w-full lg:w-5/5 rounded-lg shadow-2xl bg-white mx-10 lg:mx-0">
-            <div className="p-4 md:p-12 text-center lg:text-left z-1">
-              <div className="ProfilePicture block opacity-90 rounded-full shadow-xl mx-auto mb-5 -mt-16 h-48 w-48 bg-cover bg-center"></div>
-              <div className="opacity-75">
-                <h1 className="text-3xl font-bold pt-8 lg:pt-0">{HEADER}</h1>
-                <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
-                <p className="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
-                  <svg
-                    className="h-4 fill-current text-green-700 pr-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z" />
-                  </svg>
-                  {TITLE}
-                </p>
-                <p className="pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
-                  <svg
-                    className="h-4 fill-current text-green-700 pr-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z" />
-                  </svg>
-                  {LOCATION}
-                </p>
-                <Content />
+        <nav className="NavBar sticky -top-px lg:top-10 w-full items-center flex justify-between py-6 lg:justify-start lg:flex-row flex-wrap">
+          <a href="/">
+            <img className="w-14" src="./developer.svg" />
+          </a>
+          <button
+            aria-controls="basic-navbar-nav"
+            type="button"
+            aria-label="Toggle navigation"
+            className="lg:hidden focus:outline-none"
+            onClick={() => {
+              toggleMenu();
+            }}
+          >
+            <span className="navbar-toggler-icon inline-block">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                <path
+                  stroke="rgba(0, 0, 0, 0.5)"
+                  strokeLinecap="round"
+                  strokeMiterlimit="10"
+                  strokeWidth="2"
+                  d="M4 7h22M4 15h22M4 23h22"
+                />
+              </svg>
+            </span>
+          </button>
 
-                <div className="pt-12 pb-8">
-                  <button
-                    className="bg-green-700 hover:bg-green-900 focus:outline-none text-white font-bold py-2 px-4 rounded-full transform transition hover:scale-110 motion-reduce:transform-none duration-500"
-                    onClick={() => {
-                      openEmail();
-                    }}
-                  >
-                    {GET_IN_TOUCH}
-                  </button>
-                </div>
+          <div className={navBarClassNames}>
+            <div className={navBarMenuItems}>
+              <a className="lg:px-2 py-2 mt-4 lg:mt-0 text-xl opacity-60" href="/" role="button">
+                Home
+              </a>
+              <a className="lg:px-2 py-2 text-xl opacity-60" href="/" role="button">
+                About
+              </a>
+              <a className="lg:px-2 py-2 text-xl opacity-60" href="/" role="button">
+                Skills
+              </a>
+              <a className="lg:px-2 py-2 text-xl opacity-60" href="/" role="button">
+                Experience
+              </a>
+              <a className="lg:px-2 py-2 text-xl opacity-60" href="/" role="button">
+                Contact
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div className="mt-20">
+          <div className="flex flex-col lg:flex-row">
+            <div className="flex flex-col justify-center order-1 w-full lg:w-3/5">
+              <h1 className="text-5xl tracking-wider mb-2 mx-auto lg:-ml-0">
+                I'm <span className="font-bold">Mike van Peeren</span>
+              </h1>
+              <h4 className="text-2xl mx-auto lg:-ml-0">
+                Node.js & React Enthusiast, Full Stack Developer and loving father.
+              </h4>
 
+              <div className="flex flex-row order-1 lg:w-3/5 mt-8 mx-auto lg:-ml-0">
                 <SocialMedia />
               </div>
             </div>
-          </div>
-
-          <div className="absolute top-0 right-0 h-12 w-18 p-4">
-            <button className="js-change-theme focus:outline-none">🌙</button>
+            <div className="flex flex-row lg:justify-end order-2 w-full mt-8 lg:mt-0 lg:w-2/5">
+              <img
+                className="lg:w-10/12 lg:mr-0 rounded-xl shadow-xl mx-auto lg:-ml-0"
+                src="https://www.mikevpeeren.nl/mikevpeeren.webp"
+              />
+            </div>
           </div>
         </div>
       </main>

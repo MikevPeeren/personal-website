@@ -1,13 +1,29 @@
-body {
-  @apply bg-blue-100;
-  @apply font-sans;
-  @apply antialiased;
-  @apply text-gray-900;
-  @apply leading-normal;
-  @apply tracking-wider;
-  @apply bg-cover;
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
-.ProfilePicture {
-  background-image: url('../public/mikevpeeren.webp');
+body {
+  background-color: #f8f8f8;
+  font-family: 'Rubik', sans-serif;
+  color: #212121;
+  margin: auto !important;
+  @apply max-w-screen-xl;
+  @apply px-8;
+  @apply py-0;
+}
+
+.NavBar {
+  background-color: #f8f8f8;
+
+  &__menu {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .NavBar {
+    &__menu {
+      flex-basis: 0%;
+    }
+  }
 }

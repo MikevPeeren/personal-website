@@ -7,5 +7,5 @@ module.exports = {
   theme: {},
   variants: {},
   plugins: [],
-  darkMode: 'media',
+  darkMode: 'class',
 };
