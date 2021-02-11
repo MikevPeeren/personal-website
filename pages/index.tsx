@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 // External
-import classNames from 'classNames';
+import classNames from 'classnames';
 
 // React
 import { ReactElement, useState } from 'react';
