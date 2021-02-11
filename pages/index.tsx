@@ -9,7 +9,7 @@ import classNames from 'classnames';
 import { ReactElement, useState } from 'react';
 
 // Hooks
-import { useMediaQuery } from '../custom-hooks/useMediaQuery.ts';
+import { useMediaQuery } from '../custom-hooks/useMediaQuery';
 
 // Components
 import SocialMedia from './components/SocialMedia';
