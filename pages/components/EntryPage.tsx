@@ -5,7 +5,7 @@ import React, { ReactElement, FC } from 'react';
 import SocialMedia from './SocialMedia';
 
 // Constants
-import { HEADER, SUBHEADER } from '../../constants/general.ts';
+import { HEADER, SUBHEADER } from '../../constants/general';
 
 const EntryPage: FC = (): ReactElement => {
   return (
