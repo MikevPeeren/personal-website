@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 // React
-import React, { ReactElement, FC } from 'react';
+import React, { ReactElement, FC, useRef } from 'react';
 
 // Components
 import NavBar from './components/Navbar';
@@ -14,12 +14,19 @@ import AboutPage from './components/AboutPage';
 import { META_TITLE, META_DESCRIPTION } from '../constants/general';
 
 const Home: FC = (): ReactElement => {
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+
   // Setting Cannonical for SEO
   const site = 'https://www.mikevpeeren.nl';
   const canURL = site + useRouter().pathname;
 
+  const executeScroll = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div>
+    <div ref={homeRef}>
       <Head>
         <title>{META_TITLE}</title>
         <link rel="icon" href="./favicon.ico" />
@@ -40,9 +47,9 @@ const Home: FC = (): ReactElement => {
       </Head>
 
       <main>
-        <NavBar />
-        <EntryPage />
-        <AboutPage />
+        <NavBar executeScroll={executeScroll} homeRef={homeRef} aboutRef={aboutRef} />
+        <EntryPage homeRef={homeRef} />
+        <AboutPage aboutRef={aboutRef} />
       </main>
     </div>
   );

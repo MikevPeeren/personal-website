@@ -1,9 +1,13 @@
 // React
 import React, { ReactElement, FC } from 'react';
 
-const WhatIDo: FC = (): ReactElement => {
+interface AboutPageProps {
+  aboutRef: ref;
+}
+
+const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactElement => {
   return (
-    <div className="py-36 lg:py-52">
+    <div ref={aboutRef} className="py-36 lg:py-52">
       <h1 className="text-3xl font-semibold mb-14 -ml-0">What I do?</h1>
       <div className="md:flex md:justify-between">
         <div className="WhatIDo__leftBlock mb-9 md:mb-0">
@@ -45,4 +49,4 @@ const WhatIDo: FC = (): ReactElement => {
   );
 };
 
-export default WhatIDo;
+export default AboutPage;

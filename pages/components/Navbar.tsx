@@ -7,7 +7,13 @@ import classNames from 'classnames';
 // Hooks
 import { useMediaQuery } from '../../custom-hooks/useMediaQuery';
 
-const NavBar: FC = (): ReactElement => {
+interface NavBarProps {
+  executeScroll: (ref) => void;
+  homeRef: ref;
+  aboutRef: ref;
+}
+
+const NavBar: FC<NavBarProps> = ({ executeScroll, homeRef, aboutRef }: NavBarProps): ReactElement => {
   const [openMenu, setOpenMenu] = useState(false);
 
   // We need this in order to open the Menu on default on screens larger than LG
@@ -62,10 +68,22 @@ const NavBar: FC = (): ReactElement => {
 
       <div className={navBarClassNames}>
         <div className={navBarMenuItems}>
-          <a className="lg:px-2 py-2 mt-4 lg:mt-0 text-xl opacity-60" href="#" role="button">
+          <a
+            className="lg:px-2 py-2 mt-4 lg:mt-0 text-xl opacity-60"
+            onClick={() => {
+              executeScroll(homeRef);
+            }}
+            role="button"
+          >
             Home
           </a>
-          <a className="lg:px-2 py-2 text-xl opacity-60" href="#" role="button">
+          <a
+            className="lg:px-2 py-2 text-xl opacity-60"
+            onClick={() => {
+              executeScroll(aboutRef);
+            }}
+            role="button"
+          >
             About
           </a>
           <a className="lg:px-2 py-2 text-xl opacity-60" href="#" role="button">
