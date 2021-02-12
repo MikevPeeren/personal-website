@@ -9,8 +9,8 @@ import { useMediaQuery } from '../../custom-hooks/useMediaQuery';
 
 interface NavBarProps {
   executeScroll: (ref) => void;
-  homeRef: ref;
-  aboutRef: ref;
+  homeRef: React.MutableRefObject<HTMLDivElement>;
+  aboutRef: React.MutableRefObject<HTMLDivElement>;
 }
 
 const NavBar: FC<NavBarProps> = ({ executeScroll, homeRef, aboutRef }: NavBarProps): ReactElement => {

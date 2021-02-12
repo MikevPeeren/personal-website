@@ -2,7 +2,7 @@
 import React, { ReactElement, FC } from 'react';
 
 interface AboutPageProps {
-  aboutRef: ref;
+  aboutRef: React.MutableRefObject<HTMLDivElement>;
 }
 
 const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactElement => {

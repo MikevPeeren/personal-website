@@ -7,11 +7,7 @@ import SocialMedia from './SocialMedia';
 // Constants
 import { HEADER, SUBHEADER } from '../../constants/general';
 
-interface EntryPageProps {
-  homeRef: ref;
-}
-
-const EntryPage: FC<EntryPageProps> = ({ homeRef }: EntryPageProps): ReactElement => {
+const EntryPage: FC = (): ReactElement => {
   return (
     <div className="mt-20">
       <div className="flex flex-col lg:flex-row">

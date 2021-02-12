@@ -14,8 +14,8 @@ import AboutPage from './components/AboutPage';
 import { META_TITLE, META_DESCRIPTION } from '../constants/general';
 
 const Home: FC = (): ReactElement => {
-  const homeRef = useRef(null);
-  const aboutRef = useRef(null);
+  const homeRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
 
   // Setting Cannonical for SEO
   const site = 'https://www.mikevpeeren.nl';
@@ -48,7 +48,7 @@ const Home: FC = (): ReactElement => {
 
       <main>
         <NavBar executeScroll={executeScroll} homeRef={homeRef} aboutRef={aboutRef} />
-        <EntryPage homeRef={homeRef} />
+        <EntryPage />
         <AboutPage aboutRef={aboutRef} />
       </main>
     </div>
