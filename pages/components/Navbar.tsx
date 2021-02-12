@@ -34,8 +34,8 @@ const NavBar: FC = (): ReactElement => {
   });
 
   return (
-    <nav className="NavBar sticky -top-px lg:top-10 w-full items-center flex justify-between py-6 lg:justify-start lg:flex-row flex-wrap">
-      <a href="/">
+    <nav className="NavBar sticky -top-px w-full items-center flex justify-between py-6 lg:justify-start lg:flex-row flex-wrap">
+      <a href="#">
         <img className="w-14" src="./developer.svg" />
       </a>
       <button
@@ -62,19 +62,19 @@ const NavBar: FC = (): ReactElement => {
 
       <div className={navBarClassNames}>
         <div className={navBarMenuItems}>
-          <a className="lg:px-2 py-2 mt-4 lg:mt-0 text-xl opacity-60" href="/" role="button">
+          <a className="lg:px-2 py-2 mt-4 lg:mt-0 text-xl opacity-60" href="#" role="button">
             Home
           </a>
-          <a className="lg:px-2 py-2 text-xl opacity-60" href="/" role="button">
+          <a className="lg:px-2 py-2 text-xl opacity-60" href="#" role="button">
             About
           </a>
-          <a className="lg:px-2 py-2 text-xl opacity-60" href="/" role="button">
+          <a className="lg:px-2 py-2 text-xl opacity-60" href="#" role="button">
             Skills
           </a>
-          <a className="lg:px-2 py-2 text-xl opacity-60" href="/" role="button">
+          <a className="lg:px-2 py-2 text-xl opacity-60" href="#" role="button">
             Experience
           </a>
-          <a className="lg:px-2 py-2 text-xl opacity-60" href="/" role="button">
+          <a className="lg:px-2 py-2 text-xl opacity-60" href="#" role="button">
             Contact
           </a>
         </div>

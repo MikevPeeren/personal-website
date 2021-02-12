@@ -4,7 +4,7 @@
 
 body {
   background-color: #f8f8f8;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', sans-serif !important;
   color: #212121;
   margin: auto !important;
   @apply max-w-screen-xl;
@@ -24,6 +24,12 @@ body {
   .NavBar {
     &__menu {
       flex-basis: 0%;
+    }
+  }
+
+  .WhatIDo {
+    &__leftBlock {
+      margin-right: 10%;
     }
   }
 }

@@ -8,6 +8,7 @@ import React, { ReactElement, FC } from 'react';
 // Components
 import NavBar from './components/Navbar';
 import EntryPage from './components/EntryPage';
+import AboutPage from './components/AboutPage';
 
 // Constants
 import { META_TITLE, META_DESCRIPTION } from '../constants/general';
@@ -41,6 +42,7 @@ const Home: FC = (): ReactElement => {
       <main>
         <NavBar />
         <EntryPage />
+        <AboutPage />
       </main>
     </div>
   );
