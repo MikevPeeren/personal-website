@@ -144,9 +144,9 @@ const Home = (): ReactElement => {
                 <SocialMedia />
               </div>
             </div>
-            <div className="flex flex-row lg:justify-end order-2 w-full mt-8 lg:mt-0 lg:w-2/5">
+            <div className="flex flex-row lg:justify-end order-2 w-full mt-8 lg:mt-0 lg:w-2/5 mb-8">
               <img
-                className="lg:w-10/12 lg:mr-0 rounded-xl shadow-xl mx-auto lg:-ml-0"
+                className="lg:w-10/12 w-8/12 lg:mr-0 rounded-xl shadow-xl mx-auto lg:-ml-0"
                 src="https://www.mikevpeeren.nl/mikevpeeren.webp"
               />
             </div>
