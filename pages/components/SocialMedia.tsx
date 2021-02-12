@@ -1,10 +1,10 @@
-// Next.JS
-import Link from 'next/link';
+// React
+import React, { ReactElement, FC } from 'react';
 
 // Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const SocialMedia = () => {
+const SocialMedia: FC = (): ReactElement => {
   return (
     <>
       <div className="cursor-pointer mr-4" title="LinkedIn">

@@ -2,7 +2,7 @@
 import { AppProps } from 'next/app';
 
 // React
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 
 // Style Imports
 import '../styles/global.scss';
