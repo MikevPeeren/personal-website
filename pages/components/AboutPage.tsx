@@ -8,7 +8,7 @@ interface AboutPageProps {
 const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactElement => {
   return (
     <div ref={aboutRef} className="py-36 lg:py-52">
-      <h1 className="text-3xl font-semibold mb-14 -ml-0">What I do?</h1>
+      <h3 className="text-3xl font-semibold mb-14 -ml-0">About me</h3>
       <div className="md:flex md:justify-between">
         <div className="WhatIDo__leftBlock mb-9 md:mb-0">
           <img className="mb-4 md:mb-5 w-7 md:w-9 item-icon" src="./coding.svg" alt="code-logo" />

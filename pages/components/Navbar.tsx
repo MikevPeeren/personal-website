@@ -42,7 +42,7 @@ const NavBar: FC<NavBarProps> = ({ executeScroll, homeRef, aboutRef }: NavBarPro
   return (
     <nav className="NavBar sticky -top-px w-full items-center flex justify-between py-6 lg:justify-start lg:flex-row flex-wrap">
       <a href="#">
-        <img className="w-14" src="./developer.svg" />
+        <img className="w-14" src="./developer.svg" alt="developer-logo" />
       </a>
       <button
         aria-controls="basic-navbar-nav"

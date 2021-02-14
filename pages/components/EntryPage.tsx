@@ -15,7 +15,7 @@ const EntryPage: FC = (): ReactElement => {
           <h1 className="text-5xl mb-2 mx-auto md:-ml-0">
             I&apos;m <span className="font-medium">{HEADER}</span>
           </h1>
-          <h4 className="text-2xl mx-auto md:-ml-0">{SUBHEADER}</h4>
+          <h2 className="text-2xl mx-auto md:-ml-0">{SUBHEADER}</h2>
 
           <div className="flex flex-row order-1 lg:w-3/5 mt-8 mx-auto md:-ml-0">
             <SocialMedia />
@@ -25,6 +25,7 @@ const EntryPage: FC = (): ReactElement => {
           <img
             className="EntryPage__image lg:w-10/12 w-8/12 lg:mr-0 rounded-xl shadow-md mx-auto md:-ml-0"
             src="https://www.mikevpeeren.nl/mikevpeeren.webp"
+            alt="personal-photo"
           />
         </div>
       </div>
