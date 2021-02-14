@@ -20,6 +20,12 @@ body {
   }
 }
 
+.EntryPage {
+  &__image {
+    height: 95%;
+  }
+}
+
 @media (min-width: 1024px) {
   .NavBar {
     &__menu {
