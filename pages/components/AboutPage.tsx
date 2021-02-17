@@ -54,13 +54,13 @@ const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactEleme
           <div className="md:w-5/12 md:mb-0">
             <img className="mb-4 md:mb-5 w-7 md:w-8" src="./dachshund.svg" alt="dachshund-logo" />
             <h4 className="mb-3 md:mb-4 font-medium text-xl">Belle</h4>
-            <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5">
+            <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5 h-3/4">
               <img
                 className="w-7/12 md:w-5/12 rounded-xl float-left mr-3 mb-1 md:mr-6"
                 src="./belle-snow.jpg"
                 alt="dog-in-snow"
               />
-              <p className="mb-6 tracking-widest h-1/2">
+              <p className="mb-6 tracking-widest h-3/4">
                 My dachshund called Belle is my wife and my joy. We enjoy taking her on long walks near the beach or we
                 venture into the nature in the neighborhood. We also take her on our vacations occasionally as the
                 picture displays her in Austria, as she enjoys running in the snow allot. We have also taken her to a
@@ -71,8 +71,8 @@ const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactEleme
           <div className="md:w-5/12 md:m-0">
             <img className="mb-4 md:mb-5 w-7 md:w-8" src="./joystick.svg" alt="gaming-logo" />
             <h4 className="mb-3 md:mb-4 font-medium text-xl">Hobbies</h4>
-            <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5">
-              <p className="mb-6 tracking-widest">
+            <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5 h-3/4">
+              <p className="mb-6 tracking-widest h-3/4">
                 Other things i like to do apart from Coding at home is play Video Games. I have played Video Games just
                 about my entire life, and it is a great escape from the sometimes hectic things happening in real life.
                 What I also enjoy doing is BBQ, I often make Ribs on the BBQ which have to stay on the BBQ for about 6
