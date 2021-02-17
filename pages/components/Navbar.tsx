@@ -11,9 +11,10 @@ interface NavBarProps {
   executeScroll: (ref) => void;
   homeRef: React.MutableRefObject<HTMLDivElement>;
   aboutRef: React.MutableRefObject<HTMLDivElement>;
+  skillRef: React.MutableRefObject<HTMLDivElement>;
 }
 
-const NavBar: FC<NavBarProps> = ({ executeScroll, homeRef, aboutRef }: NavBarProps): ReactElement => {
+const NavBar: FC<NavBarProps> = ({ executeScroll, homeRef, aboutRef, skillRef }: NavBarProps): ReactElement => {
   const [openMenu, setOpenMenu] = useState(false);
 
   // We need this in order to open the Menu on default on screens larger than LG
@@ -86,7 +87,13 @@ const NavBar: FC<NavBarProps> = ({ executeScroll, homeRef, aboutRef }: NavBarPro
           >
             About
           </a>
-          <a className="lg:px-2 py-2 text-xl opacity-60" href="#" role="button">
+          <a
+            className="lg:px-2 py-2 text-xl opacity-60"
+            onClick={() => {
+              executeScroll(skillRef);
+            }}
+            role="button"
+          >
             Skills
           </a>
           <a className="lg:px-2 py-2 text-xl opacity-60" href="#" role="button">

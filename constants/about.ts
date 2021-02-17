@@ -1,5 +1,3 @@
-export const ABOUT_HEADER = 'About me';
-
 export const CODING_AT_WORK_HEADER = 'Coding @ Work';
 export const CODING_AT_WORK_TEXT_PART_ONE = 'I am currently working for ';
 export const CODING_AT_WORK_TEXT_PART_TWO = `, I maintain and develop their online platform that contains educational and innovative modules for

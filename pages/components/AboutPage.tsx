@@ -2,9 +2,8 @@
 import React, { ReactElement, FC } from 'react';
 
 // Constants
-import { GITHUB, GITLAB, BLINK } from '../../constants/general';
+import { ABOUT_HEADER, GITHUB, GITLAB, BLINK } from '../../constants/general';
 import {
-  ABOUT_HEADER,
   CODING_AT_WORK_HEADER,
   CODING_AT_WORK_TEXT_PART_ONE,
   CODING_AT_WORK_TEXT_PART_TWO,

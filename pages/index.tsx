@@ -9,6 +9,7 @@ import React, { ReactElement, FC, useRef } from 'react';
 import NavBar from './components/Navbar';
 import EntryPage from './components/EntryPage';
 import AboutPage from './components/AboutPage';
+import SkillPage from './components/SkillPage';
 
 // Constants
 import { META_TITLE, META_DESCRIPTION } from '../constants/general';
@@ -16,6 +17,7 @@ import { META_TITLE, META_DESCRIPTION } from '../constants/general';
 const Home: FC = (): ReactElement => {
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
+  const skillRef = useRef<HTMLDivElement>(null);
 
   // Setting Cannonical for SEO
   const site = 'https://www.mikevpeeren.nl';
@@ -54,9 +56,10 @@ const Home: FC = (): ReactElement => {
       </Head>
 
       <main>
-        <NavBar executeScroll={executeScroll} homeRef={homeRef} aboutRef={aboutRef} />
+        <NavBar executeScroll={executeScroll} homeRef={homeRef} aboutRef={aboutRef} skillRef={skillRef} />
         <EntryPage />
         <AboutPage aboutRef={aboutRef} />
+        <SkillPage skillRef={skillRef} />
       </main>
     </div>
   );

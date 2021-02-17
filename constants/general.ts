@@ -6,6 +6,10 @@ export const HEADER = 'Mike van Peeren - Full Stack Developer';
 
 export const SUBHEADER = 'Node.js & React Enthusiast💡, Full Stack Developer 💻 and Loving Father.';
 
+export const ABOUT_HEADER = 'About me';
+
+export const SKILLS_HEADER = 'Skills';
+
 export const GITHUB = 'Github';
 export const GITLAB = 'GitLab';
 
