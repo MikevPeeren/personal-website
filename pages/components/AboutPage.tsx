@@ -1,6 +1,23 @@
 // React
 import React, { ReactElement, FC } from 'react';
 
+// Constants
+import { GITHUB, GITLAB, BLINK } from '../../constants/general';
+import {
+  ABOUT_HEADER,
+  CODING_AT_WORK_HEADER,
+  CODING_AT_WORK_TEXT_PART_ONE,
+  CODING_AT_WORK_TEXT_PART_TWO,
+  CODING_AT_HOME_HEADER,
+  CODING_AT_HOME_TEXT_PART_ONE,
+  CODING_AT_HOME_TEXT_PART_TWO,
+  CODING_AT_HOME_TEXT_PART_THREE,
+  BELLE_HEADER,
+  BELLE_TEXT,
+  HOBBIES_HEADER,
+  HOBBIES_TEXT,
+} from '../../constants/about';
+
 interface AboutPageProps {
   aboutRef: React.MutableRefObject<HTMLDivElement>;
 }
@@ -8,44 +25,36 @@ interface AboutPageProps {
 const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactElement => {
   return (
     <div ref={aboutRef} className="py-36 lg:py-52">
-      <h3 className="text-3xl font-semibold mb-14 -ml-0">About me</h3>
+      <h3 className="text-3xl font-semibold mb-14 -ml-0">{ABOUT_HEADER}</h3>
       <div className="md:flex md:flex-col md:justify-between">
         <div className="md:flex md:flex-row md:justify-between">
           <div className="md:w-5/12 md:mb-0">
             <img className="mb-4 md:mb-5 w-7 md:w-8" src="./coding-work.svg" alt="coding-at-work-logo" />
-            <h4 className="mb-3 md:mb-4 font-medium text-xl">Coding @ Work</h4>
+            <h4 className="mb-3 md:mb-4 font-medium text-xl">{CODING_AT_WORK_HEADER}</h4>
             <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5">
               <p className="mb-6 tracking-widest h-1/2">
-                I am currently working for{' '}
+                {CODING_AT_WORK_TEXT_PART_ONE}
                 <a href="https://blink.nl" className="text-blue-600">
-                  Blink
+                  {BLINK}
                 </a>
-                , I maintain and develop their online platform that contains educational and innovative modules for
-                primary and secondary education. Their front-end is written in React while their back-end is written in
-                Node.js. My job is to maintain and develop both including the Devops which I do through Google Cloud. We
-                do this using the newest technologies including but not limited to TypeScript, FC Components, Custom
-                Hooks, Tailwind CSS, GitLab & Kubernetes.
+                {CODING_AT_WORK_TEXT_PART_TWO}
               </p>
             </div>
           </div>
           <div className="md:w-5/12 md:m-0">
             <img className="mb-4 md:mb-5 w-7 md:w-8" src="./coding-home.svg" alt="coding-at-home-logo" />
-            <h4 className="mb-3 md:mb-4 font-medium text-xl">Coding @ Home</h4>
+            <h4 className="mb-3 md:mb-4 font-medium text-xl">{CODING_AT_HOME_HEADER}</h4>
             <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5">
               <p className="mb-6 tracking-widest h-1/2">
-                In my free time I try to hone my developer skills with various projects which you can see on my
+                {CODING_AT_HOME_TEXT_PART_ONE}
                 <a href="https://github.com/MikevPeeren/" className="text-blue-600">
-                  {' '}
-                  Github{' '}
-                </a>{' '}
-                and
-                <a href="https://gitlab.com/MikevPeeren/" className="text-blue-600">
-                  {' '}
-                  GitLab
+                  {GITHUB}
                 </a>
-                . I am mostly interested in the newest technologies and techniques, for example I recently have delved
-                into Next.js and Kubernetes. In combination with coding these newest technologies and techniques I also
-                do a fair bit of reading through newsletters and blog posts so I stay up to date with the industry.
+                {CODING_AT_HOME_TEXT_PART_TWO}
+                <a href="https://gitlab.com/MikevPeeren/" className="text-blue-600">
+                  {GITLAB}
+                </a>
+                {CODING_AT_HOME_TEXT_PART_THREE}
               </p>
             </div>
           </div>
@@ -53,32 +62,21 @@ const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactEleme
         <div className="md:flex md:flex-row md:justify-between">
           <div className="md:w-5/12 md:mb-0">
             <img className="mb-4 md:mb-5 w-7 md:w-8" src="./dachshund.svg" alt="dachshund-logo" />
-            <h4 className="mb-3 md:mb-4 font-medium text-xl">Belle</h4>
+            <h4 className="mb-3 md:mb-4 font-medium text-xl">{BELLE_HEADER}</h4>
             <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5 h-3/4">
               <img
                 className="w-7/12 md:w-5/12 rounded-xl float-left mr-3 mb-1 md:mr-6"
                 src="./belle-snow.jpg"
                 alt="dog-in-snow"
               />
-              <p className="mb-6 tracking-widest h-3/4">
-                My dachshund called Belle is my wife and my joy. We enjoy taking her on long walks near the beach or we
-                venture into the nature in the neighborhood. We also take her on our vacations occasionally as the
-                picture displays her in Austria, as she enjoys running in the snow allot. We have also taken her to a
-                specific Hotel in Austria specifically made for dachshunds where she has made new dachshund friends.
-              </p>
+              <p className="mb-6 tracking-widest h-3/4">{BELLE_TEXT}</p>
             </div>
           </div>
           <div className="md:w-5/12 md:m-0">
             <img className="mb-4 md:mb-5 w-7 md:w-8" src="./joystick.svg" alt="gaming-logo" />
-            <h4 className="mb-3 md:mb-4 font-medium text-xl">Hobbies</h4>
-            <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5 h-3/4">
-              <p className="mb-6 tracking-widest h-3/4">
-                Other things i like to do apart from Coding at home is play Video Games. I have played Video Games just
-                about my entire life, and it is a great escape from the sometimes hectic things happening in real life.
-                What I also enjoy doing is BBQ, I often make Ribs on the BBQ which have to stay on the BBQ for about 6
-                hours. I also wake up late at night if I want to prepare Pulled Pork which takes about 12 hours at a
-                minimum.
-              </p>
+            <h4 className="mb-3 md:mb-4 font-medium text-xl">{HOBBIES_HEADER}</h4>
+            <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-4 h-3/4">
+              <p className="mb-6 tracking-widest h-3/4">{HOBBIES_TEXT}</p>
             </div>
           </div>
         </div>
