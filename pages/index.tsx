@@ -10,6 +10,7 @@ import NavBar from './components/Navbar';
 import EntryPage from './components/EntryPage';
 import AboutPage from './components/AboutPage';
 import SkillPage from './components/SkillPage';
+import ExperiencePage from './components/ExperiencePage';
 
 // Constants
 import { META_TITLE, META_DESCRIPTION } from '../constants/general';
@@ -18,6 +19,7 @@ const Home: FC = (): ReactElement => {
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const skillRef = useRef<HTMLDivElement>(null);
+  const experienceRef = useRef<HTMLDivElement>(null);
 
   // Setting Cannonical for SEO
   const site = 'https://www.mikevpeeren.nl';
@@ -56,10 +58,17 @@ const Home: FC = (): ReactElement => {
       </Head>
 
       <main>
-        <NavBar executeScroll={executeScroll} homeRef={homeRef} aboutRef={aboutRef} skillRef={skillRef} />
+        <NavBar
+          executeScroll={executeScroll}
+          homeRef={homeRef}
+          aboutRef={aboutRef}
+          skillRef={skillRef}
+          experienceRef={experienceRef}
+        />
         <EntryPage />
         <AboutPage aboutRef={aboutRef} />
         <SkillPage skillRef={skillRef} />
+        <ExperiencePage experienceRef={experienceRef} />
       </main>
     </div>
   );

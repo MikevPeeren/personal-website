@@ -10,6 +10,8 @@ export const ABOUT_HEADER = 'About me';
 
 export const SKILLS_HEADER = 'Skills';
 
+export const EXPERIENCE_HEADER = 'Work Experience';
+
 export const GITHUB = 'Github';
 export const GITLAB = 'GitLab';
 

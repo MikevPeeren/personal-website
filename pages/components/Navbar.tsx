@@ -12,9 +12,16 @@ interface NavBarProps {
   homeRef: React.MutableRefObject<HTMLDivElement>;
   aboutRef: React.MutableRefObject<HTMLDivElement>;
   skillRef: React.MutableRefObject<HTMLDivElement>;
+  experienceRef: React.MutableRefObject<HTMLDivElement>;
 }
 
-const NavBar: FC<NavBarProps> = ({ executeScroll, homeRef, aboutRef, skillRef }: NavBarProps): ReactElement => {
+const NavBar: FC<NavBarProps> = ({
+  executeScroll,
+  homeRef,
+  aboutRef,
+  skillRef,
+  experienceRef,
+}: NavBarProps): ReactElement => {
   const [openMenu, setOpenMenu] = useState(false);
 
   // We need this in order to open the Menu on default on screens larger than LG
@@ -70,7 +77,7 @@ const NavBar: FC<NavBarProps> = ({ executeScroll, homeRef, aboutRef, skillRef }:
       <div className={navBarClassNames}>
         <div className={navBarMenuItems}>
           <a
-            className="lg:px-2 py-2 mt-4 lg:mt-0 text-xl opacity-60"
+            className="lg:px-4 py-2 mt-4 lg:mt-0 text-xl opacity-60"
             onClick={() => {
               executeScroll(homeRef);
             }}
@@ -79,7 +86,7 @@ const NavBar: FC<NavBarProps> = ({ executeScroll, homeRef, aboutRef, skillRef }:
             Home
           </a>
           <a
-            className="lg:px-2 py-2 text-xl opacity-60"
+            className="lg:px-4 py-2 text-xl opacity-60"
             onClick={() => {
               executeScroll(aboutRef);
             }}
@@ -88,7 +95,7 @@ const NavBar: FC<NavBarProps> = ({ executeScroll, homeRef, aboutRef, skillRef }:
             About
           </a>
           <a
-            className="lg:px-2 py-2 text-xl opacity-60"
+            className="lg:px-4 py-2 text-xl opacity-60"
             onClick={() => {
               executeScroll(skillRef);
             }}
@@ -96,10 +103,16 @@ const NavBar: FC<NavBarProps> = ({ executeScroll, homeRef, aboutRef, skillRef }:
           >
             Skills
           </a>
-          <a className="lg:px-2 py-2 text-xl opacity-60" href="#" role="button">
+          <a
+            className="lg:px-4 py-2 text-xl opacity-60"
+            onClick={() => {
+              executeScroll(experienceRef);
+            }}
+            role="button"
+          >
             Experience
           </a>
-          <a className="lg:px-2 py-2 text-xl opacity-60" href="#" role="button">
+          <a className="lg:px-4 py-2 text-xl opacity-60" href="#" role="button">
             Contact
           </a>
         </div>
