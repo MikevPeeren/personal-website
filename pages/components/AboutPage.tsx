@@ -68,13 +68,19 @@ const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactEleme
               </p>
             </div>
           </div>
-          {/* <div className="md:w-5/12 md:m-0">
-            <img className="mb-4 md:mb-5 w-7 md:w-8" src="./free-time.svg" alt="free-time-logo" />
+          <div className="md:w-5/12 md:m-0">
+            <img className="mb-4 md:mb-5 w-7 md:w-8" src="./joystick.svg" alt="gaming-logo" />
             <h4 className="mb-3 md:mb-4 font-medium text-xl">Hobbies</h4>
             <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5">
-              <p className="mb-6 tracking-widest">to be implemented</p>
+              <p className="mb-6 tracking-widest">
+                Other things i like to do apart from Coding at home is play Video Games. I have played Video Games just
+                about my entire life, and it is a great escape from the sometimes hectic things happening in real life.
+                What I also enjoy doing is BBQ, I often make Ribs on the BBQ which have to stay on the BBQ for about 6
+                hours. I also wake up late at night if I want to prepare Pulled Pork which takes about 12 hours at a
+                minimum.
+              </p>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
