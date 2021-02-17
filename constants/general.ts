@@ -4,7 +4,7 @@ export const META_DESCRIPTION =
 
 export const HEADER = 'Mike van Peeren - Full Stack Developer';
 
-export const SUBHEADER = 'Node.js & React Enthusiast💡, Full Stack Developer 💻 and Loving Father.';
+export const SUBHEADER = 'Node.js & React Enthusiast💡 Full Stack Developer 💻 Loving Husband and Father.';
 
 export const ABOUT_HEADER = 'About me';
 
