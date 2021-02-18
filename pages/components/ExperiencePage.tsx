@@ -16,12 +16,12 @@ const ExperiencePage: FC<ExperienceProps> = ({ experienceRef }: ExperienceProps)
       <div className="md:flex md:flex-col">
         <div>
           <h4 className="font-medium text-xl">{JOB_ONE_TITLE}</h4>
-          <p className="mb-6 tracking-widest h-1/2 pt-5">{JOB_ONE_TEXT}</p>
+          <p className="mb-6 h-1/2 pt-5">{JOB_ONE_TEXT}</p>
         </div>
         <hr className="my-8" />
         <div>
           <h4 className="font-medium text-xl">{JOB_TWO_TITLE}</h4>
-          <p className="mb-6 tracking-widest h-1/2 pt-5">{JOB_TWO_TEXT}</p>
+          <p className="mb-6 h-1/2 pt-5">{JOB_TWO_TEXT}</p>
         </div>
       </div>
     </div>
