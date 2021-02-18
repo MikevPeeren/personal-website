@@ -23,7 +23,7 @@ interface AboutPageProps {
 
 const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactElement => {
   return (
-    <div ref={aboutRef} className="py-36 lg:py-52">
+    <div ref={aboutRef} className="py-36 lg:pt-52">
       <h3 className="text-3xl font-semibold mb-14 -ml-0">{ABOUT_HEADER}</h3>
       <div className="md:flex md:flex-col md:justify-between">
         <div className="md:flex md:flex-row md:justify-between">

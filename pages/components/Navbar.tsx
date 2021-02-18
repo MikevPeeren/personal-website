@@ -7,12 +7,16 @@ import classNames from 'classnames';
 // Hooks
 import { useMediaQuery } from '../../custom-hooks/useMediaQuery';
 
+// Constants
+import { HOME_HEADER, ABOUT_HEADER, SKILLS_HEADER, EXPERIENCE_HEADER, CONTACT_HEADER } from '../../constants/general';
+
 interface NavBarProps {
   executeScroll: (ref) => void;
   homeRef: React.MutableRefObject<HTMLDivElement>;
   aboutRef: React.MutableRefObject<HTMLDivElement>;
   skillRef: React.MutableRefObject<HTMLDivElement>;
   experienceRef: React.MutableRefObject<HTMLDivElement>;
+  contactRef: React.MutableRefObject<HTMLDivElement>;
 }
 
 const NavBar: FC<NavBarProps> = ({
@@ -21,6 +25,7 @@ const NavBar: FC<NavBarProps> = ({
   aboutRef,
   skillRef,
   experienceRef,
+  contactRef,
 }: NavBarProps): ReactElement => {
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -83,7 +88,7 @@ const NavBar: FC<NavBarProps> = ({
             }}
             role="button"
           >
-            Home
+            {HOME_HEADER}
           </a>
           <a
             className="lg:px-4 py-2 text-xl opacity-60"
@@ -92,7 +97,7 @@ const NavBar: FC<NavBarProps> = ({
             }}
             role="button"
           >
-            About
+            {ABOUT_HEADER}
           </a>
           <a
             className="lg:px-4 py-2 text-xl opacity-60"
@@ -101,7 +106,7 @@ const NavBar: FC<NavBarProps> = ({
             }}
             role="button"
           >
-            Skills
+            {SKILLS_HEADER}
           </a>
           <a
             className="lg:px-4 py-2 text-xl opacity-60"
@@ -110,10 +115,16 @@ const NavBar: FC<NavBarProps> = ({
             }}
             role="button"
           >
-            Experience
+            {EXPERIENCE_HEADER}
           </a>
-          <a className="lg:px-4 py-2 text-xl opacity-60" href="#" role="button">
-            Contact
+          <a
+            className="lg:px-4 py-2 text-xl opacity-60"
+            onClick={() => {
+              executeScroll(contactRef);
+            }}
+            role="button"
+          >
+            {CONTACT_HEADER}
           </a>
         </div>
       </div>
