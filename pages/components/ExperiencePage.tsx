@@ -11,7 +11,7 @@ interface ExperienceProps {
 }
 const ExperiencePage: FC<ExperienceProps> = ({ experienceRef }: ExperienceProps): ReactElement => {
   return (
-    <div ref={experienceRef} className="py-16 lg:py-16">
+    <div ref={experienceRef} className="py-28">
       <h3 className="text-3xl font-semibold mb-14 -ml-0">{EXPERIENCE_HEADER}</h3>
       <div className="md:flex md:flex-col">
         <div>

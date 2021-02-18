@@ -11,6 +11,7 @@ import EntryPage from './components/EntryPage';
 import AboutPage from './components/AboutPage';
 import SkillPage from './components/SkillPage';
 import ExperiencePage from './components/ExperiencePage';
+import ContactPage from './components/ContactPage';
 
 // Constants
 import { META_TITLE, META_DESCRIPTION } from '../constants/general';
@@ -20,8 +21,9 @@ const Home: FC = (): ReactElement => {
   const aboutRef = useRef<HTMLDivElement>(null);
   const skillRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
-  // Setting Cannonical for SEO
+  // Setting Canonical for SEO
   const site = 'https://www.mikevpeeren.nl';
   const canURL = site + useRouter().pathname;
 
@@ -64,11 +66,13 @@ const Home: FC = (): ReactElement => {
           aboutRef={aboutRef}
           skillRef={skillRef}
           experienceRef={experienceRef}
+          contactRef={contactRef}
         />
         <EntryPage />
         <AboutPage aboutRef={aboutRef} />
         <SkillPage skillRef={skillRef} />
         <ExperiencePage experienceRef={experienceRef} />
+        <ContactPage contactRef={contactRef} />
       </main>
     </div>
   );
