@@ -5,6 +5,9 @@ import { useRouter } from 'next/router';
 // React
 import React, { ReactElement, FC, useRef } from 'react';
 
+// GA
+import ReactGA from 'react-ga';
+
 // Components
 import NavBar from './components/Navbar';
 import EntryPage from './components/EntryPage';
@@ -31,6 +34,9 @@ const Home: FC = (): ReactElement => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  ReactGA.initialize(process.env.REACT_GA);
+  ReactGA.pageview(window.location.pathname + window.location.search);
+
   return (
     <div ref={homeRef}>
       <Head>
@@ -41,8 +47,6 @@ const Home: FC = (): ReactElement => {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
@@ -51,6 +55,13 @@ const Home: FC = (): ReactElement => {
         <link rel="canonical" href={canURL} />
         <meta name="title" content={META_TITLE} />
         <meta name="description" content={META_DESCRIPTION} />
+
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta
+          name="keywords"
+          content="Full Stack, full stack, full-stack, MERN, developer, software, React, node, node.js, next.js, vercel, html5, css3, html, css, tailwind, google cloud, google, gitlab, github, linkedin"
+        />
         <meta property="og:title" content={META_TITLE} />
         <meta property="og:description" content={META_DESCRIPTION} />
         <meta property="og:type" content="website" />
