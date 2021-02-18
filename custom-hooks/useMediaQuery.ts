@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
  * Custom hook to determine the current window so we can fiddle with it in our component
  * @param {string | boolean} query
  */
-export function useMediaQuery(query: string | boolean): string {
+export function useMediaQuery(query: string): boolean {
   const [matches, setMatches] = useState(false);
 
   useEffect(() => {
