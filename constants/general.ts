@@ -24,3 +24,8 @@ export const HTML5 = 'HTML 5';
 export const CSS3 = 'CSS 3';
 export const GOOGLE_CLOUD = 'Google Cloud';
 export const GIT = 'Git';
+
+export const CONTACT_ME = "I'm always open to discuss your project and talk about new things!";
+export const MAIL_ME = 'Mail me at:';
+export const EMAIL = 'mikevpeeren@hotmail.com';
+export const FOLLOW_ME = 'Follow me:';
