@@ -35,7 +35,8 @@ const Home: FC = (): ReactElement => {
   };
 
   ReactGA.initialize(process.env.REACT_GA);
-  ReactGA.pageview(window.location.pathname + window.location.search);
+
+  if (typeof window !== 'undefined') ReactGA.pageview(window.location.pathname + window.location.search);
 
   return (
     <div ref={homeRef}>
