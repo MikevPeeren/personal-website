@@ -10,6 +10,7 @@ export const HOME_HEADER = 'Home';
 export const ABOUT_HEADER = 'About me';
 export const SKILLS_HEADER = 'Skills';
 export const EXPERIENCE_HEADER = 'Work Experience';
+export const CONTACT_HEADER_NAVBAR = 'Contact';
 export const CONTACT_HEADER = 'Just say Hi. 👋';
 
 export const GITHUB = 'Github';

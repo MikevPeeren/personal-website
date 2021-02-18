@@ -8,7 +8,13 @@ import classNames from 'classnames';
 import { useMediaQuery } from '../../custom-hooks/useMediaQuery';
 
 // Constants
-import { HOME_HEADER, ABOUT_HEADER, SKILLS_HEADER, EXPERIENCE_HEADER, CONTACT_HEADER } from '../../constants/general';
+import {
+  HOME_HEADER,
+  ABOUT_HEADER,
+  SKILLS_HEADER,
+  EXPERIENCE_HEADER,
+  CONTACT_HEADER_NAVBAR,
+} from '../../constants/general';
 
 interface NavBarProps {
   executeScroll: (ref) => void;
@@ -124,7 +130,7 @@ const NavBar: FC<NavBarProps> = ({
             }}
             role="button"
           >
-            {CONTACT_HEADER}
+            {CONTACT_HEADER_NAVBAR}
           </a>
         </div>
       </div>
