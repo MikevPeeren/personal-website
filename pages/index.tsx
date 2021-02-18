@@ -24,7 +24,7 @@ const Home: FC = (): ReactElement => {
   const contactRef = useRef<HTMLDivElement>(null);
 
   // Setting Canonical for SEO
-  const site = 'https://www.mikevpeeren.nl';
+  const site = 'https://mikevpeeren.nl';
   const canURL = site + useRouter().pathname;
 
   const executeScroll = (ref) => {
