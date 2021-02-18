@@ -88,7 +88,7 @@ const NavBar: FC<NavBarProps> = ({
       <div className={navBarClassNames}>
         <div className={navBarMenuItems}>
           <a
-            className="lg:px-4 py-2 mt-4 lg:mt-0 text-xl opacity-60"
+            className="lg:px-4 py-2 mt-4 lg:mt-0 text-xl opacity-80"
             onClick={() => {
               executeScroll(homeRef);
             }}
@@ -97,7 +97,7 @@ const NavBar: FC<NavBarProps> = ({
             {HOME_HEADER}
           </a>
           <a
-            className="lg:px-4 py-2 text-xl opacity-60"
+            className="lg:px-4 py-2 text-xl opacity-80"
             onClick={() => {
               executeScroll(aboutRef);
             }}
@@ -106,7 +106,7 @@ const NavBar: FC<NavBarProps> = ({
             {ABOUT_HEADER}
           </a>
           <a
-            className="lg:px-4 py-2 text-xl opacity-60"
+            className="lg:px-4 py-2 text-xl opacity-80"
             onClick={() => {
               executeScroll(skillRef);
             }}
@@ -115,7 +115,7 @@ const NavBar: FC<NavBarProps> = ({
             {SKILLS_HEADER}
           </a>
           <a
-            className="lg:px-4 py-2 text-xl opacity-60"
+            className="lg:px-4 py-2 text-xl opacity-80"
             onClick={() => {
               executeScroll(experienceRef);
             }}
@@ -124,7 +124,7 @@ const NavBar: FC<NavBarProps> = ({
             {EXPERIENCE_HEADER}
           </a>
           <a
-            className="lg:px-4 py-2 text-xl opacity-60"
+            className="lg:px-4 py-2 text-xl opacity-80"
             onClick={() => {
               executeScroll(contactRef);
             }}
