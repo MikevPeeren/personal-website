@@ -85,7 +85,7 @@ const Home: FC = (): ReactElement => {
         <SkillPage skillRef={skillRef} />
         <ExperiencePage experienceRef={experienceRef} />
         <ContactPage contactRef={contactRef} />
-        <footer className="text-center py-20">Copyright © 2020, All rights reserved.</footer>
+        <footer className="text-center py-20">Copyright © 2021, All rights reserved.</footer>
       </main>
     </div>
   );
