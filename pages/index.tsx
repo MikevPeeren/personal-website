@@ -69,7 +69,7 @@ const Home: FC = (): ReactElement => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.mikevpeeren.nl/" />
         <meta property="og:image" content="https://www.mikevpeeren.nl/mikevpeeren.webp" />
-        <meta httpEquiv="content-language" content="en-us" />
+        <meta httpEquiv="content-language" content="en" />
       </Head>
 
       <main>
