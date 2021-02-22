@@ -3,7 +3,10 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 // React
-import React, { ReactElement, FC, useRef } from 'react';
+import React, { ReactElement, FC, useEffect, useRef } from 'react';
+
+// External
+import smoothscroll from 'smoothscroll-polyfill';
 
 // Components
 import NavBar from './components/Navbar';
@@ -26,6 +29,11 @@ const Home: FC = (): ReactElement => {
   // Setting Canonical for SEO
   const site = 'https://mikevpeeren.nl';
   const canURL = site + useRouter().pathname;
+
+  useEffect(function onFirstMount() {
+    // Kick off the polyfill!
+    smoothscroll.polyfill();
+  }, []);
 
   const executeScroll = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
