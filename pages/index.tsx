@@ -5,9 +5,6 @@ import { useRouter } from 'next/router';
 // React
 import React, { ReactElement, FC, useRef } from 'react';
 
-// GA
-import ReactGA from 'react-ga';
-
 // Components
 import NavBar from './components/Navbar';
 import EntryPage from './components/EntryPage';
@@ -33,10 +30,6 @@ const Home: FC = (): ReactElement => {
   const executeScroll = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
   };
-
-  ReactGA.initialize(process.env.REACT_GA);
-
-  if (typeof window !== 'undefined') ReactGA.pageview(window.location.pathname + window.location.search);
 
   return (
     <div ref={homeRef}>
