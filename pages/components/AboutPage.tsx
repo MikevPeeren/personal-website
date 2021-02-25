@@ -31,7 +31,9 @@ const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactEleme
       <div className="md:flex md:flex-col md:justify-between">
         <div className="md:flex md:flex-row md:justify-between">
           <div className="md:w-5/12 md:mb-0">
-            <img className="mb-4 md:mb-5 w-7 md:w-8" src="./coding-work.svg" alt="coding-at-work-logo" />
+            <div className="mb-4 md:mb-5 w-7 md:w-8">
+              <Image className="z-0" src="/coding-work.svg" alt="coding-at-work-logo" width={50} height={50} />
+            </div>
             <h4 className="mb-3 md:mb-4 font-medium text-xl">{CODING_AT_WORK_HEADER}</h4>
             <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5">
               <p className="mb-6 tracking-widest h-1/2">
@@ -44,7 +46,9 @@ const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactEleme
             </div>
           </div>
           <div className="md:w-5/12 md:m-0">
-            <img className="mb-4 md:mb-5 w-7 md:w-8" src="./coding-home.svg" alt="coding-at-home-logo" />
+            <div className="mb-4 md:mb-5 w-7 md:w-8">
+              <Image className="z-0" src="/coding-home.svg" alt="coding-at-home-logo" width={50} height={50} />
+            </div>
             <h4 className="mb-3 md:mb-4 font-medium text-xl">{CODING_AT_HOME_HEADER}</h4>
             <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5">
               <p className="mb-6 tracking-widest h-1/2">
@@ -63,7 +67,9 @@ const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactEleme
         </div>
         <div className="md:flex md:flex-row md:justify-between">
           <div className="md:w-5/12 md:mb-0">
-            <img className="mb-4 md:mb-5 w-7 md:w-8" src="./dachshund.svg" alt="dachshund-logo" />
+            <div className="mb-4 md:mb-5 w-7 md:w-8">
+              <Image className="z-0" src="/dachshund.svg" alt="dachshund-logo" width={50} height={50} />
+            </div>
             <h4 className="mb-3 md:mb-4 font-medium text-xl">{BELLE_HEADER}</h4>
             <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5 h-3/4">
               <div className="w-7/12 md:w-5/12 rounded-xl float-left mr-3 mb-1 md:mr-6">
@@ -73,7 +79,9 @@ const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactEleme
             </div>
           </div>
           <div className="md:w-5/12 md:m-0">
-            <img className="mb-4 md:mb-5 w-7 md:w-8" src="./joystick.svg" alt="gaming-logo" />
+            <div className="mb-4 md:mb-5 w-7 md:w-8">
+              <Image className="z-0" src="/joystick.svg" alt="gaming-logo" width={50} height={50} />
+            </div>
             <h4 className="mb-3 md:mb-4 font-medium text-xl">{HOBBIES_HEADER}</h4>
             <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-4 h-3/4">
               <p className="mb-6 tracking-widest h-3/4">{HOBBIES_TEXT}</p>

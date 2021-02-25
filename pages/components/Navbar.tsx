@@ -1,3 +1,6 @@
+// Next
+import Image from 'next/image';
+
 // React
 import React, { ReactElement, FC, useState } from 'react';
 
@@ -60,11 +63,12 @@ const NavBar: FC<NavBarProps> = ({
 
   return (
     <nav className="NavBar sticky -top-px w-full items-center flex justify-between py-6 lg:justify-start lg:flex-row flex-wrap z-10">
-      <a href="#">
-        <img className="w-14" src="./developer.svg" alt="developer-logo" />
+      <a href="#" title="home">
+        <div className="w-14">
+          <Image className="z-0" src="/developer.svg" alt="developer-logo" width={50} height={50} />
+        </div>
       </a>
       <button
-        aria-controls="basic-navbar-nav"
         type="button"
         aria-label="Toggle navigation"
         className="lg:hidden focus:outline-none"

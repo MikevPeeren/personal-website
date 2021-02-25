@@ -53,6 +53,7 @@ const Home: FC = (): ReactElement => {
         <link
           href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
           rel="stylesheet"
+          crossOrigin="anonymous"
         />
         <link rel="canonical" href={canURL} />
         <meta name="title" content={META_TITLE} />
