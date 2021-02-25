@@ -1,3 +1,6 @@
+// Next
+import Image from 'next/image';
+
 // React
 import React, { ReactElement, FC } from 'react';
 
@@ -63,11 +66,9 @@ const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactEleme
             <img className="mb-4 md:mb-5 w-7 md:w-8" src="./dachshund.svg" alt="dachshund-logo" />
             <h4 className="mb-3 md:mb-4 font-medium text-xl">{BELLE_HEADER}</h4>
             <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5 h-3/4">
-              <img
-                className="w-7/12 md:w-5/12 rounded-xl float-left mr-3 mb-1 md:mr-6"
-                src="./belle-snow.jpg"
-                alt="dog-in-snow"
-              />
+              <div className="w-7/12 md:w-5/12 rounded-xl float-left mr-3 mb-1 md:mr-6">
+                <Image className="rounded-xl z-0" src="/belle-snow.jpg" alt="dog-in-snow" width={300} height={400} />
+              </div>
               <p className="mb-6 tracking-widest h-3/4">{BELLE_TEXT}</p>
             </div>
           </div>

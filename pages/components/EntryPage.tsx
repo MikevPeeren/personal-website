@@ -1,3 +1,6 @@
+// Next
+import Image from 'next/image';
+
 // React
 import React, { ReactElement, FC } from 'react';
 
@@ -22,11 +25,15 @@ const EntryPage: FC = (): ReactElement => {
           </div>
         </div>
         <div className="flex flex-row lg:justify-end order-2 w-full mt-8 lg:mt-0 lg:w-2/5 mb-8">
-          <img
-            className="EntryPage__image lg:w-10/12 w-8/12 lg:mr-0 rounded-xl mx-auto md:-ml-0"
-            src="https://www.mikevpeeren.nl/mikevpeeren.webp"
-            alt="personal-photo"
-          />
+          <div className="EntryPage__image lg:w-10/12 w-8/12 lg:mr-0 mx-auto md:-ml-0">
+            <Image
+              className="rounded-xl z-0"
+              src="https://www.mikevpeeren.nl/mikevpeeren.webp"
+              alt="personal-photo"
+              width={400}
+              height={400}
+            />
+          </div>
         </div>
       </div>
     </div>

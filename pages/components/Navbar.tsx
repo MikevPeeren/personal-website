@@ -59,7 +59,7 @@ const NavBar: FC<NavBarProps> = ({
   });
 
   return (
-    <nav className="NavBar sticky -top-px w-full items-center flex justify-between py-6 lg:justify-start lg:flex-row flex-wrap">
+    <nav className="NavBar sticky -top-px w-full items-center flex justify-between py-6 lg:justify-start lg:flex-row flex-wrap z-10">
       <a href="#">
         <img className="w-14" src="./developer.svg" alt="developer-logo" />
       </a>
