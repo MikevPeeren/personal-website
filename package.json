@@ -20,7 +20,7 @@
     "next-images": "^1.7.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "sass": "^1.32.13",
+    "sass": "^1.33.0",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
