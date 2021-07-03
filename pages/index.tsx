@@ -17,7 +17,7 @@ import ExperiencePage from './components/ExperiencePage';
 import ContactPage from './components/ContactPage';
 
 // Constants
-import { META_TITLE, META_DESCRIPTION } from '../constants/general';
+import { AUTHOR, META_TITLE, META_DESCRIPTION } from '../constants/general';
 
 const Home: FC = (): ReactElement => {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -58,20 +58,20 @@ const Home: FC = (): ReactElement => {
         />
 
         <link rel="canonical" href={canURL} />
+        <meta name="author" content={AUTHOR}>
         <meta name="title" content={META_TITLE} />
         <meta name="description" content={META_DESCRIPTION} />
 
         <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
         <meta
           name="keywords"
           content="Full Stack, full stack, full-stack, MERN, developer, software, React, React.js, node, node.js, next.js, git, vercel, html5, css3, html, css, tailwind, google cloud, gitlab, github, linkedIn"
         />
-        <meta property="og:title" content={META_TITLE} />
-        <meta property="og:description" content={META_DESCRIPTION} />
+        <meta name="title" property="og:title" content={META_TITLE} />
+        <meta name="description" property="og:description" content={META_DESCRIPTION} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.mikevpeeren.nl/" />
-        <meta property="og:image" content="https://www.mikevpeeren.nl/mikevpeeren.jpg" />
+        <meta name="image" property="og:image" content="https://www.mikevpeeren.nl/mikevpeeren.jpg" />
         <meta httpEquiv="content-language" content="en" />
       </Head>
 

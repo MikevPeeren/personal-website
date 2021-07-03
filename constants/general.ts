@@ -2,9 +2,11 @@ export const META_TITLE = 'Mike van Peeren - Full Stack Developer, Tilburg';
 export const META_DESCRIPTION =
   'Mike van Peeren Full Stack Developer, JavaScript, TypeScript, React, Node.js, Next.js, Sass, TailwindCSS, HTML5, GCD, Jest, GitLab';
 
+export const AUTHOR = 'Mike van Peeren';
 export const HEADER = 'Mike van Peeren - Full Stack Developer';
 
-export const SUBHEADER = 'Full Stack Developer 👨‍💻 | JavaScript React.js Node.js & Next.js Enthusiast 💡 | Loving Husband and Father ❤️';
+export const SUBHEADER =
+  'Full Stack Developer 👨‍💻 | JavaScript React.js Node.js & Next.js Enthusiast 💡 | Loving Husband and Father ❤️';
 
 export const HOME_HEADER = 'Home';
 export const ABOUT_HEADER = 'About me';
