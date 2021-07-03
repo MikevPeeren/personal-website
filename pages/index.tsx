@@ -65,7 +65,7 @@ const Home: FC = (): ReactElement => {
         <meta name="theme-color" content="#ffffff" />
         <meta
           name="keywords"
-          content="Full Stack, full stack, full-stack, MERN, developer, software, React, node, node.js, next.js, vercel, html5, css3, html, css, tailwind, google cloud, google, gitlab, github, linkedin"
+          content="Full Stack, full stack, full-stack, MERN, developer, software, React, React.js, node, node.js, next.js, git, vercel, html5, css3, html, css, tailwind, google cloud, gitlab, github, linkedIn"
         />
         <meta property="og:title" content={META_TITLE} />
         <meta property="og:description" content={META_DESCRIPTION} />
