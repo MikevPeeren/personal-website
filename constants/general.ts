@@ -1,6 +1,6 @@
 export const META_TITLE = 'Mike van Peeren - Full Stack Developer, Tilburg';
 export const META_DESCRIPTION =
-  'Mike van Peeren Full Stack Developer, JavaScript, TypeScript, React, Node.js, Next.js, Sass, TailwindCSS, HTML5, GCD, Jest, GitLab';
+  'Mike van Peeren Full Stack Developer, JavaScript, TypeScript, React, React.js, Node.js, Next.js, HTML, HTML5, CSS, Git';
 
 export const AUTHOR = 'Mike van Peeren';
 export const HEADER = 'Mike van Peeren - Full Stack Developer';
