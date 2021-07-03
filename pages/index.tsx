@@ -71,7 +71,7 @@ const Home: FC = (): ReactElement => {
         <meta property="og:description" content={META_DESCRIPTION} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.mikevpeeren.nl/" />
-        <meta property="og:image" content="https://www.mikevpeeren.nl/mikevpeeren.webp" />
+        <meta property="og:image" content="https://www.mikevpeeren.nl/mikevpeeren.jpg" />
         <meta httpEquiv="content-language" content="en" />
       </Head>
 
