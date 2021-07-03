@@ -58,7 +58,7 @@ const Home: FC = (): ReactElement => {
         />
 
         <link rel="canonical" href={canURL} />
-        <meta name="author" content={AUTHOR}>
+        <meta name="author" content={AUTHOR} />
         <meta name="title" content={META_TITLE} />
         <meta name="description" content={META_DESCRIPTION} />
 
