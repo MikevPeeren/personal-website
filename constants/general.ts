@@ -21,7 +21,7 @@ export const GITLAB = 'GitLab';
 export const BLINK = 'Blink';
 
 export const NODE = 'Node.js';
-export const REACT = 'React';
+export const REACT = 'React.js';
 export const JAVASCRIPT = 'JavaScript';
 export const HTML5 = 'HTML 5';
 export const CSS3 = 'CSS 3';
