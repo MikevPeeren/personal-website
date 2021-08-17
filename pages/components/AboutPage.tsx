@@ -20,6 +20,8 @@ import {
   HOBBIES_TEXT,
 } from '../../constants/about';
 
+import BelleSnow from '../../public/belle-snow.jpg';
+
 interface AboutPageProps {
   aboutRef: React.MutableRefObject<HTMLDivElement>;
 }
@@ -73,7 +75,14 @@ const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactEleme
             <h4 className="mb-3 md:mb-4 font-medium text-xl">{BELLE_HEADER}</h4>
             <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5 h-3/4">
               <div className="w-7/12 md:w-5/12 rounded-xl float-left mr-3 mb-1 md:mr-6">
-                <Image className="rounded-xl z-0" src="/belle-snow.jpg" alt="dog-in-snow" width={300} height={400} />
+                <Image
+                  className="rounded-xl z-0"
+                  src={BelleSnow}
+                  alt="dog-in-snow"
+                  width={300}
+                  height={400}
+                  placeholder="blur"
+                />
               </div>
               <p className="mb-6 tracking-widest h-3/4">{BELLE_TEXT}</p>
             </div>

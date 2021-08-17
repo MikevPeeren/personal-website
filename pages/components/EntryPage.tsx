@@ -10,6 +10,8 @@ import SocialMedia from './SocialMedia';
 // Constants
 import { HEADER, SUBHEADER } from '../../constants/general';
 
+import MikevPeerenPic from '../../public/mikevpeeren.webp';
+
 const EntryPage: FC = (): ReactElement => {
   return (
     <div className="mt-20">
@@ -28,10 +30,11 @@ const EntryPage: FC = (): ReactElement => {
           <div className="EntryPage__image lg:w-10/12 w-8/12 lg:mr-0 mx-auto md:-ml-0">
             <Image
               className="rounded-xl z-0"
-              src="https://www.mikevpeeren.nl/mikevpeeren.webp"
+              src={MikevPeerenPic}
               alt="personal-photo"
               width={400}
               height={400}
+              placeholder="blur"
             />
           </div>
         </div>
