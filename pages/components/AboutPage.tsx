@@ -20,7 +20,14 @@ import {
   HOBBIES_TEXT,
 } from '../../constants/about';
 
+// Images
 import BelleSnow from '../../public/belle-snow.jpg';
+
+// SVG's
+import CodingAtWork from '../../public/coding-work.svg';
+import CodingAtHome from '../../public/coding-home.svg';
+import Dachshund from '../../public/dachshund.svg';
+import JoyStick from '../../public/joystick.svg';
 
 interface AboutPageProps {
   aboutRef: React.MutableRefObject<HTMLDivElement>;
@@ -34,7 +41,7 @@ const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactEleme
         <div className="md:flex md:flex-row md:justify-between">
           <div className="md:w-5/12 md:mb-0">
             <div className="mb-4 md:mb-5 w-7 md:w-8">
-              <Image className="z-0" src="/coding-work.svg" alt="coding-at-work-logo" width={50} height={50} />
+              <Image className="z-0" src={CodingAtWork} alt="coding-at-work-logo" width={50} height={50} />
             </div>
             <h4 className="mb-3 md:mb-4 font-medium text-xl">{CODING_AT_WORK_HEADER}</h4>
             <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5">
@@ -49,7 +56,7 @@ const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactEleme
           </div>
           <div className="md:w-5/12 md:m-0">
             <div className="mb-4 md:mb-5 w-7 md:w-8">
-              <Image className="z-0" src="/coding-home.svg" alt="coding-at-home-logo" width={50} height={50} />
+              <Image className="z-0" src={CodingAtHome} alt="coding-at-home-logo" width={50} height={50} />
             </div>
             <h4 className="mb-3 md:mb-4 font-medium text-xl">{CODING_AT_HOME_HEADER}</h4>
             <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5">
@@ -70,7 +77,7 @@ const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactEleme
         <div className="md:flex md:flex-row md:justify-between">
           <div className="md:w-5/12 md:mb-0">
             <div className="mb-4 md:mb-5 w-7 md:w-8">
-              <Image className="z-0" src="/dachshund.svg" alt="dachshund-logo" width={50} height={50} />
+              <Image className="z-0" src={Dachshund} alt="dachshund-logo" width={50} height={50} />
             </div>
             <h4 className="mb-3 md:mb-4 font-medium text-xl">{BELLE_HEADER}</h4>
             <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5 h-3/4">
@@ -89,7 +96,7 @@ const AboutPage: FC<AboutPageProps> = ({ aboutRef }: AboutPageProps): ReactEleme
           </div>
           <div className="md:w-5/12 md:m-0">
             <div className="mb-4 md:mb-5 w-7 md:w-8">
-              <Image className="z-0" src="/joystick.svg" alt="gaming-logo" width={50} height={50} />
+              <Image className="z-0" src={JoyStick} alt="gaming-logo" width={50} height={50} />
             </div>
             <h4 className="mb-3 md:mb-4 font-medium text-xl">{HOBBIES_HEADER}</h4>
             <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-4 h-3/4">

@@ -10,6 +10,7 @@ import SocialMedia from './SocialMedia';
 // Constants
 import { HEADER, SUBHEADER } from '../../constants/general';
 
+// Images
 import MikevPeerenPic from '../../public/mikevpeeren.webp';
 
 const EntryPage: FC = (): ReactElement => {

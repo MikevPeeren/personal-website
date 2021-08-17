@@ -19,6 +19,9 @@ import {
   CONTACT_HEADER_NAVBAR,
 } from '../../constants/general';
 
+// SVGs
+import Developer from '../../public/developer.svg';
+
 interface NavBarProps {
   executeScroll: (ref) => void;
   homeRef: React.MutableRefObject<HTMLDivElement>;
@@ -65,7 +68,7 @@ const NavBar: FC<NavBarProps> = ({
     <nav className="NavBar sticky -top-px w-full items-center flex justify-between py-6 lg:justify-start lg:flex-row flex-wrap z-10">
       <a href="#" title="home">
         <div className="w-14">
-          <Image className="z-0" src="/developer.svg" alt="developer-logo" width={50} height={50} />
+          <Image className="z-0" src={Developer} alt="developer-logo" width={50} height={50} />
         </div>
       </a>
       <button
