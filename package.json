@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "lint": "next lint",
     "prettify": "prettier --write '{pages}/**/*.js' ",
     "pretty-quick": "pretty-quick --staged"
   },
@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
+    "@next/eslint-plugin-next": "^11.1.0",
     "@types/node": "^15.14.0",
     "@types/react": "^17.0.18",
     "@typescript-eslint/eslint-plugin": "^4.29.2",
@@ -32,9 +33,6 @@
     "autoprefixer": "^10.3.1",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.0",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
     "lint-staged": "^10.5.4",
     "postcss": "^8.3.6",
     "postcss-preset-env": "^6.7.0",
