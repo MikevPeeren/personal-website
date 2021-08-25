@@ -19,13 +19,15 @@ export const GITLAB = 'GitLab';
 
 export const BLINK = 'Blink';
 
-export const NODE = 'Node.js';
 export const REACT = 'React.js';
+export const NEXTJS = 'Next.js';
 export const JAVASCRIPT = 'JavaScript';
+export const TYPESCRIPT = 'TypeScript';
 export const HTML5 = 'HTML 5';
 export const CSS3 = 'CSS 3';
-export const GOOGLE_CLOUD = 'Google Cloud';
+export const TAILWIND = 'Tailwind CSS';
 export const GIT = 'Git';
+export const VERCEL = 'Vercel';
 
 export const CONTACT_ME = "I'm always open to connect, to discuss project(s) and talk about new things!";
 export const MAIL_ME = 'Mail me at:';

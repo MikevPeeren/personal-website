@@ -1,30 +1,35 @@
 // React
 import React, { ReactElement, FC } from 'react';
 
-// Font Awesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// Next
+import Image from 'next/image';
+
+import LINKEDIN_ICON from '../../public/icons/linkedin.svg';
+import GITLAB_ICON from '../../public/icons/gitlab.svg';
+import GITHUB_ICON from '../../public/icons/github.svg';
+import MEDIUM_ICON from '../../public/icons/medium.svg';
 
 const SocialMedia: FC = (): ReactElement => {
   return (
     <>
       <div className="cursor-pointer mr-4">
-        <a href="https://www.linkedin.com/in/mikevpeeren/" title="linkedIn">
-          <FontAwesomeIcon className="h-8" icon={['fab', 'linkedin']} />
-        </a>
-      </div>
-      <div className="cursor-pointer mr-4">
         <a href="https://gitlab.com/MikevPeeren/" title="GitLab">
-          <FontAwesomeIcon className="h-8" icon={['fab', 'gitlab']} />
+          <Image src={GITLAB_ICON} alt="gitlab-logo" width={35} height={35} />
         </a>
       </div>
       <div className="cursor-pointer mr-4">
         <a href="https://github.com/MikevPeeren/" title="Github">
-          <FontAwesomeIcon className="h-8" icon={['fab', 'github']} />
+          <Image src={GITHUB_ICON} alt="github-logo" width={35} height={35} />
+        </a>
+      </div>
+      <div className="cursor-pointer mr-4">
+        <a href="https://www.linkedin.com/in/mikevpeeren/" title="linkedIn">
+          <Image src={LINKEDIN_ICON} alt="linkedin-logo" width={35} height={35} />
         </a>
       </div>
       <div className="cursor-pointer mr-4">
         <a href="https://medium.com/@mikevpeeren/" title="Medium">
-          <FontAwesomeIcon className="h-8" icon={['fab', 'medium']} />
+          <Image src={MEDIUM_ICON} alt="medium-logo" width={35} height={35} />
         </a>
       </div>
     </>
