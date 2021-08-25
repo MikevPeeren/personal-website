@@ -65,7 +65,7 @@ const Home: FC = (): ReactElement => {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta
           name="keywords"
-          content="Full Stack, full stack, full-stack, MERN, developer, software, React, React.js, node, node.js, next.js, git, vercel, html5, css3, html, css, tailwind, google cloud, gitlab, github, linkedIn"
+          content="Frontend, front-end, engineer, developer, software, React, React.js, react query, javascript, JavaScript, typescript, TypeScript, next.js, git, vercel, html5, css3, html, css, tailwind, vercel, gitlab, github"
         />
         <meta name="title" property="og:title" content={META_TITLE} />
         <meta name="description" property="og:description" content={META_DESCRIPTION} />
