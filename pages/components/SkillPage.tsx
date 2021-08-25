@@ -76,7 +76,7 @@ const SkillPage: FC<SkillPageProps> = ({ skillRef }: SkillPageProps): ReactEleme
         <div className="md:flex md:flex-row md:my-10">
           <div className="flex flex-row align-middle mb-4 md:mr-24">
             <Image src={GIT_ICON} alt="git-logo" width={50} height={50} />
-            <p className="ml-6 my-auto text-lg">{GIT}</p>
+            <p className="ml-6 mr-10 my-auto text-lg">{GIT}</p>
           </div>
           <div className="flex flex-row align-middle mb-4 md:mr-24">
             <Image src={VERCEL_ICON} alt="vercel-logo" width={50} height={50} />
