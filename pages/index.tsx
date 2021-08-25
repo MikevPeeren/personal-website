@@ -49,13 +49,10 @@ const Home: FC = (): ReactElement => {
         <link rel="icon" type="image/png" sizes="16x16" href="meta/favicon-16x16.png" />
         <link rel="manifest" href="meta/site.webmanifest" />
         <link rel="mask-icon" href="meta/safari-pinned-tab.svg" color="#5bbad5" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
-          rel="preload"
-          as="font"
-          crossOrigin="anonymous"
-        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet" />
 
         <link rel="canonical" href={canURL} />
         <meta name="author" content={AUTHOR} />
