@@ -1,4 +1,0 @@
-Sitemap: https://www.mikevpeeren.nl/sitemap.xml
-
-User-agent: *
-Allow: /
