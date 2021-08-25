@@ -51,13 +51,14 @@ const Home: FC = (): ReactElement => {
         <link rel="mask-icon" href="meta/safari-pinned-tab.svg" color="#5bbad5" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet" />
 
         <link rel="canonical" href={canURL} />
         <meta name="author" content={AUTHOR} />
         <meta name="title" content={META_TITLE} />
         <meta name="description" content={META_DESCRIPTION} />
+        <meta name="theme-color" content="#da532c" />
 
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta
