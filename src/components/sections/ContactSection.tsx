@@ -8,18 +8,18 @@ import {
   MAIL_ME,
   EMAIL,
   FOLLOW_ME,
-} from "../../constants/general";
+} from "../../utils/constants/general";
 
 // Components
-import SocialMedia from "./SocialMedia";
+import SocialMedia from "../SocialMedia";
 
-interface ContactPageProps {
+interface ContactSectionProps {
   contactRef: React.MutableRefObject<HTMLDivElement>;
 }
 
-const ContactPage: FC<ContactPageProps> = ({
+const ContactSection: FC<ContactSectionProps> = ({
   contactRef,
-}: ContactPageProps): ReactElement => {
+}: ContactSectionProps): ReactElement => {
   return (
     <div ref={contactRef} className="py-28">
       <h3 className="text-3xl font-semibold mb-14 -ml-0">{CONTACT_HEADER}</h3>
@@ -41,4 +41,4 @@ const ContactPage: FC<ContactPageProps> = ({
     </div>
   );
 };
-export default ContactPage;
+export default ContactSection;

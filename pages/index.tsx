@@ -9,15 +9,19 @@ import React, { ReactElement, FC, useEffect, useRef } from "react";
 import smoothscroll from "smoothscroll-polyfill";
 
 // Components
-import NavBar from "./components/Navbar";
-import EntryPage from "./components/EntryPage";
-import AboutPage from "./components/AboutPage";
-import SkillPage from "./components/SkillPage";
-import ExperiencePage from "./components/ExperiencePage";
-import ContactPage from "./components/ContactPage";
+import NavBar from "../src/components/Navbar";
+import EntrySection from "../src/components/sections/EntrySection";
+import AboutSection from "../src/components/sections/AboutSection";
+import SkillSection from "../src/components/sections/SkillSection";
+import ExperienceSection from "../src/components/sections/ExperienceSection";
+import ContactSection from "../src/components/sections/ContactSection";
 
 // Constants
-import { AUTHOR, META_TITLE, META_DESCRIPTION } from "../constants/general";
+import {
+  AUTHOR,
+  META_TITLE,
+  META_DESCRIPTION,
+} from "../src/utils/constants/general";
 
 const Home: FC = (): ReactElement => {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -115,11 +119,11 @@ const Home: FC = (): ReactElement => {
           experienceRef={experienceRef}
           contactRef={contactRef}
         />
-        <EntryPage />
-        <AboutPage aboutRef={aboutRef} />
-        <SkillPage skillRef={skillRef} />
-        <ExperiencePage experienceRef={experienceRef} />
-        <ContactPage contactRef={contactRef} />
+        <EntrySection />
+        <AboutSection aboutRef={aboutRef} />
+        <SkillSection skillRef={skillRef} />
+        <ExperienceSection experienceRef={experienceRef} />
+        <ContactSection contactRef={contactRef} />
         <footer className="text-center py-20">
           Copyright © 2021, All rights reserved.
         </footer>

@@ -8,7 +8,7 @@ import React, { ReactElement, FC, useState } from "react";
 import classNames from "classnames";
 
 // Hooks
-import { useMediaQuery } from "../../custom-hooks/useMediaQuery";
+import { useMediaQuery } from "../utils/hooks/useMediaQuery";
 
 // Constants
 import {
@@ -17,7 +17,7 @@ import {
   SKILLS_HEADER,
   EXPERIENCE_HEADER,
   CONTACT_HEADER_NAVBAR,
-} from "../../constants/general";
+} from "../utils/constants/general";
 
 // SVGs
 import Developer from "../../public/developer.svg";

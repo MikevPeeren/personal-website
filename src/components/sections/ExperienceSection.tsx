@@ -2,19 +2,19 @@
 import React, { ReactElement, FC } from "react";
 
 // Constants
-import { EXPERIENCE_HEADER } from "../../constants/general";
+import { EXPERIENCE_HEADER } from "../../utils/constants/general";
 
 import {
   JOB_ONE_TITLE,
   JOB_ONE_TEXT,
   JOB_TWO_TITLE,
   JOB_TWO_TEXT,
-} from "../../constants/experience";
+} from "../../utils/constants/experience";
 
 interface ExperienceProps {
   experienceRef: React.MutableRefObject<HTMLDivElement>;
 }
-const ExperiencePage: FC<ExperienceProps> = ({
+const ExperienceSection: FC<ExperienceProps> = ({
   experienceRef,
 }: ExperienceProps): ReactElement => {
   return (
@@ -37,4 +37,4 @@ const ExperiencePage: FC<ExperienceProps> = ({
   );
 };
 
-export default ExperiencePage;
+export default ExperienceSection;

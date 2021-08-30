@@ -16,25 +16,25 @@ import {
   TAILWIND,
   GIT,
   VERCEL,
-} from "../../constants/general";
+} from "../../utils/constants/general";
 
-import REACT_ICON from "../../public/icons/react.svg";
-import NEXTJS_ICON from "../../public/icons/nextdotjs.svg";
-import JAVASCRIPT_ICON from "../../public/icons/javascript.svg";
-import TYPESCRIPT_ICON from "../../public/icons/typescript.svg";
-import HTML5_ICON from "../../public/icons/html5.svg";
-import CSS3_ICON from "../../public/icons/css3.svg";
-import TAILWIND_ICON from "../../public/icons/tailwindcss.svg";
-import VERCEL_ICON from "../../public/icons/vercel.svg";
-import GIT_ICON from "../../public/icons/git.svg";
+import REACT_ICON from "../../../public/icons/react.svg";
+import NEXTJS_ICON from "../../../public/icons/nextdotjs.svg";
+import JAVASCRIPT_ICON from "../../../public/icons/javascript.svg";
+import TYPESCRIPT_ICON from "../../../public/icons/typescript.svg";
+import HTML5_ICON from "../../../public/icons/html5.svg";
+import CSS3_ICON from "../../../public/icons/css3.svg";
+import TAILWIND_ICON from "../../../public/icons/tailwindcss.svg";
+import VERCEL_ICON from "../../../public/icons/vercel.svg";
+import GIT_ICON from "../../../public/icons/git.svg";
 
-interface SkillPageProps {
+interface SkillSectionProps {
   skillRef: React.MutableRefObject<HTMLDivElement>;
 }
 
-const SkillPage: FC<SkillPageProps> = ({
+const SkillSection: FC<SkillSectionProps> = ({
   skillRef,
-}: SkillPageProps): ReactElement => {
+}: SkillSectionProps): ReactElement => {
   return (
     <div ref={skillRef} className="py-28">
       <h3 className="text-3xl font-semibold mb-14 -ml-0">{SKILLS_HEADER}</h3>
@@ -105,4 +105,4 @@ const SkillPage: FC<SkillPageProps> = ({
   );
 };
 
-export default SkillPage;
+export default SkillSection;

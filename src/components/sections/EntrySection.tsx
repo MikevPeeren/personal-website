@@ -5,15 +5,15 @@ import Image from "next/image";
 import React, { ReactElement, FC } from "react";
 
 // Components
-import SocialMedia from "./SocialMedia";
+import SocialMedia from "../SocialMedia";
 
 // Constants
-import { HEADER, SUBHEADER } from "../../constants/general";
+import { HEADER, SUBHEADER } from "../../utils/constants/general";
 
 // Images
-import MikevPeerenPic from "../../public/mikevpeeren.webp";
+import MikevPeerenPic from "../../../public/mikevpeeren.webp";
 
-const EntryPage: FC = (): ReactElement => {
+const EntrySection: FC = (): ReactElement => {
   return (
     <div className="mt-20">
       <div className="flex flex-col lg:flex-row">
@@ -28,7 +28,7 @@ const EntryPage: FC = (): ReactElement => {
           </div>
         </div>
         <div className="flex flex-row lg:justify-end order-2 w-full mt-8 lg:mt-0 lg:w-2/5 mb-8">
-          <div className="EntryPage__image lg:w-10/12 w-8/12 lg:mr-0 mx-auto md:-ml-0">
+          <div className="EntrySection__image lg:w-10/12 w-8/12 lg:mr-0 mx-auto md:-ml-0">
             <Image
               className="rounded-xl z-0"
               src={MikevPeerenPic}
@@ -44,4 +44,4 @@ const EntryPage: FC = (): ReactElement => {
   );
 };
 
-export default EntryPage;
+export default EntrySection;

@@ -5,7 +5,12 @@ import Image from "next/image";
 import React, { ReactElement, FC } from "react";
 
 // Constants
-import { ABOUT_HEADER, GITHUB, GITLAB, BLINK } from "../../constants/general";
+import {
+  ABOUT_HEADER,
+  GITHUB,
+  GITLAB,
+  BLINK,
+} from "../../utils/constants/general";
 import {
   CODING_AT_WORK_HEADER,
   CODING_AT_WORK_TEXT_PART_ONE,
@@ -18,24 +23,24 @@ import {
   BELLE_TEXT,
   HOBBIES_HEADER,
   HOBBIES_TEXT,
-} from "../../constants/about";
+} from "../../utils/constants/about";
 
 // Images
-import BelleSnow from "../../public/belle-snow.jpg";
+import BelleSnow from "../../../public/belle-snow.jpg";
 
 // SVG's
-import CodingAtWork from "../../public/coding-work.svg";
-import CodingAtHome from "../../public/coding-home.svg";
-import Dachshund from "../../public/dachshund.svg";
-import JoyStick from "../../public/joystick.svg";
+import CodingAtWork from "../../../public/coding-work.svg";
+import CodingAtHome from "../../../public/coding-home.svg";
+import Dachshund from "../../../public/dachshund.svg";
+import JoyStick from "../../../public/joystick.svg";
 
-interface AboutPageProps {
+interface AboutSectionProps {
   aboutRef: React.MutableRefObject<HTMLDivElement>;
 }
 
-const AboutPage: FC<AboutPageProps> = ({
+const AboutSection: FC<AboutSectionProps> = ({
   aboutRef,
-}: AboutPageProps): ReactElement => {
+}: AboutSectionProps): ReactElement => {
   return (
     <div ref={aboutRef} className="py-36 lg:pt-52">
       <h3 className="text-3xl font-semibold mb-14 -ml-0">{ABOUT_HEADER}</h3>
@@ -147,4 +152,4 @@ const AboutPage: FC<AboutPageProps> = ({
   );
 };
 
-export default AboutPage;
+export default AboutSection;
