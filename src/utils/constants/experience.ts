@@ -8,5 +8,5 @@ export const JOB_ONE_TEXT = `Duuk, an online platform developed and maintained b
             author various teaching methods.`;
 
 export const JOB_TWO_TITLE =
-  "Junior Software Developer - PIDZ (January 2019 - October 2019)";
+  "Junior Software Developer - PIDZ (September 2017 - October 2019)";
 export const JOB_TWO_TEXT = `PIDZ is a company that provides matching and planning software, specifically for the healthcare industry. Their system is written in PHP with the use of the Symfony Framework, which is where I did most of my development tasks in. The code was based in a Monolithic application, this Monolithic application was in the process of being transferred to a micro services architecture. Furthermore, I  was responsible for the mobile app and the API that communicated with it and thus the maintenance and improvements of both.`;
