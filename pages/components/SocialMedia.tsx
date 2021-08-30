@@ -1,13 +1,13 @@
 // React
-import React, { ReactElement, FC } from 'react';
+import React, { ReactElement, FC } from "react";
 
 // Next
-import Image from 'next/image';
+import Image from "next/image";
 
-import LINKEDIN_ICON from '../../public/icons/linkedin.svg';
-import GITLAB_ICON from '../../public/icons/gitlab.svg';
-import GITHUB_ICON from '../../public/icons/github.svg';
-import MEDIUM_ICON from '../../public/icons/medium.svg';
+import LINKEDIN_ICON from "../../public/icons/linkedin.svg";
+import GITLAB_ICON from "../../public/icons/gitlab.svg";
+import GITHUB_ICON from "../../public/icons/github.svg";
+import MEDIUM_ICON from "../../public/icons/medium.svg";
 
 const SocialMedia: FC = (): ReactElement => {
   return (
@@ -24,7 +24,12 @@ const SocialMedia: FC = (): ReactElement => {
       </div>
       <div className="cursor-pointer mr-4">
         <a href="https://www.linkedin.com/in/mikevpeeren/" title="linkedIn">
-          <Image src={LINKEDIN_ICON} alt="linkedin-logo" width={35} height={35} />
+          <Image
+            src={LINKEDIN_ICON}
+            alt="linkedin-logo"
+            width={35}
+            height={35}
+          />
         </a>
       </div>
       <div className="cursor-pointer mr-4">

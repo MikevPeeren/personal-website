@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettify": "prettier --write '{pages}/**/*.js' ",
+    "prettify": "prettier --write .",
     "pretty-quick": "pretty-quick --staged"
   },
   "dependencies": {

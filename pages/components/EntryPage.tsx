@@ -1,17 +1,17 @@
 // Next
-import Image from 'next/image';
+import Image from "next/image";
 
 // React
-import React, { ReactElement, FC } from 'react';
+import React, { ReactElement, FC } from "react";
 
 // Components
-import SocialMedia from './SocialMedia';
+import SocialMedia from "./SocialMedia";
 
 // Constants
-import { HEADER, SUBHEADER } from '../../constants/general';
+import { HEADER, SUBHEADER } from "../../constants/general";
 
 // Images
-import MikevPeerenPic from '../../public/mikevpeeren.webp';
+import MikevPeerenPic from "../../public/mikevpeeren.webp";
 
 const EntryPage: FC = (): ReactElement => {
   return (

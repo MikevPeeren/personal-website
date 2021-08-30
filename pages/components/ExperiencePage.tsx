@@ -1,18 +1,27 @@
 // React
-import React, { ReactElement, FC } from 'react';
+import React, { ReactElement, FC } from "react";
 
 // Constants
-import { EXPERIENCE_HEADER } from '../../constants/general';
+import { EXPERIENCE_HEADER } from "../../constants/general";
 
-import { JOB_ONE_TITLE, JOB_ONE_TEXT, JOB_TWO_TITLE, JOB_TWO_TEXT } from '../../constants/experience';
+import {
+  JOB_ONE_TITLE,
+  JOB_ONE_TEXT,
+  JOB_TWO_TITLE,
+  JOB_TWO_TEXT,
+} from "../../constants/experience";
 
 interface ExperienceProps {
   experienceRef: React.MutableRefObject<HTMLDivElement>;
 }
-const ExperiencePage: FC<ExperienceProps> = ({ experienceRef }: ExperienceProps): ReactElement => {
+const ExperiencePage: FC<ExperienceProps> = ({
+  experienceRef,
+}: ExperienceProps): ReactElement => {
   return (
     <div ref={experienceRef} className="py-28">
-      <h3 className="text-3xl font-semibold mb-14 -ml-0">{EXPERIENCE_HEADER}</h3>
+      <h3 className="text-3xl font-semibold mb-14 -ml-0">
+        {EXPERIENCE_HEADER}
+      </h3>
       <div className="md:flex md:flex-col">
         <div>
           <h4 className="font-medium text-xl">{JOB_ONE_TITLE}</h4>

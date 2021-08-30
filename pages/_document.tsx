@@ -1,8 +1,8 @@
 // React
-import React from 'react';
+import React from "react";
 
 // NextJS
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -14,7 +14,10 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_GA}`} />
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_GA}`}
+          />
           <script
             dangerouslySetInnerHTML={{
               __html: `

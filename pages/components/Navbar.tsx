@@ -1,14 +1,14 @@
 // Next
-import Image from 'next/image';
+import Image from "next/image";
 
 // React
-import React, { ReactElement, FC, useState } from 'react';
+import React, { ReactElement, FC, useState } from "react";
 
 // External
-import classNames from 'classnames';
+import classNames from "classnames";
 
 // Hooks
-import { useMediaQuery } from '../../custom-hooks/useMediaQuery';
+import { useMediaQuery } from "../../custom-hooks/useMediaQuery";
 
 // Constants
 import {
@@ -17,10 +17,10 @@ import {
   SKILLS_HEADER,
   EXPERIENCE_HEADER,
   CONTACT_HEADER_NAVBAR,
-} from '../../constants/general';
+} from "../../constants/general";
 
 // SVGs
-import Developer from '../../public/developer.svg';
+import Developer from "../../public/developer.svg";
 
 interface NavBarProps {
   executeScroll: (ref) => void;
@@ -42,7 +42,7 @@ const NavBar: FC<NavBarProps> = ({
   const [openMenu, setOpenMenu] = useState(false);
 
   // We need this in order to open the Menu on default on screens larger than LG
-  const isTailwindLG = useMediaQuery('(min-width: 1024px)');
+  const isTailwindLG = useMediaQuery("(min-width: 1024px)");
 
   /**
    * Set the state on the menu
@@ -53,22 +53,29 @@ const NavBar: FC<NavBarProps> = ({
 
   // Initializing menu
   const navBarClassNames = classNames({
-    'NavBar__menu items-center flex-grow lg:flex': true,
-    'lg:transition-none lg:translate-x-0 ease-in-out duration-1000 transform': true,
-    'translate-x-0': openMenu,
-    '-translate-x-full': !openMenu,
+    "NavBar__menu items-center flex-grow lg:flex": true,
+    "lg:transition-none lg:translate-x-0 ease-in-out duration-1000 transform":
+      true,
+    "translate-x-0": openMenu,
+    "-translate-x-full": !openMenu,
   });
 
   const navBarMenuItems = classNames({
     hidden: !openMenu && !isTailwindLG,
-    'NavBar__menu--content ml-auto flex flex-col lg:flex-row': true,
+    "NavBar__menu--content ml-auto flex flex-col lg:flex-row": true,
   });
 
   return (
     <nav className="NavBar sticky -top-px w-full items-center flex justify-between py-6 lg:justify-start lg:flex-row flex-wrap z-10">
       <a href="#" title="home">
         <div className="w-14">
-          <Image className="z-0" src={Developer} alt="developer-logo" width={50} height={50} />
+          <Image
+            className="z-0"
+            src={Developer}
+            alt="developer-logo"
+            width={50}
+            height={50}
+          />
         </div>
       </a>
       <button

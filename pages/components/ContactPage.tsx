@@ -1,17 +1,25 @@
 // React
-import React, { ReactElement, FC } from 'react';
+import React, { ReactElement, FC } from "react";
 
 // Constants
-import { CONTACT_HEADER, CONTACT_ME, MAIL_ME, EMAIL, FOLLOW_ME } from '../../constants/general';
+import {
+  CONTACT_HEADER,
+  CONTACT_ME,
+  MAIL_ME,
+  EMAIL,
+  FOLLOW_ME,
+} from "../../constants/general";
 
 // Components
-import SocialMedia from './SocialMedia';
+import SocialMedia from "./SocialMedia";
 
 interface ContactPageProps {
   contactRef: React.MutableRefObject<HTMLDivElement>;
 }
 
-const ContactPage: FC<ContactPageProps> = ({ contactRef }: ContactPageProps): ReactElement => {
+const ContactPage: FC<ContactPageProps> = ({
+  contactRef,
+}: ContactPageProps): ReactElement => {
   return (
     <div ref={contactRef} className="py-28">
       <h3 className="text-3xl font-semibold mb-14 -ml-0">{CONTACT_HEADER}</h3>
