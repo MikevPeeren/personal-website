@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
-    "@next/eslint-plugin-next": "^11.1.0",
+    "@next/eslint-plugin-next": "^11.1.2",
     "@types/node": "^15.14.0",
     "@types/react": "^17.0.19",
     "@types/smoothscroll-polyfill": "^0.3.1",
