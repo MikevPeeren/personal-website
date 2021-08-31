@@ -29,7 +29,7 @@ import VERCEL_ICON from "../../../public/icons/vercel.svg";
 import GIT_ICON from "../../../public/icons/git.svg";
 
 interface SkillSectionProps {
-  skillRef: React.MutableRefObject<HTMLDivElement>;
+  skillRef: React.RefObject<HTMLDivElement>;
 }
 
 const SkillSection: FC<SkillSectionProps> = ({

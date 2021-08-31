@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 // React
-import React, { ReactElement, FC, useEffect, useRef } from "react";
+import React, { ReactElement, FC, useEffect, useRef, RefObject } from "react";
 
 // External
 import smoothscroll from "smoothscroll-polyfill";
@@ -39,8 +39,9 @@ const Home: FC = (): ReactElement => {
     smoothscroll.polyfill();
   }, []);
 
-  const executeScroll = (ref) => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
+  const executeScroll = (ref: RefObject<HTMLDivElement>) => {
+    if (ref?.current?.scrollIntoView)
+      ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (

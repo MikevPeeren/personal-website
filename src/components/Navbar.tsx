@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 // React
-import React, { ReactElement, FC, useState } from "react";
+import React, { ReactElement, FC, useState, RefObject } from "react";
 
 // External
 import classNames from "classnames";
@@ -23,12 +23,12 @@ import {
 import Developer from "../../public/developer.svg";
 
 interface NavBarProps {
-  executeScroll: (ref) => void;
-  homeRef: React.MutableRefObject<HTMLDivElement>;
-  aboutRef: React.MutableRefObject<HTMLDivElement>;
-  skillRef: React.MutableRefObject<HTMLDivElement>;
-  experienceRef: React.MutableRefObject<HTMLDivElement>;
-  contactRef: React.MutableRefObject<HTMLDivElement>;
+  executeScroll: (ref: RefObject<HTMLDivElement>) => void;
+  homeRef: React.RefObject<HTMLDivElement>;
+  aboutRef: React.RefObject<HTMLDivElement>;
+  skillRef: React.RefObject<HTMLDivElement>;
+  experienceRef: React.RefObject<HTMLDivElement>;
+  contactRef: React.RefObject<HTMLDivElement>;
 }
 
 const NavBar: FC<NavBarProps> = ({

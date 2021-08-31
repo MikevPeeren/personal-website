@@ -12,7 +12,7 @@ import {
 } from "../../utils/constants/experience";
 
 interface ExperienceProps {
-  experienceRef: React.MutableRefObject<HTMLDivElement>;
+  experienceRef: React.RefObject<HTMLDivElement>;
 }
 const ExperienceSection: FC<ExperienceProps> = ({
   experienceRef,

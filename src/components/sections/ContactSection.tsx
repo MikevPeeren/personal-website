@@ -14,7 +14,7 @@ import {
 import SocialMedia from "../SocialMedia";
 
 interface ContactSectionProps {
-  contactRef: React.MutableRefObject<HTMLDivElement>;
+  contactRef: React.RefObject<HTMLDivElement>;
 }
 
 const ContactSection: FC<ContactSectionProps> = ({

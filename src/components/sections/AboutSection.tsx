@@ -35,7 +35,7 @@ import Dachshund from "../../../public/dachshund.svg";
 import JoyStick from "../../../public/joystick.svg";
 
 interface AboutSectionProps {
-  aboutRef: React.MutableRefObject<HTMLDivElement>;
+  aboutRef: React.RefObject<HTMLDivElement>;
 }
 
 const AboutSection: FC<AboutSectionProps> = ({
