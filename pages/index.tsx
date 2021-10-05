@@ -106,7 +106,7 @@ const Home: FC = (): ReactElement => {
         <meta
           name="image"
           property="og:image"
-          content="https://www.mikevpeeren.nl/mikevpeeren.jpg"
+          content="https://www.mikevpeeren.nl/me.jpg"
         />
         <meta httpEquiv="content-language" content="en" />
       </Head>
