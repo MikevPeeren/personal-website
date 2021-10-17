@@ -9,10 +9,7 @@ import "../styles/global.scss";
 import "../styles/tailwind.scss";
 
 // Constants
-import {
-  META_TITLE,
-  META_TITLE_ALTERNATIVE,
-} from "../src/utils/constants/general";
+import { META_TITLE, META_TITLE_ALTERNATIVE } from "../utils/constants/general";
 
 const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
   useEffect(() => {

@@ -11,7 +11,7 @@ import SocialMedia from "../SocialMedia";
 import { HEADER, SUBHEADER } from "../../utils/constants/general";
 
 // Images
-import MikevPeerenPic from "../../../public/mikevpeeren.webp";
+import MikevPeerenPic from "../../public/mikevpeeren.webp";
 
 const EntrySection: FC = (): ReactElement => {
   return (

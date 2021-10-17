@@ -4,10 +4,10 @@ import React, { ReactElement, FC } from "react";
 // Next
 import Image from "next/image";
 
-import LINKEDIN_ICON from "../../public/icons/linkedin.svg";
-import GITLAB_ICON from "../../public/icons/gitlab.svg";
-import GITHUB_ICON from "../../public/icons/github.svg";
-import MEDIUM_ICON from "../../public/icons/medium.svg";
+import LINKEDIN_ICON from "../public/icons/linkedin.svg";
+import GITLAB_ICON from "../public/icons/gitlab.svg";
+import GITHUB_ICON from "../public/icons/github.svg";
+import MEDIUM_ICON from "../public/icons/medium.svg";
 
 const SocialMedia: FC = (): ReactElement => {
   return (

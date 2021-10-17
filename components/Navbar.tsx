@@ -20,7 +20,7 @@ import {
 } from "../utils/constants/general";
 
 // SVGs
-import Developer from "../../public/developer.svg";
+import Developer from "../public/developer.svg";
 
 interface NavBarProps {
   executeScroll: (ref: RefObject<HTMLDivElement>) => void;

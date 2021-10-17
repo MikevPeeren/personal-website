@@ -9,19 +9,19 @@ import React, { ReactElement, FC, useEffect, useRef, RefObject } from "react";
 import smoothscroll from "smoothscroll-polyfill";
 
 // Components
-import NavBar from "../src/components/Navbar";
-import EntrySection from "../src/components/sections/EntrySection";
-import AboutSection from "../src/components/sections/AboutSection";
-import SkillSection from "../src/components/sections/SkillSection";
-import ExperienceSection from "../src/components/sections/ExperienceSection";
-import ContactSection from "../src/components/sections/ContactSection";
+import NavBar from "../components/Navbar";
+import EntrySection from "../components/sections/EntrySection";
+import AboutSection from "../components/sections/AboutSection";
+import SkillSection from "../components/sections/SkillSection";
+import ExperienceSection from "../components/sections/ExperienceSection";
+import ContactSection from "../components/sections/ContactSection";
 
 // Constants
 import {
   AUTHOR,
   META_TITLE,
   META_DESCRIPTION,
-} from "../src/utils/constants/general";
+} from "../utils/constants/general";
 
 const Home: FC = (): ReactElement => {
   const homeRef = useRef<HTMLDivElement>(null);

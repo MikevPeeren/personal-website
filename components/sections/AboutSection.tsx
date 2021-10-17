@@ -26,13 +26,13 @@ import {
 } from "../../utils/constants/about";
 
 // Images
-import BelleSnow from "../../../public/belle-snow.jpg";
+import BelleSnow from "../../public/belle-snow.jpg";
 
 // SVG's
-import CodingAtWork from "../../../public/coding-work.svg";
-import CodingAtHome from "../../../public/coding-home.svg";
-import Dachshund from "../../../public/dachshund.svg";
-import JoyStick from "../../../public/joystick.svg";
+import CodingAtWork from "../../public/coding-work.svg";
+import CodingAtHome from "../../public/coding-home.svg";
+import Dachshund from "../../public/dachshund.svg";
+import JoyStick from "../../public/joystick.svg";
 
 interface AboutSectionProps {
   aboutRef: React.RefObject<HTMLDivElement>;
