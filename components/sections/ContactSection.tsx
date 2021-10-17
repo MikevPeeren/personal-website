@@ -27,7 +27,10 @@ const ContactSection: FC<ContactSectionProps> = ({
       <div className="md:flex md:flex-row md:justify-between md:w-2/5 mt-10">
         <div className="md:flex md:flex-col">
           <p className="text-lg opacity-80 mb-2">{MAIL_ME}</p>
-          <a href="mailto:mikevpeeren@hotmail.com?SUBJECT=👋&BODY=Hello Mike,%0D%0AHallo Mike,%0D%0A %0D%0A I am contacting you through mikevpeeren.nl%0D%0AIk neem contact met je op via mikevpeeren.nl%0D%0A">
+          <a
+            className="underline"
+            href="mailto:mikevpeeren@hotmail.com?SUBJECT=👋&BODY=Hello Mike,%0D%0AHallo Mike,%0D%0A %0D%0A I am contacting you through mikevpeeren.nl%0D%0AIk neem contact met je op via mikevpeeren.nl%0D%0A"
+          >
             <h5>{EMAIL}</h5>
           </a>
         </div>
