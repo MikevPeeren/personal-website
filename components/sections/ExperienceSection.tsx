@@ -9,6 +9,8 @@ import {
   JOB_ONE_TEXT,
   JOB_TWO_TITLE,
   JOB_TWO_TEXT,
+  JOB_THREE_TITLE,
+  JOB_THREE_TEXT,
 } from "../../utils/constants/experience";
 
 interface ExperienceProps {
@@ -31,6 +33,11 @@ const ExperienceSection: FC<ExperienceProps> = ({
         <div>
           <h4 className="font-medium text-xl">{JOB_TWO_TITLE}</h4>
           <p className="mb-6 h-1/2 pt-5">{JOB_TWO_TEXT}</p>
+        </div>
+        <hr className="my-8" />
+        <div>
+          <h4 className="font-medium text-xl">{JOB_THREE_TITLE}</h4>
+          <p className="mb-6 h-1/2 pt-5">{JOB_THREE_TEXT}</p>
         </div>
       </div>
     </div>

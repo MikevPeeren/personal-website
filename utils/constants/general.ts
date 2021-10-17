@@ -18,7 +18,7 @@ export const CONTACT_HEADER = "Just say Hi. 👋";
 export const GITHUB = "Github";
 export const GITLAB = "GitLab";
 
-export const BLINK = "Blink";
+export const YOUNGONES = "YoungOnes";
 
 export const REACT = "React.js";
 export const NEXTJS = "Next.js";

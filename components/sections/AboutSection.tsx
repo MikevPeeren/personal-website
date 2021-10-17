@@ -9,7 +9,7 @@ import {
   ABOUT_HEADER,
   GITHUB,
   GITLAB,
-  BLINK,
+  YOUNGONES,
 } from "../../utils/constants/general";
 import {
   CODING_AT_WORK_HEADER,
@@ -62,8 +62,8 @@ const AboutSection: FC<AboutSectionProps> = ({
             <div className="w-10/12 md:w-full text-sm md:text-base mb-10 pt-5">
               <p className="mb-6 tracking-widest h-1/2">
                 {CODING_AT_WORK_TEXT_PART_ONE}
-                <a href="https://blink.nl" className="text-blue-600">
-                  {BLINK}
+                <a href="https://youngones.com" className="text-blue-600">
+                  {YOUNGONES}
                 </a>
                 {CODING_AT_WORK_TEXT_PART_TWO}
               </p>
