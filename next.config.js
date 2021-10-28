@@ -7,5 +7,6 @@ module.exports = {
   },
   images: {
     domains: ["www.mikevpeeren.nl"],
+    formats: ["image/avif", "image/webp"],
   },
 };
