@@ -10,6 +10,10 @@ import Document, {
   DocumentContext,
 } from "next/document";
 
+import { GA_ANALYTICS_MEASUREMENT_ID } from "../utils/analytics/gtag";
+
+const isProd = process.env.NEXT_PUBLIC_VERCEL_ENV === "production";
+
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -20,21 +24,28 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_GA}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', '${process.env.REACT_GA}');
+          {/* enable analytics script only for production */}
+          {isProd && (
+            <>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_ANALYTICS_MEASUREMENT_ID}`}
+              />
+              <script
+                // eslint-disable-next-line react/no-danger
+                dangerouslySetInnerHTML={{
+                  __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ANALYTICS_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+            });
           `,
-            }}
-          />
+                }}
+              />
+            </>
+          )}
         </Head>
         <body>
           <Main />
