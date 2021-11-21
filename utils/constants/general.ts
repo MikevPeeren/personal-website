@@ -1,7 +1,7 @@
 export const META_TITLE = "Mike van Peeren - Frontend Developer, Tilburg";
 export const META_TITLE_ALTERNATIVE = `Hey, let's connect!`;
 export const META_DESCRIPTION =
-  "Mike van Peeren Frontend Developer, JavaScript, TypeScript, React, React.js, Next.js, HTML, HTML5, CSS, CSS3, TailwindCSS, Git";
+  "Mike van Peeren Frontend Developer, JavaScript, TypeScript, React, Next.js, HTML5, CSS3, TailwindCSS, Git";
 export const AUTHOR = "Mike van Peeren";
 export const HEADER = "Mike van Peeren - Frontend Developer";
 
@@ -26,7 +26,7 @@ export const JAVASCRIPT = "JavaScript";
 export const TYPESCRIPT = "TypeScript";
 export const HTML5 = "HTML 5";
 export const CSS3 = "CSS 3";
-export const TAILWIND = "Tailwind CSS";
+export const TAILWIND = "TailwindCSS";
 export const GIT = "Git";
 export const VERCEL = "Vercel";
 
