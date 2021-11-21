@@ -72,7 +72,7 @@ const NavBar: FC<NavBarProps> = ({
           <Image
             className="z-0"
             src={Developer}
-            alt="developer-logo"
+            alt=""
             width={50}
             height={50}
           />

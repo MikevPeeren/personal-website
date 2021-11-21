@@ -40,29 +40,19 @@ const SkillSection: FC<SkillSectionProps> = ({
       <h3 className="text-3xl font-semibold mb-14 -ml-0">{SKILLS_HEADER}</h3>
       <div className="md:flex md:flex-row">
         <div className="flex flex-row align-middle mb-4 md:mr-24">
-          <Image src={REACT_ICON} alt="react-logo" width={50} height={50} />
+          <Image src={REACT_ICON} alt="" width={50} height={50} />
           <p className="ml-6 my-auto text-lg">{REACT}</p>
         </div>
         <div className="flex flex-row align-middle mb-4 md:mr-24">
-          <Image src={NEXTJS_ICON} alt="nextjs-logo" width={50} height={50} />
+          <Image src={NEXTJS_ICON} alt="" width={50} height={50} />
           <p className="ml-6 my-auto text-lg">{NEXTJS}</p>
         </div>
         <div className="flex flex-row align-middle mb-4 md:mr-24">
-          <Image
-            src={JAVASCRIPT_ICON}
-            alt="javascript-logo"
-            width={50}
-            height={50}
-          />
+          <Image src={JAVASCRIPT_ICON} alt="" width={50} height={50} />
           <p className="ml-6 my-auto text-lg">{JAVASCRIPT}</p>
         </div>
         <div className="flex flex-row align-middle mb-4 md:mr-24">
-          <Image
-            src={TYPESCRIPT_ICON}
-            alt="typescript-logo"
-            width={50}
-            height={50}
-          />
+          <Image src={TYPESCRIPT_ICON} alt="" width={50} height={50} />
           <p className="ml-6 my-auto text-lg">{TYPESCRIPT}</p>
         </div>
       </div>
@@ -70,20 +60,15 @@ const SkillSection: FC<SkillSectionProps> = ({
       <div className="md:flex md:flex-row">
         <div className="md:flex md:flex-row md:my-10">
           <div className="flex flex-row align-middle mb-4 md:mr-24">
-            <Image src={HTML5_ICON} alt="html5-logo" width={50} height={50} />
+            <Image src={HTML5_ICON} alt="" width={50} height={50} />
             <p className="ml-6 my-auto text-lg">{HTML5}</p>
           </div>
           <div className="flex flex-row align-middle mb-4 md:mr-24">
-            <Image src={CSS3_ICON} alt="css3-logo" width={50} height={50} />
+            <Image src={CSS3_ICON} alt="" width={50} height={50} />
             <p className="ml-6 my-auto text-lg">{CSS3}</p>
           </div>
           <div className="flex flex-row align-middle mb-4 md:mr-24">
-            <Image
-              src={TAILWIND_ICON}
-              alt="tailwind-logo"
-              width={50}
-              height={50}
-            />
+            <Image src={TAILWIND_ICON} alt="" width={50} height={50} />
             <p className="ml-6 my-auto text-lg">{TAILWIND}</p>
           </div>
         </div>
@@ -92,11 +77,11 @@ const SkillSection: FC<SkillSectionProps> = ({
       <div className="md:flex md:flex-row">
         <div className="md:flex md:flex-row md:my-10">
           <div className="flex flex-row align-middle mb-4 md:mr-24">
-            <Image src={GIT_ICON} alt="git-logo" width={50} height={50} />
+            <Image src={GIT_ICON} alt="" width={50} height={50} />
             <p className="ml-6 mr-10 my-auto text-lg">{GIT}</p>
           </div>
           <div className="flex flex-row align-middle mb-4 md:mr-24">
-            <Image src={VERCEL_ICON} alt="vercel-logo" width={50} height={50} />
+            <Image src={VERCEL_ICON} alt="" width={50} height={50} />
             <p className="ml-6 my-auto text-lg">{VERCEL}</p>
           </div>
         </div>

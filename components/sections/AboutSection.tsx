@@ -51,7 +51,7 @@ const AboutSection: FC<AboutSectionProps> = ({
               <Image
                 className="z-0"
                 src={CodingAtWork}
-                alt="coding-at-work-logo"
+                alt=""
                 width={50}
                 height={50}
               />
@@ -74,7 +74,7 @@ const AboutSection: FC<AboutSectionProps> = ({
               <Image
                 className="z-0"
                 src={CodingAtHome}
-                alt="coding-at-home-logo"
+                alt=""
                 width={50}
                 height={50}
               />
@@ -109,7 +109,7 @@ const AboutSection: FC<AboutSectionProps> = ({
               <Image
                 className="z-0"
                 src={Dachshund}
-                alt="dachshund-logo"
+                alt=""
                 width={50}
                 height={50}
               />
@@ -120,7 +120,7 @@ const AboutSection: FC<AboutSectionProps> = ({
                 <Image
                   className="rounded-xl z-0"
                   src={BelleSnow}
-                  alt="dog-in-snow"
+                  alt=""
                   width={300}
                   height={400}
                   placeholder="blur"
@@ -134,7 +134,7 @@ const AboutSection: FC<AboutSectionProps> = ({
               <Image
                 className="z-0"
                 src={JoyStick}
-                alt="gaming-logo"
+                alt=""
                 width={50}
                 height={50}
               />

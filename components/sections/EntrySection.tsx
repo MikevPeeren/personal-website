@@ -32,7 +32,7 @@ const EntrySection: FC = (): ReactElement => {
             <Image
               className="rounded-xl z-0"
               src={MikevPeerenPic}
-              alt="personal-photo"
+              alt="Personal picture of Mike van Peeren"
               width={400}
               height={400}
               placeholder="blur"
