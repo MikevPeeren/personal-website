@@ -91,8 +91,6 @@ class MyDocument extends Document {
           />
 
           <meta name="author" content={AUTHOR} />
-          <meta name="title" content={META_TITLE} />
-          <meta name="description" content={META_DESCRIPTION} />
           <meta name="theme-color" content="#ffffff" />
 
           <meta name="msapplication-TileColor" content="#da532c" />
