@@ -19,7 +19,7 @@ import {
   META_DESCRIPTION,
 } from "../utils/constants/general";
 
-const isProd = process.env.NEXT_PUBLIC_VERCEL_ENV === "production";
+const isProd = process.env.NODE_ENV === "production";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -42,18 +42,17 @@ class MyDocument extends Document {
                 // eslint-disable-next-line react/no-danger
                 dangerouslySetInnerHTML={{
                   __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_ANALYTICS_MEASUREMENT_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${GA_ANALYTICS_MEASUREMENT_ID}', {
+                      page_path: window.location.pathname,
+                    });
+                  `,
                 }}
               />
             </>
           )}
-
           <link rel="icon" href="meta/favicon.ico" />
           <link
             rel="apple-touch-icon"
