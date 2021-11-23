@@ -15,10 +15,10 @@ import * as gtag from "../utils/analytics/gtag";
 // Constants
 import { META_TITLE, META_TITLE_ALTERNATIVE } from "../utils/constants/general";
 
-const isProd = process.env.NEXT_PUBLIC_VERCEL_ENV === "production";
-
 const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
   const router = useRouter();
+
+  const isProd = process.env.NEXT_PUBLIC_VERCEL_ENV === "production";
 
   useEffect(() => {
     const handleRouteChange = (url: URL) => {
@@ -29,7 +29,7 @@ const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, [router.events]);
+  }, [isProd, router.events]);
 
   useEffect(() => {
     document.addEventListener("visibilitychange", () => {
