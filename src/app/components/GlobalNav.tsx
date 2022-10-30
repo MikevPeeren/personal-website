@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-import Developer from "public/developer.png";
+import Developer from "/public/developer.png";
 
 const GlobalNav = () => {
   return (
-    <nav className="NavBar sticky -top-px w-full items-center flex justify-between py-10 lg:justify-start lg:flex-row flex-wrap z-10">
+    <nav className="NavBar sticky -top-px z-10 flex w-full flex-wrap items-center justify-between py-10 lg:flex-row lg:justify-start">
       <a href="#" title="home">
         <div className="flex items-center">
           <Image
@@ -14,7 +14,7 @@ const GlobalNav = () => {
             width={50}
             height={50}
           />
-          <span className="ml-2 bg-clip-text text-transparent bg-gradient-to-tr text-primary font-extrabold">
+          <span className="text-primary ml-2 bg-gradient-to-tr bg-clip-text font-extrabold text-transparent">
             Mike&apos;s Blog
           </span>
         </div>

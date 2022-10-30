@@ -1,23 +1,23 @@
 import Image from "next/image";
 
-import ME from "/public/avataaars.png";
+import Projects from "@/components/Projects";
+import SocialMedia from "@/components/SocialMediaRow";
 
-import Projects from "./components/Projects";
-import SocialMedia from "./components/SocialMediaRow";
+import ME from "/public/avataaars.png";
 
 const Home = () => {
   return (
     <div className="flex flex-col gap-10 md:gap-20">
-      <div className="flex flex-col md:flex-row items-center md:items-end md:justify-between md:gap-x-24">
+      <div className="flex flex-col items-center md:flex-row md:items-end md:justify-between md:gap-x-24">
         <div className="text-white">
           <h1 className="text-3xl font-extrabold tracking-wider">
             Hi there, I&apos;m{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-br from-red-500 to-violet-500">
+            <span className="bg-gradient-to-br from-red-500 to-violet-500 bg-clip-text text-transparent">
               Mike van Peeren
             </span>
           </h1>
 
-          <p className="mt-6 text-xl leading-9 py-4">
+          <p className="mt-6 py-4 text-xl leading-9">
             I love creating applications that have a social impact on the world.
             This provides a sense of meaningfulness for me in my work and pushes
             me to deliver results as close to perfection as possible. My drive
@@ -28,7 +28,7 @@ const Home = () => {
 
           <SocialMedia />
         </div>
-        <div className="shrink-0 mt-10 md:mt-0">
+        <div className="mt-10 shrink-0 md:mt-0">
           <Image
             className="z-0 rounded-md"
             priority

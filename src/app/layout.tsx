@@ -1,13 +1,14 @@
+import React from "react";
+
 import { Inter } from "@next/font/google";
 
+import { AnalyticsWrapper } from "@/components/Analytics";
+import GlobalNav from "@/components/GlobalNav";
 import {
   AUTHOR,
   META_DESCRIPTION,
   META_TITLE,
 } from "@/utils/constants/general";
-
-import { AnalyticsWrapper } from "./components/Analytics";
-import GlobalNav from "./components/GlobalNav";
 
 import "@/styles/global.scss";
 
