@@ -3,8 +3,9 @@ import Link from "next/link";
 
 import GITHUB_ICON from "public/icons/github.png";
 import GITLAB_ICON from "public/icons/gitlab.png";
-import LINKEDIN_ICON from "public/icons/linkedin.png";
 import MEDIUM_ICON from "public/icons/medium.png";
+
+import LINKEDIN_ICON from "/icons/linkedin.png";
 
 const SocialMedia = () => {
   const socialMediaContent = [
