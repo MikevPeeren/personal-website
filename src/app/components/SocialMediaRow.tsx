@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import GITHUB_ICON from "public/icons/github.png";
-import GITLAB_ICON from "public/icons/gitlab.png";
-import MEDIUM_ICON from "public/icons/medium.png";
-
-import LINKEDIN_ICON from "/icons/linkedin.png";
+import GITHUB_ICON from "/public/icons/github.png";
+import GITLAB_ICON from "/public/icons/gitlab.png";
+import LINKEDIN_ICON from "/public/icons/linkedIn.png";
+import MEDIUM_ICON from "/public/icons/medium.png";
 
 const SocialMedia = () => {
   const socialMediaContent = [
