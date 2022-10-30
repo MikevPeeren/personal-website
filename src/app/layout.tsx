@@ -80,6 +80,13 @@ export default function RootLayout({
             <GlobalNav />
           </div>
           <div>{children}</div>
+
+          <footer className="flex flex-col justify-between pt-20 text-center">
+            <hr></hr>
+            <span className="font-base pt-4 text-xs tracking-widest text-white">
+              Copyright © 2022, All rights reserved.
+            </span>
+          </footer>
         </div>
         <AnalyticsWrapper />
       </body>
