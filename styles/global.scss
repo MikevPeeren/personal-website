@@ -1,35 +1,7 @@
-* {
-  -webkit-tap-highlight-color: transparent;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  background-color: #f8f8f8;
-  font-family: "Rubik", sans-serif !important;
-  color: #212121;
-  margin: auto !important;
-  @apply max-w-screen-xl;
-  @apply px-8;
-  @apply py-0;
-}
-
-.NavBar {
-  background-color: #f8f8f8;
-
-  &__menu {
-    flex-basis: 100%;
-  }
-}
-
-.EntryPage {
-  &__image {
-    height: 95%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .NavBar {
-    &__menu {
-      flex-basis: 0%;
-    }
-  }
+  @apply bg-slate-900;
 }
