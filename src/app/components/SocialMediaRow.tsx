@@ -31,12 +31,12 @@ const SocialMedia = () => {
   ];
 
   return (
-    <div className="flex flex-row gap-4 items-end">
+    <div className="flex flex-row items-end gap-4">
       {socialMediaContent.map((socialMedia, index) => {
         return (
           <div
             key={index}
-            className="cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+            className="cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
           >
             <Link href={socialMedia.url}>
               <Image
