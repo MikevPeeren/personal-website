@@ -17,32 +17,32 @@ const Projects = async () => {
       color: "bg-blue-600",
     },
     {
-      title: "SASS",
+      title: "Sass",
       color: "bg-red-800",
     },
     {
-      title: "VERCEL",
+      title: "Vercel",
       color: "bg-green-800",
     },
   ];
 
   return (
     <div>
-      <h2 className="text-3xl text-white font-extrabold tracking-wider">
+      <h2 className="text-3xl font-extrabold tracking-wider text-white">
         Recent{" "}
-        <span className="bg-clip-text text-transparent bg-gradient-to-br from-red-500 to-violet-500">
+        <span className="bg-gradient-to-br from-red-500 to-violet-500 bg-clip-text text-transparent">
           Projects
         </span>
       </h2>
-      <div className="rounded-xl bg-slate-800 p-10 mt-4 shadow-md">
-        <div className="flex flex-col md:flex-row items-center gap-4">
-          <div className="flex flex-col md:flex-row gap-4 items-center">
+      <div className="mt-4 rounded-xl bg-slate-800 p-10 shadow-md">
+        <div className="flex flex-col items-center gap-4 md:flex-row">
+          <div className="flex flex-col items-center gap-4 md:flex-row">
             <a
               target="_blank"
               href={
                 "https://github.com/MikevPeeren/next-typescript-tailwindcss-sass-starter"
               }
-              className="cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+              className="cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
               rel="noreferrer"
             >
               <Image
@@ -56,15 +56,15 @@ const Projects = async () => {
               href={
                 "https://github.com/MikevPeeren/next-typescript-tailwindcss-sass-starter"
               }
-              className="cursor-pointer transition ease-in-out delay-150 from-white to-white bg-clip-text text-transparent bg-gradient-to-br hover:from-red-500 hover:to-violet-500"
+              className="cursor-pointer bg-gradient-to-br from-white to-white bg-clip-text text-transparent transition delay-150 ease-in-out hover:from-red-500 hover:to-violet-500"
               rel="noreferrer"
             >
-              <h3 className="capitalize text-2xl font-extrabold tracking-wider">
+              <h3 className="text-2xl font-extrabold capitalize tracking-wider">
                 next typeScript tailwindCSS sass starter
               </h3>
             </a>
           </div>
-          <div className="flex flex-row gap-1 items-center text-white font-extrabold tracking-wider flex-wrap">
+          <div className="flex flex-row flex-wrap items-center gap-1 gap-y-2 font-extrabold tracking-wider text-white">
             {badges.map((badge, index: number) => {
               return (
                 <div
@@ -77,7 +77,7 @@ const Projects = async () => {
             })}
           </div>
         </div>
-        <p className="text-gray-300 mt-4 font-bold text-lg">
+        <p className="mt-4 text-lg font-bold text-gray-300">
           Use TypeScript, TailwindCSS & Sass to quick start your new Next.js
           app!!
         </p>

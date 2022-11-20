@@ -3,7 +3,7 @@ import Image from "next/image";
 import Projects from "@/components/Projects";
 import SocialMedia from "@/components/SocialMediaRow";
 
-import ME from "/public/avataaars.png";
+import ME from "/public/me.png";
 
 const Home = () => {
   return (
@@ -30,7 +30,7 @@ const Home = () => {
         </div>
         <div className="mt-10 shrink-0 md:mt-0">
           <Image
-            className="z-0 rounded-md"
+            className="z-0 h-auto w-auto rounded-md"
             priority
             src={ME}
             alt="Personal picture of Mike van Peeren"

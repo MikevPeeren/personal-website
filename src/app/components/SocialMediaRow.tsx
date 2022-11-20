@@ -40,10 +40,11 @@ const SocialMedia = () => {
           >
             <Link href={socialMedia.url}>
               <Image
+                className="h-auto w-auto"
                 src={socialMedia.image}
                 alt={socialMedia.alt}
-                width={35}
-                height={35}
+                width={25}
+                height={25}
               />
             </Link>
           </div>
