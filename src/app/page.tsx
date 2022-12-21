@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import Projects from "@/components/Projects";
 import SocialMedia from "@/components/SocialMediaRow";
+import { getSortedPostsData } from "@/utils/blog/posts";
 
 import ME from "/public/me.png";
 
@@ -12,7 +13,7 @@ const Home = () => {
         <div className="text-white">
           <h1 className="text-3xl font-extrabold tracking-wider">
             Hi there, I&apos;m{" "}
-            <span className="bg-gradient-to-br from-red-500 to-violet-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#007CF0] to-[#00DFD8] bg-clip-text font-extrabold text-transparent">
               Mike van Peeren
             </span>
           </h1>

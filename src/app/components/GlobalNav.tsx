@@ -4,7 +4,7 @@ import Developer from "/public/developer.png";
 
 const GlobalNav = () => {
   return (
-    <nav className="NavBar sticky -top-px z-10 flex w-full flex-wrap items-center justify-between py-10 lg:flex-row lg:justify-start">
+    <nav className="NavBar sticky -top-px z-10 flex w-full flex-wrap items-center justify-between pb-10 lg:flex-row lg:justify-start">
       <a href="#" title="home">
         <div className="flex items-center">
           <Image
