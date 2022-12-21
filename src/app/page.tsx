@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import Projects from "@/components/Projects";
 import SocialMedia from "@/components/SocialMediaRow";
-import { getSortedPostsData } from "@/utils/blog/posts";
 
+// import { getSortedPostsData } from "@/utils/blog/posts";
 import ME from "/public/me.png";
 
 const Home = () => {
