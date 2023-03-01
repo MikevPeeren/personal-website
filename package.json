@@ -22,7 +22,7 @@
     "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^13.0.0",
+    "@next/eslint-plugin-next": "^13.2.3",
     "@types/node": "^18.11.7",
     "@types/react": "^18.0.24",
     "@types/smoothscroll-polyfill": "^0.3.1",
