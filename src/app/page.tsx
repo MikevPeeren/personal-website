@@ -39,7 +39,6 @@ const Home = async () => {
             priority
             src={ME}
             alt="Personal picture of Mike van Peeren"
-            priority
           />
         </div>
       </div>
