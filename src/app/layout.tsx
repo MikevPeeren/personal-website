@@ -24,7 +24,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <head>
-        <title>Mike van Peeren</title>
         <link rel="icon" href="meta/favicon.ico" />
         <link
           rel="apple-touch-icon"
