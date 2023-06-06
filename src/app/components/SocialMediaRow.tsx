@@ -9,6 +9,11 @@ import MEDIUM_ICON from "/public/icons/medium.png";
 const SocialMedia = () => {
   const socialMediaContent = [
     {
+      image: LINKEDIN_ICON,
+      alt: "Redirection to LinkedIn",
+      url: "https://www.linkedin.com/in/mikevpeeren/",
+    },
+    {
       image: GITLAB_ICON,
       alt: "Redirection to GitLab",
       url: "https://gitlab.com/MikevPeeren/",
@@ -18,11 +23,7 @@ const SocialMedia = () => {
       alt: "Redirection to GitHub",
       url: "https://github.com/MikevPeeren/",
     },
-    {
-      image: LINKEDIN_ICON,
-      alt: "Redirection to LinkedIn",
-      url: "https://www.linkedin.com/in/mikevpeeren/",
-    },
+
     {
       image: MEDIUM_ICON,
       alt: "Redirection to Medium",
@@ -40,11 +41,10 @@ const SocialMedia = () => {
           >
             <Link href={socialMedia.url}>
               <Image
-                className="h-auto w-auto"
                 src={socialMedia.image}
                 alt={socialMedia.alt}
-                width={25}
-                height={25}
+                width={17}
+                height={17}
               />
             </Link>
           </div>

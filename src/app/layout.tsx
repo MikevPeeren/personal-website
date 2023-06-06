@@ -1,6 +1,5 @@
 import React from "react";
-
-import { Inter } from "@next/font/google";
+import { Inter } from "next/font/google";
 
 import { AnalyticsWrapper } from "@/components/Analytics";
 import GlobalNav from "@/components/GlobalNav";
@@ -10,10 +9,12 @@ import {
   META_TITLE,
 } from "@/utils/constants/general";
 
+import SocialMedia from "./components/SocialMediaRow";
+
 import "@/styles/global.scss";
 
 // If loading a variable font, you don't need to specify the font weight
-const inter = Inter();
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -74,20 +75,23 @@ export default function RootLayout({
         />
         <meta httpEquiv="content-language" content="en" />
       </head>
-      <body>
-        <div className="mx-auto max-w-screen-lg px-6 py-12">
-          <div className="col-start-2">
-            <GlobalNav />
+      <body className="mx-auto flex h-screen max-w-screen-lg flex-col justify-between px-6 py-12">
+        <main className="mb-auto">
+          <div>
+            <div className="col-start-2">
+              <GlobalNav />
+            </div>
+            <div>{children}</div>
           </div>
-          <div>{children}</div>
+        </main>
 
-          <footer className="flex flex-col justify-between pt-20 text-center">
-            <hr></hr>
-            <span className="font-base pt-4 text-xs tracking-widest text-white">
-              Copyright © 2022, All rights reserved.
-            </span>
-          </footer>
-        </div>
+        <footer className="flex flex-col items-center justify-between gap-2 pb-10 pt-20 text-center">
+          <hr className="w-full rounded-lg" />
+          <span className="sticky pt-4 text-xs font-bold tracking-widest">
+            {`Copyright © ${new Date().getFullYear()}, All rights reserved.`}
+          </span>
+          <SocialMedia />
+        </footer>
         <AnalyticsWrapper />
       </body>
     </html>

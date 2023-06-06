@@ -1,19 +1,16 @@
-// Node
 const path = require("path");
 
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    appDir: true,
-    fontLoaders: [
-      { loader: "@next/font/google", options: { subsets: ["latin"] } },
-    ],
-  },
+  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
   images: {
-    domains: ["www.mikevpeeren.nl"],
+    domains: ["www.mikevpeeren.nl", "images.unsplash.com"],
     formats: ["image/avif", "image/webp"],
   },
 };
+
+module.exports = nextConfig;

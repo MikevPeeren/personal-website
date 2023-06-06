@@ -1,12 +1,7 @@
 module.exports = {
-  content: [
-    "./src/app/**/*.{js,ts,jsx,tsx}",
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-  ],
-  darkMode: "class", // or 'media' or 'class'
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}", "./mdx-components.jsx"],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
