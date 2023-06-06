@@ -71,7 +71,7 @@ export default function RootLayout({
         <meta
           name="image"
           property="og:image"
-          content="https://www.mikevpeeren.nl/me.jpg"
+          content="https://www.mikevpeeren.nl/mike.png"
         />
         <meta httpEquiv="content-language" content="en" />
       </head>

@@ -25,10 +25,7 @@ const BlogPreview = ({
         />
         <div>
           <div className="bg-black p-4 sm:p-6">
-            <time
-              dateTime={publishDate}
-              className="block text-xs text-gray-500"
-            >
+            <time dateTime={publishDate} className="block text-xs text-white">
               {publishDate}
             </time>
 
@@ -36,7 +33,7 @@ const BlogPreview = ({
               {title}
             </h3>
 
-            <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+            <p className="mt-2 line-clamp-3 text-sm/relaxed text-white">
               {description}
             </p>
           </div>

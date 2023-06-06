@@ -33,14 +33,13 @@ const Home = async () => {
             </p>
           </div>
         </div>
-        <div className="mt-10 shrink-0 md:mt-0">
+        <div className="mt-10 h-full w-56 shrink-0 md:mt-0">
           <Image
             className="z-0 h-auto w-auto rounded-xl"
             priority
             src={ME}
             alt="Personal picture of Mike van Peeren"
-            width={250}
-            height={300}
+            priority
           />
         </div>
       </div>
