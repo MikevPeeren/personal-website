@@ -14,6 +14,8 @@ export const getPostBySlug = async (
     title: string;
     description: string;
     publishDate: string;
+    imageAlt: string;
+    imageSrc: string;
   };
   content: ReactElement<any, string | JSXElementConstructor<any>>;
 }> => {

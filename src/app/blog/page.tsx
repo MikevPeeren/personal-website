@@ -15,6 +15,8 @@ const Blog = async () => {
             publishDate={post.publishDate}
             title={post.title}
             description={post.description}
+            imageAlt={post.imageAlt}
+            imageSrc={post.imageSrc}
             link={`blog/${post.slug}`}
           />
         ))}
@@ -22,6 +24,5 @@ const Blog = async () => {
     </div>
   );
 };
-// href={`blog/${post.slug}`}
 
 export default Blog;

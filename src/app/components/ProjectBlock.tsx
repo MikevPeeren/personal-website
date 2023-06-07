@@ -20,12 +20,15 @@ const ProjectBlock = ({
     <div className="mt-4 rounded-xl border-2 bg-black p-6 shadow-md">
       <Link href={redirect}>
         <div className="flex flex-col items-center gap-6 md:flex-row">
-          <Image
-            alt="Redirection to GitHub Project"
-            src={imageSrc}
-            width={100}
-            height={50}
-          />
+          <div className="max-w-[100px]">
+            <Image
+              alt="Redirection to GitHub Project"
+              src={imageSrc}
+              width={100}
+              height={50}
+            />
+          </div>
+
           <h3 className="text-2xl font-extrabold capitalize tracking-wider lg:hidden">
             {title}
           </h3>

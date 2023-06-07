@@ -3,11 +3,13 @@ title: "Next.js App Directory"
 author: "Mike van Peeren"
 description: "Next.js has been a game-changer in the world of web development, especially for developers using React. With the introduction of the App Directory, Next.js has taken a significant leap forward, offering a more efficient and powerful way to build applications."
 publishDate: "June 1, 2023"
+imageAlt: "App folder visual view"
+imageSrc: "/stocks/next-app-router.png"
 ---
 
 # Next.js App Directory: A Comprehensive Guide to the Future of Web Development
 
-<img src="/stocks/development.jpeg" />
+<img src="/stocks/development.png" />
 <small>Image Source: Unsplash</small>
 
 Next.js has been a game-changer in the world of web development, especially for developers using React. With the introduction of the App Directory, Next.js has taken a significant leap forward, offering a more efficient and powerful way to build applications. In this comprehensive guide, we will explore the ins and outs of the Next.js App Directory, its advantages, and how it fits into the overall landscape of web development.
@@ -35,14 +37,12 @@ The App Directory is built around the concept of the "Layout per Page" architect
 
 The Root Layout component replaces the traditional \_app and \_document components found in the Pages Directory. It serves as the primary layout that wraps your entire application.
 
-```
+```js
 export function RootLayout({ children }: { children: React.ReactNode }) {
-    return (
-        <html lang="en">
-            <body>
-                {children}
-            </body>
-        </html>
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
   );
 }
 ```
