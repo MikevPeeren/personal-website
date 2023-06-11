@@ -42,7 +42,6 @@ export default function RootLayout({
           sizes="16x16"
           href="meta/favicon-16x16.png"
         />
-        <link rel="manifest" href="meta/site.webmanifest" />
         <link
           rel="mask-icon"
           href="meta/safari-pinned-tab.svg"

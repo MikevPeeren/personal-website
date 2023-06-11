@@ -22,10 +22,11 @@ const BlogPreview = ({
     <article className="overflow-hidden rounded-lg border-2 shadow transition hover:shadow-lg">
       <Link href={link}>
         <Image
+          className="h-[200px] w-full object-cover"
           alt={imageAlt}
           src={imageSrc}
           width={1000}
-          height={50}
+          height={200}
           priority
         />
         <div>

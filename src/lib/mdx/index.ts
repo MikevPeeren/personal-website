@@ -43,5 +43,9 @@ export const getAllPostsMeta = async () => {
     posts.push(meta);
   }
 
-  return posts;
+  console.log(posts);
+
+  return posts.sort((a, b) => {
+    return Date.parse(b.publishDate) - Date.parse(a.publishDate);
+  });
 };
