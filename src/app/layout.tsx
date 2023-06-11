@@ -13,8 +13,7 @@ import SocialMedia from "./components/SocialMediaRow";
 
 import "@/styles/global.scss";
 
-// If loading a variable font, you don't need to specify the font weight
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export default function RootLayout({
   children,
