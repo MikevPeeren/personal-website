@@ -9,22 +9,25 @@ const Blog = async () => {
   );
 
   return (
-    <div className="flex flex-col gap-2 md:flex-col">
-      <h2 className="py-8">All Posts</h2>
-      <section className="grid grid-cols-1 gap-4 md:grid-cols-3">
-        {posts?.map((post) => (
-          <BlogPreview
-            key={post.title}
-            publishDate={post.publishDate}
-            title={post.title}
-            description={post.description}
-            imageAlt={post.imageAlt}
-            imageSrc={post.imageSrc}
-            link={`blog/${post._raw.flattenedPath}`}
-          />
-        ))}
-      </section>
-    </div>
+    <>
+      <title>Mike van Peeren&apos;s Blog</title>
+      <div className="flex flex-col gap-2 md:flex-col">
+        <h2 className="py-8">All Posts</h2>
+        <section className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          {posts?.map((post) => (
+            <BlogPreview
+              key={post.title}
+              publishDate={post.publishDate}
+              title={post.title}
+              description={post.description}
+              imageAlt={post.imageAlt}
+              imageSrc={post.imageSrc}
+              link={`blog/${post._raw.flattenedPath}`}
+            />
+          ))}
+        </section>
+      </div>
+    </>
   );
 };
 
