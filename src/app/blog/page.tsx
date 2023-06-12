@@ -1,9 +1,12 @@
+import { allPosts } from "contentlayer/generated";
+import { compareDesc } from "date-fns";
+
 import BlogPreview from "../components/BlogPreview";
 
-import { getAllPostsMeta } from "@/lib/mdx";
-
 const Blog = async () => {
-  const posts = await getAllPostsMeta();
+  const posts = allPosts.sort((a, b) =>
+    compareDesc(new Date(a.publishDate), new Date(b.publishDate))
+  );
 
   return (
     <div className="flex flex-col gap-2 md:flex-col">
@@ -17,7 +20,7 @@ const Blog = async () => {
             description={post.description}
             imageAlt={post.imageAlt}
             imageSrc={post.imageSrc}
-            link={`blog/${post.slug}`}
+            link={`blog/${post._raw.flattenedPath}`}
           />
         ))}
       </section>

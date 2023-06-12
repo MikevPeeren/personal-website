@@ -1,15 +1,18 @@
 import Image from "next/image";
 
+import { allPosts } from "contentlayer/generated";
+import { compareDesc } from "date-fns";
+
 import Projects from "@/components/Projects";
 
 import ME from "/public/mike.png";
 
 import BlogPreview from "./components/BlogPreview";
 
-import { getAllPostsMeta } from "@/lib/mdx";
-
 const Home = async () => {
-  const posts = await getAllPostsMeta();
+  const posts = allPosts.sort((a, b) =>
+    compareDesc(new Date(a.publishDate), new Date(b.publishDate))
+  );
 
   return (
     <>
@@ -59,7 +62,7 @@ const Home = async () => {
                 description={post.description}
                 imageAlt={post.imageAlt}
                 imageSrc={post.imageSrc}
-                link={`blog/${post.slug}`}
+                link={`blog/${post._raw.flattenedPath}`}
               />
             ))}
           </section>

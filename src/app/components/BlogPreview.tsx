@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { format, parseISO } from "date-fns";
+
 interface IBlogPreview {
   publishDate: string;
   title: string;
@@ -32,7 +34,7 @@ const BlogPreview = ({
         <div>
           <div className="bg-black p-4 sm:p-6">
             <time dateTime={publishDate} className="block text-xs text-white">
-              {publishDate}
+              {format(parseISO(publishDate), "LLLL d, yyyy")}
             </time>
 
             <h3 className="mt-0.5  bg-clip-text text-lg text-[#f9a66c]">

@@ -7,14 +7,12 @@ imageAlt: "Under construction"
 imageSrc: "/stocks/simonpixabay.png"
 ---
 
-# Exploring Next.js Server Actions: Alpha State, Applications, and Considerations
+Next.js is a popular framework for building React applications, and it continually evolves to provide cutting-edge features. One such experimental feature is Server Actions. In this article, we will delve into the alpha state of Next.js Server Actions, their application in server components and client components, and the pros and cons of this technology.
 
 <figcaption>
   <img className="mb-0" src="/stocks/simonpixabay.png" />
   Photo by [Simon](https://pixabay.com/users/simon-3/) on [Pixabay](https://pixabay.com/photos/cambodia-welder-welding-work-light-438)
 </figcaption>
-
-Next.js is a popular framework for building React applications, and it continually evolves to provide cutting-edge features. One such experimental feature is Server Actions. In this article, we will delve into the alpha state of Next.js Server Actions, their application in server components and client components, and the pros and cons of this technology.
 
 ## Table of Contents
 
@@ -91,6 +89,8 @@ async function addItem(data) {
   await saveToDb({ cartId, data });
 }
 ```
+
+<span></span>
 
 ```js
 // app/add-to-cart.jsx

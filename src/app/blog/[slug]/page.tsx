@@ -1,31 +1,40 @@
-import { getPostBySlug } from "@/lib/mdx";
+import { getMDXComponent } from "next-contentlayer/hooks";
 
-const getPageContent = async (slug: string) => {
-  const { meta, content } = await getPostBySlug(slug);
+import { allPosts } from "contentlayer/generated";
+import { format, parseISO } from "date-fns";
 
-  return { meta, content };
+import styles from "./blog.module.scss";
+
+export const generateStaticParams = async () =>
+  allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
+
+export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+
+  return { title: post?.title };
 };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const { meta } = await getPageContent(params.slug);
+const PostLayout = ({ params }: { params: { slug: string } }) => {
+  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
 
-  return { title: meta.title, description: meta.description };
-}
+  if (!post) return <>Post not found</>;
 
-const Page = async ({ params }: { params: { slug: string } }) => {
-  const { content } = await getPageContent(params.slug);
+  const Content = getMDXComponent(post.body.code);
 
   return (
-    <section className="py-24">
-      <div className="prose-small:text-xs container prose mx-auto font-medium text-white prose-h1:bg-gradient-to-r prose-h1:from-[#FFC94B] prose-h1:via-[#f9a66c]  prose-h1:to-[#F17A7E] prose-h1:bg-clip-text prose-h1:text-transparent prose-h2:bg-gradient-to-r prose-h2:from-[#FFC94B] prose-h2:via-[#f9a66c] prose-h2:to-[#F17A7E] prose-h2:bg-clip-text prose-h2:text-transparent prose-h3:font-bold prose-h3:text-white prose-p:mb-0 prose-p:mt-0 prose-p:pb-4 prose-p:pt-1 prose-p:text-base prose-p:text-white prose-a:text-white prose-strong:text-white">
-        {content}
+    <article className={styles.post}>
+      <div className="mb-8 text-center">
+        <time
+          dateTime={post.publishDate}
+          className="mb-1 text-xs text-gray-300"
+        >
+          {format(parseISO(post.publishDate), "LLLL d, yyyy")}
+        </time>
+        <h1>{post.title}</h1>
       </div>
-    </section>
+      <Content />
+    </article>
   );
 };
 
-export default Page;
+export default PostLayout;
