@@ -1,7 +1,8 @@
-export const META_TITLE = "Mike van Peeren - Frontend Developer, Tilburg";
+export const META_TITLE =
+  "Mike van Peeren - Frontend Developer with a Passion for React and Next.js";
 export const META_TITLE_ALTERNATIVE = `Hey, let's connect!`;
 export const META_DESCRIPTION =
-  "Mike van Peeren Frontend Developer, JavaScript, TypeScript, React, Next.js, HTML5, CSS3, TailwindCSS, Git";
+  "Explore the world of front-end development with Mike van Peeren. Check out his blog, projects, and expertise in React, Next.js, TailwindCSS, React Query, and more.";
 export const AUTHOR = "Mike van Peeren";
 export const HEADER = "Mike van Peeren - Frontend Developer";
 
