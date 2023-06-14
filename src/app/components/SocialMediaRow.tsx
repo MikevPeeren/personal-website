@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import GITHUB_ICON from "/public/icons/github.png";
+import GITHUB_ICON from "/public/icons/github-mark-white.png";
 import GITLAB_ICON from "/public/icons/gitlab.png";
 import LINKEDIN_ICON from "/public/icons/linkedIn.png";
 import MEDIUM_ICON from "/public/icons/medium.png";
@@ -43,8 +43,8 @@ const SocialMedia = () => {
               <Image
                 src={socialMedia.image}
                 alt={socialMedia.alt}
-                width={17}
-                height={17}
+                width={25}
+                height={25}
               />
             </Link>
           </div>

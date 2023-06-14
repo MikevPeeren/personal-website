@@ -13,7 +13,7 @@ const Blog = async () => {
       <title>Mike van Peeren&apos;s Blog</title>
       <div className="flex flex-col gap-2 md:flex-col">
         <h2 className="py-8">All Posts</h2>
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <section className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-4">
           {posts?.map((post) => (
             <BlogPreview
               key={post.title}

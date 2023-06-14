@@ -53,7 +53,7 @@ const Home = async () => {
           <h2 className="bg-gradient-to-r from-[#FFC94B] via-[#f9a66c] to-[#F17A7E] bg-clip-text py-8 text-transparent">
             Latest Posts
           </h2>
-          <section className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <section className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-4">
             {posts?.map((post) => (
               <BlogPreview
                 key={post.title}
