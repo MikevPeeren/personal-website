@@ -26,7 +26,7 @@
   }
 
   figcaption {
-    @apply pb-6 text-xs;
+    @apply flex w-full flex-col pb-6 text-center text-xs;
   }
 
   pre {

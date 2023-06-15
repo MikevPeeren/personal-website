@@ -54,7 +54,7 @@ const Home = async () => {
             Latest Posts
           </h2>
           <section className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-4">
-            {posts?.map((post) => (
+            {posts.slice(0, 3)?.map((post) => (
               <BlogPreview
                 key={post.title}
                 publishDate={post.publishDate}
