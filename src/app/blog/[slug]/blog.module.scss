@@ -23,6 +23,11 @@
 
   li {
     @apply my-2 pl-1;
+
+    > p {
+      margin: 0px;
+      padding: 0px;
+    }
   }
 
   figcaption {
@@ -30,6 +35,6 @@
   }
 
   pre {
-    @apply overflow-x-auto;
+    @apply my-2 overflow-x-auto;
   }
 }

@@ -1,5 +1,8 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
+import rehypeSlug from "rehype-slug";
+import remarkToc from "remark-toc";
 
 const Post = defineDocumentType(() => ({
   name: "Post",
@@ -46,9 +49,7 @@ const Post = defineDocumentType(() => ({
 }));
 
 const options = {
-  // Use one of Shiki's packaged themes
-  theme: "one-dark-pro",
-  // Or your own JSON theme
+  theme: "rose-pine-moon",
 
   // Keep the background or use a custom background color?
   keepBackground: true,
@@ -76,7 +77,11 @@ export default makeSource({
   contentDirPath: "posts",
   documentTypes: [Post],
   mdx: {
-    remarkPlugins: [],
-    rehypePlugins: [[rehypePrettyCode, options]],
+    remarkPlugins: [[remarkToc, { tight: true, ordered: true }]],
+    rehypePlugins: [
+      [rehypePrettyCode, options],
+      rehypeSlug,
+      rehypeAutolinkHeadings,
+    ],
   },
 });
