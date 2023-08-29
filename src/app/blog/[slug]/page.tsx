@@ -40,7 +40,9 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         <h1>{post.title}</h1>
       </div>
       <Content />
-      <h2 className="py-8">Other Posts</h2>
+      <h2 className="bg-gradient-to-r from-[#FFC94B] via-[#f9a66c] to-[#F17A7E] bg-clip-text py-8 text-transparent">
+        Other Posts
+      </h2>
       <section className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-4">
         {otherPosts?.map((post) => (
           <BlogPreview
