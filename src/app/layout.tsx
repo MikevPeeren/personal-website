@@ -65,6 +65,7 @@ export default function RootLayout({
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.mikevpeeren.nl/" />
+        <meta name="robots" content="all" />
         <meta
           name="image"
           property="og:image"
