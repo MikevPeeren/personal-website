@@ -10,11 +10,22 @@ import BlogPreview from "@/app/components/BlogPreview";
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
 
-  return { title: post?.title };
-};
+  return {
+    title: post?.title,
+    description: post?.description,
+    openGraph: {
+      title: post?.title,
+      description: post?.description,
+    },
+  };
+}
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
