@@ -18,6 +18,7 @@ export async function generateMetadata({
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
 
   return {
+    metadataBase: new URL("https://mikevpeeren.nl"),
     title: post?.title,
     description: post?.description,
     openGraph: {
