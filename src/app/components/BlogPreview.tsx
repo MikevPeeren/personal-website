@@ -23,14 +23,16 @@ const BlogPreview = ({
   return (
     <article className="overflow-hidden rounded-lg border-2 shadow transition hover:shadow-lg">
       <Link href={link}>
-        <Image
-          className="h-[200px] w-full object-cover"
-          alt={imageAlt}
-          src={imageSrc}
-          width={1000}
-          height={200}
-          priority
-        />
+        <div className="relative h-[200px] w-full">
+          <Image
+            className="object-cover"
+            alt={imageAlt}
+            src={imageSrc}
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
         <div>
           <div className="bg-black p-4 sm:p-6">
             <time dateTime={publishDate} className="block text-xs text-white">
