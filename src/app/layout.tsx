@@ -1,4 +1,5 @@
 import React from "react";
+import { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import { AnalyticsWrapper } from "@/components/Analytics";
@@ -14,6 +15,21 @@ import SocialMedia from "./components/SocialMediaRow";
 import "@/styles/global.scss";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
+
+export const metadata: Metadata = {
+  title: META_TITLE,
+  description: META_DESCRIPTION,
+  authors: { name: AUTHOR },
+  metadataBase: new URL("https://mikevpeeren.nl"),
+  themeColor: "#f9a66c",
+  keywords:
+    "Frontend, front-end, engineer, developer, software, React, React.js, react query, javascript, JavaScript, typescript, TypeScript, next.js, git, vercel, html5, css3, html, css, tailwind, vercel, gitlab, github",
+  robots: "all",
+  openGraph: {
+    title: META_TITLE,
+    description: META_DESCRIPTION,
+  },
+};
 
 export default function RootLayout({
   children,
@@ -44,28 +60,11 @@ export default function RootLayout({
         <link
           rel="mask-icon"
           href="/meta/safari-pinned-tab.svg"
-          color="#5b21b6"
+          color="#f9a66c"
         />
 
-        <meta name="author" content={AUTHOR} />
-        <meta name="theme-color" content="#5b21b6" />
+        <meta name="msapplication-TileColor" content="#f9a66c" />
 
-        <meta name="viewport" content="width=device-width"></meta>
-
-        <meta name="msapplication-TileColor" content="#5b21b6" />
-        <meta
-          name="keywords"
-          content="Frontend, front-end, engineer, developer, software, React, React.js, react query, javascript, JavaScript, typescript, TypeScript, next.js, git, vercel, html5, css3, html, css, tailwind, vercel, gitlab, github"
-        />
-        <meta name="title" property="og:title" content={META_TITLE} />
-        <meta
-          name="description"
-          property="og:description"
-          content={META_DESCRIPTION}
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.mikevpeeren.nl/" />
-        <meta name="robots" content="all" />
         <meta
           name="image"
           property="og:image"

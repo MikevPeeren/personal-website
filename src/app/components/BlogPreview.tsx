@@ -8,7 +8,7 @@ interface IBlogPreview {
   title: string;
   description: string;
   link: string;
-  imageAlt: string;
+  imageAlt: string | undefined;
   imageSrc: string;
 }
 
@@ -26,7 +26,7 @@ const BlogPreview = ({
         <div className="relative h-[200px] w-full">
           <Image
             className="object-cover"
-            alt={imageAlt}
+            alt={imageAlt ?? ""}
             src={imageSrc}
             fill
             priority

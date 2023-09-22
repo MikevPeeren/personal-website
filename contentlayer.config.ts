@@ -32,11 +32,16 @@ const Post = defineDocumentType(() => ({
     imageAlt: {
       type: "string",
       description: "The alt of the image",
-      required: true,
+      required: false,
     },
     imageSrc: {
       type: "string",
       description: "The src of the image",
+      required: true,
+    },
+    keyWords: {
+      type: "string",
+      description: "The keywords for the blog post",
       required: true,
     },
   },
