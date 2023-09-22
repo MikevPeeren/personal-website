@@ -34,7 +34,7 @@
     @apply flex w-full flex-col items-center pb-6 text-center text-xs;
 
     img {
-      @apply max-w-lg rounded-3xl shadow-md shadow-[#f9a66c]/50;
+      @apply rounded-3xl shadow-md shadow-[#f9a66c]/50 md:max-w-lg;
     }
 
     p {
