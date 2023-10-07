@@ -12,6 +12,7 @@ import {
 
 import SocialMedia from "./components/SocialMediaRow";
 
+import "@/styles/prism.scss";
 import "@/styles/global.scss";
 
 const inter = Inter({
