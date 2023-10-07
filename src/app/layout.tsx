@@ -14,7 +14,12 @@ import SocialMedia from "./components/SocialMediaRow";
 
 import "@/styles/global.scss";
 
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: true,
+  fallback: ["system-ui", "arial"],
+});
 
 export const metadata: Metadata = {
   title: META_TITLE,

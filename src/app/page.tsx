@@ -63,6 +63,7 @@ const Home = async () => {
                 imageAlt={post.imageAlt}
                 imageSrc={post.imageSrc}
                 link={`blog/${post._raw.flattenedPath}`}
+                lazyLoading
               />
             ))}
           </section>

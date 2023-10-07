@@ -10,6 +10,7 @@ interface IBlogPreview {
   link: string;
   imageAlt: string | undefined;
   imageSrc: string;
+  lazyLoading?: boolean;
 }
 
 const BlogPreview = ({
@@ -19,6 +20,7 @@ const BlogPreview = ({
   link,
   imageAlt,
   imageSrc,
+  lazyLoading = false,
 }: IBlogPreview) => {
   return (
     <article className="overflow-hidden rounded-lg border-2 shadow transition hover:shadow-lg">
@@ -28,8 +30,9 @@ const BlogPreview = ({
             className="object-cover"
             alt={imageAlt ?? ""}
             src={imageSrc}
+            loading={lazyLoading ? "lazy" : "eager"}
             fill
-            priority
+            priority={lazyLoading ? false : true}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
