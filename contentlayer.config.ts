@@ -1,7 +1,6 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import readingTime from "reading-time";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypePrettyCode from "rehype-pretty-code";
 import rehypePrismPlus from "rehype-prism-plus";
 import rehypeSlug from "rehype-slug";
 import remarkToc from "remark-toc";
@@ -62,7 +61,6 @@ export default makeSource({
   mdx: {
     remarkPlugins: [[remarkToc, { tight: true, ordered: true }]],
     rehypePlugins: [
-      // [rehypePrettyCode, options],
       rehypeSlug,
       rehypeAutolinkHeadings,
       [rehypePrismPlus, { defaultLanguage: "js", ignoreMissing: true }],
