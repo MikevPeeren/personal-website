@@ -37,6 +37,8 @@ export const metadata: Metadata = {
   },
 };
 
+const GOOGLE_TAG_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
+
 export default function RootLayout({
   children,
 }: {
@@ -80,9 +82,7 @@ export default function RootLayout({
       </head>
       <body className="mx-auto flex h-screen max-w-screen-lg flex-col justify-between px-6 py-12">
         <main className="mb-auto">
-          {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
-            <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
-          ) : null}
+          {GOOGLE_TAG_ID ? <GoogleAnalytics gaID={GOOGLE_TAG_ID} /> : null}
 
           <div>
             <div className="col-start-2">
