@@ -24,6 +24,7 @@ export async function generateMetadata({
     keywords: post?.keyWords,
     openGraph: {
       title: post?.title,
+      images: [new URL("https://mikevpeeren.nl" + post?.imageSrc)],
       description: post?.description,
     },
   };
