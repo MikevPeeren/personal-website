@@ -4,13 +4,13 @@ import { Inter } from "next/font/google";
 
 import { AnalyticsWrapper } from "@/components/Analytics";
 import GlobalNav from "@/components/GlobalNav";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import SocialMedia from "@/components/SocialMediaRow";
 import {
   AUTHOR,
   META_DESCRIPTION,
   META_TITLE,
 } from "@/utils/constants/general";
-
-import SocialMedia from "./components/SocialMediaRow";
 
 import "@/styles/prism.scss";
 import "@/styles/global.scss";
@@ -80,6 +80,10 @@ export default function RootLayout({
       </head>
       <body className="mx-auto flex h-screen max-w-screen-lg flex-col justify-between px-6 py-12">
         <main className="mb-auto">
+          {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+            <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+          ) : null}
+
           <div>
             <div className="col-start-2">
               <GlobalNav />
