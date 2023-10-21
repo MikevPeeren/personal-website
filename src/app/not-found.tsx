@@ -7,7 +7,12 @@ export default function NotFound() {
         Page not Found
       </h2>
 
-      <Link href="/blog" title="blog" className="font-bold text-white">
+      <Link
+        rel="canonical"
+        href="/blog"
+        title="blog"
+        className="font-bold text-white"
+      >
         Return Home
       </Link>
     </div>

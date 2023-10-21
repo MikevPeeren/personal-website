@@ -62,7 +62,7 @@ const Home = async () => {
                 description={post.description}
                 imageAlt={post.imageAlt}
                 imageSrc={post.imageSrc}
-                link={`blog/${post._raw.flattenedPath}`}
+                link={`/blog/${post._raw.flattenedPath}`}
                 lazyLoading
               />
             ))}

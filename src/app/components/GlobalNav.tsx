@@ -6,7 +6,7 @@ import Developer from "/public/developer.png";
 const GlobalNav = () => {
   return (
     <nav className="sticky -top-px z-10 flex w-full flex-wrap items-baseline justify-between pb-10 lg:flex-row">
-      <Link href="/" title="home">
+      <Link rel="canonical" href="/" title="home">
         <Image
           className="z-0"
           src={Developer}
@@ -18,7 +18,12 @@ const GlobalNav = () => {
       </Link>
       <div className="">
         <div className="flex flex-row flex-wrap items-baseline justify-between gap-4 lg:gap-10">
-          <Link href="/blog" title="blog" className="font-bold text-white">
+          <Link
+            rel="canonical"
+            href="/blog"
+            title="blog"
+            className="font-bold text-white"
+          >
             Blog
           </Link>
         </div>

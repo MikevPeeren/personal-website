@@ -24,7 +24,7 @@ const BlogPreview = ({
 }: IBlogPreview) => {
   return (
     <article className="overflow-hidden rounded-lg border-2 shadow transition hover:shadow-lg">
-      <Link href={link}>
+      <Link rel="canonical" href={link}>
         <div className="relative h-[200px] w-full">
           <Image
             className="object-cover"
