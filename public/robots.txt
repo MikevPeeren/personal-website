@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.mikevpeeren.nl/sitemap.xml
+Sitemap: https://mikevpeeren.nl/sitemap.xml
