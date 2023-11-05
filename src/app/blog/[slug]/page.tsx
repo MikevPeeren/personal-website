@@ -34,6 +34,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
 
   const otherPosts = allPosts
+    .filter((post) => post._raw.flattenedPath !== params.slug)
     .sort(() => Math.random() - Math.random())
     .slice(0, 3);
 
