@@ -29,10 +29,12 @@ const ProjectBlock = ({
             />
           </div>
 
-          <h3 className="text-2xl font-extrabold capitalize tracking-wider lg:hidden">
+          <h3 className="text-3xl font-extrabold capitalize tracking-wider lg:hidden">
             {title}
           </h3>
-          <p className="my-0 text-lg font-bold text-gray-300">{description}</p>
+          <h3 className="hidden lg:block my-0 text-3xl font-extrabold capitalize text-gray-300">
+            {title}
+          </h3>
           <div className="flex flex-row flex-wrap items-center gap-1 gap-y-2 font-extrabold tracking-wider text-white">
             {[
               {
@@ -53,7 +55,7 @@ const ProjectBlock = ({
           </div>
         </div>
 
-        <p className="mb-0 mt-4 hidden text-lg font-bold text-gray-300 lg:flex">
+        <p className="mb-0 mt-4 text-lg font-bold text-gray-300 lg:flex">
           {description}
         </p>
       </Link>

@@ -9,7 +9,7 @@ const Projects = () => {
       redirect:
         "https://github.com/MikevPeeren/next-typescript-tailwindcss-sass-starter",
       imageSrc: NEXTJS,
-      title: "next typeScript tailwindCSS sass starter",
+      title: "Next.js Starter Template",
       description:
         "Use TypeScript, TailwindCSS & Sass to quick start your new Next.js app!",
     },
@@ -17,7 +17,7 @@ const Projects = () => {
       redirect:
         "https://github.com/MikevPeeren/next-typescript-tailwindcss-sass-starter",
       imageSrc: SVELTE,
-      title: "SvelteKit typeScript tailwindCSS sass starter",
+      title: "SvelteKit Starter Template",
       description:
         "Use TypeScript, TailwindCSS & Sass to quick start your new SvelteKit app!",
     },

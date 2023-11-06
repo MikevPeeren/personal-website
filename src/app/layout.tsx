@@ -1,6 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
-import { Inter } from "next/font/google";
+
+import { GeistSans } from "geist/font";
 
 import { AnalyticsWrapper } from "@/components/Analytics";
 import GlobalNav from "@/components/GlobalNav";
@@ -14,13 +15,6 @@ import {
 
 import "@/styles/prism.scss";
 import "@/styles/global.scss";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  adjustFontFallback: true,
-  fallback: ["system-ui", "arial"],
-});
 
 export const metadata: Metadata = {
   title: META_TITLE,
@@ -45,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={GeistSans.className}>
       <head>
         <link rel="icon" href="/meta/favicon.ico" />
         <link
