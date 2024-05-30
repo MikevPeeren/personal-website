@@ -1,8 +1,11 @@
-import NextLink from "@/components/NextLink";
-import Video from "@/components/Video";
+import Image from "next/image";
+
 import EmailIcon from "@/components/icons/EmailIcon";
 import LinkedInIcon from "@/components/icons/LinkedInIcon";
-import Image from "next/image";
+import NextLink from "@/components/NextLink";
+import Testimonials from "@/components/Testimonials";
+import Video from "@/components/Video";
+import WorkExperience from "@/components/WorkExperience";
 
 import BBQ from "@/public/bbq.webp";
 import Leader from "@/public/leader.webp";
@@ -10,8 +13,6 @@ import MacBook from "@/public/macbook.webp";
 import Mountain from "@/public/mountain.webp";
 import NiceView from "@/public/niceview.webp";
 import PostIts from "@/public/postits.webp";
-import WorkExperience from "@/components/WorkExperience";
-import Testimonials from "@/components/Testimonials";
 
 export default function About() {
   return (

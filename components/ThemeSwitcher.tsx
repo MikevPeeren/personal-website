@@ -1,7 +1,7 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import { SVGProps, useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);

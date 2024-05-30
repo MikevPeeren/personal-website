@@ -1,10 +1,12 @@
-import { posts } from '@/.velite';
+import { format, parseISO } from "date-fns";
+
 import BlogPostCTA from "@/components/BlogPostCTA";
+import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon";
 import { MDXContent } from '@/components/MDXContent';
 import NextLink from "@/components/NextLink";
 import SocialCard from "@/components/SocialCard";
-import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon";
-import { format, parseISO } from "date-fns";
+
+import { posts } from '@/.velite';
 
 export const generateStaticParams = async () =>
   posts.map((post) => ({ slug: post.slug }));

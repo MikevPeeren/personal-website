@@ -1,8 +1,9 @@
+import { JSX, SVGProps } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { JSX, SVGProps } from "react";
-import ThemeSwitcher from "./ThemeSwitcher";
+
 import NavBarMenu from "./NavBarMenu";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 export function Navigation() {
   return (

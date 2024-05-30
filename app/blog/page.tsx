@@ -1,8 +1,10 @@
-import { posts } from '@/.velite';
-import BlogPostCTA from "@/components/BlogPostCTA";
-import BlogPostCard from "@/components/BlogPostCard";
-import SocialCard from "@/components/SocialCard";
 import { compareDesc } from "date-fns";
+
+import BlogPostCard from "@/components/BlogPostCard";
+import BlogPostCTA from "@/components/BlogPostCTA";
+import SocialCard from "@/components/SocialCard";
+
+import { posts } from '@/.velite';
 
 export default function Blog() {
   const sortedPosts = posts.sort(

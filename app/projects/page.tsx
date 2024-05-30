@@ -1,10 +1,12 @@
-import NextLink from "@/components/NextLink";
-import MailBox from "@/components/icons/MailBox";
 import Image from "next/image";
+import Link from "next/link";
+
+import MailBox from "@/components/icons/MailBox";
+import NextLink from "@/components/NextLink";
+import ProjectCard from "@/components/ProjectCard";
+
 import NextJS from "@/public/projects/nextjs.jpg";
 import Svelte from "@/public/projects/svelte.png";
-import Link from "next/link";
-import ProjectCard from "@/components/ProjectCard";
 
 export default function Projects() {
   const projects = [

@@ -1,8 +1,10 @@
-import { posts } from '@/.velite';
-import { cn } from "@/lib/utils";
-import { compareDesc, format, parseISO } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
+
+import { compareDesc, format, parseISO } from "date-fns";
+
+import { posts } from '@/.velite';
+import { cn } from "@/lib/utils";
 
 const BlogPostCTA = ({
   amount,

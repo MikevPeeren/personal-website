@@ -1,9 +1,11 @@
-import Link from "next/link";
 import Image from "next/image";
-import FooterLinks from "./FooterLinks";
-import LinkedInIcon from "@/components/icons/LinkedInIcon";
+import Link from "next/link";
+
 import GithubIcon from "@/components/icons/GithubIcon";
 import HomeIcon from "@/components/icons/HomeIcon";
+import LinkedInIcon from "@/components/icons/LinkedInIcon";
+
+import FooterLinks from "./FooterLinks";
 import NextLink from "./NextLink";
 
 const Footer = () => {

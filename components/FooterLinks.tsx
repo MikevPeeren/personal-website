@@ -1,9 +1,10 @@
 "use client";
 
-import { posts } from '@/.velite';
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+
+import { posts } from '@/.velite';
 
 const FooterLinks = () => {
   const [randomPost, setRandomPost] = useState({ _raw: { flattenedPath: "" } });

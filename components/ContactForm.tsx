@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Button from "./Button";
-import { sendEmail } from "@/actions/sendEmail";
 import { useFormState } from "react-dom";
+
+import Button from "./Button";
+
+import { sendEmail } from "@/actions/sendEmail";
 
 const initialState = {
   name: "",

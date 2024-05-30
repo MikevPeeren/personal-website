@@ -1,10 +1,11 @@
-import Avatar from "@/components/Avatar";
 import Image from "next/image";
 
+import Avatar from "@/components/Avatar";
 import BlogPostCTA from "@/components/BlogPostCTA";
 import CTAContact from "@/components/CTAContact";
-import NextLink from "@/components/NextLink";
 import ArrowRightIcon from "@/components/icons/ArrowRightIcon";
+import NextLink from "@/components/NextLink";
+
 import Belle from "@/public/belle.webp";
 
 export default function Home() {

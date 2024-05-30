@@ -1,8 +1,9 @@
-import Avatar from "./Avatar";
-import NextLink from "./NextLink";
-import LinkedInIcon from "@/components/icons/LinkedInIcon";
 import GithubIcon from "@/components/icons/GithubIcon";
 import HomeIcon from "@/components/icons/HomeIcon";
+import LinkedInIcon from "@/components/icons/LinkedInIcon";
+
+import Avatar from "./Avatar";
+import NextLink from "./NextLink";
 
 const SocialCard = () => {
   return (
