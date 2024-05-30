@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .paused {
+    animation-play-state: paused;
+  }
+}
+
+@layer components {
+  .testimonial-wrapper {
+    @apply flex flex-col animate-infinite-scroll items-center justify-center md:justify-start group-hover:paused;
+  }
+}
+
+h1 {
+  @apply text-4xl md:text-6xl break-words max-w-4xl font-bold tracking-wider leading-none;
+}
+
+h2 {
+  @apply text-2xl md:text-4xl break-words max-w-4xl font-bold tracking-wider leading-none;
+}
+
+h3 {
+  @apply font-bold text-lg;
+}
+
+p {
+  @apply text-base text-50 max-w-5xl;
+}
+
+.text-50 {
+  @apply dark:text-[#FFFFFF]/50 text-[#000000]/50;
+}
+
+.white-50 {
+  @apply text-[#FFFFFF]/50;
+}

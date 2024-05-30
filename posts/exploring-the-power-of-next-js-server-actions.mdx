@@ -1,0 +1,166 @@
+---
+title: "Exploring Next.js Server Actions: Capabilities and Benefits"
+description: "Discover Next.js server actions, powerful functions enabling seamless server-side logic execution in your web applications. Learn their advantages and use cases."
+publishDate: "June 11, 2023"
+imageAlt: ""
+imageSrc: "/blog/server.avif"
+keyWords: "next.js server actions, next.js, react applications, server actions, server components, alpha state, popular framework"
+category: "Tech"
+---
+
+Next.js is a popular framework for building React applications, and it continually evolves to provide cutting-edge features. One such experimental feature is Server Actions. In this article, we will delve into the alpha state of Next.js Server Actions, their application in server components and client components, and the pros and cons of this technology.
+
+## Introduction to Next.js Server Actions
+
+Next.js Server Actions, currently in the alpha stage, are built on top of React Actions. They enable server-side data mutations, reduced client-side JavaScript, and progressively enhanced forms. Server Actions can be defined inside Server Components and/or called from Client Components, making them a versatile feature for handling various tasks within a Next.js app router/app folder.
+
+## Alpha State: What Does It Mean?
+
+Being in the alpha state indicates that Server Actions are still under active development and testing. It means the feature is not fully stable yet and might undergo significant changes before it is released for production use. Developers using alpha features should be prepared for potential breaking changes and should closely monitor updates and releases.
+
+## Enabling Server Actions in Your Next.js Project
+
+To enable Server Actions in your Next.js project, you need to enable the experimental serverActions flag in the next.config.js file:
+
+```js
+const nextConfig = {
+  experimental: {
+    serverActions: true,
+  },
+};
+
+module.exports = nextConfig;
+```
+
+This opt-in step ensures that developers are aware of the experimental nature of Server Actions and are willing to work with possible instability.
+
+## Server Actions in Server Components
+
+Server Actions can be defined within Server Components, allowing for seamless server-side data mutations. Here's a simple example of a Server Action defined inside a Server Component:
+
+```js
+// app/add-to-cart.jsx
+
+import { cookies } from "next/headers";
+
+export default function AddToCart({ productId }) {
+  async function addItem(data) {
+    "use server";
+
+    const cartId = cookies().get("cartId")?.value;
+    await saveToDb({ cartId, data });
+  }
+
+  return (
+    <form action={addItem}>
+      <button type="submit">Add to Cart</button>
+    </form>
+  );
+}
+```
+
+## Server Actions in Client Components
+
+Server Actions can also be called from Client Components, providing flexibility to developers when handling actions in different parts of the app. Here's an example of a Server Action being called from a Client Component:
+
+```js
+// app/actions.js
+"use server";
+
+async function addItem(data) {
+  const cartId = cookies().get("cartId")?.value;
+  await saveToDb({ cartId, data });
+}
+```
+
+<span></span>
+
+```js
+// app/add-to-cart.jsx
+"use client";
+
+import { addItem } from "./actions.js";
+
+export default function AddToCart({ productId }) {
+  return (
+    <form action={addItem}>
+      <button type="submit">Add to Cart</button>
+    </form>
+  );
+}
+```
+
+## Defining Server Actions: Creating Reusable Functions
+
+Server Actions can be defined in two places:
+
+- Inside the component that uses it (Server Components only)
+- In a separate file (Client and Server Components), for reusability
+
+To create a Server Action, you need to define an asynchronous function with the use server directive at the top of the function body. This function should have serializable arguments and a serializable return value based on the React Server Components protocol.
+
+```js
+// app/server-component.jsx
+export default function ServerComponent() {
+  async function myAction() {
+    "use server";
+    // ...
+  }
+}
+```
+
+For using a Server Action inside a Client Component, create the action in a separate file with the use server directive at the top of the file. Then, import the Server Action into your Client Component:
+
+```js
+// app/actions.js
+"use server";
+
+export async function myAction() {
+  // ...
+}
+
+// app/client-component.jsx
+("use client");
+import { myAction } from "./actions";
+
+export default function ClientComponent() {
+  return (
+    <form action={myAction}>
+      <button type="submit">Add to Cart</button>
+    </form>
+  );
+}
+```
+
+## Invoking Server Actions: Various Methods
+
+You can invoke Server Actions using the following methods:
+
+- Using action: React's action prop allows invoking a Server Action on a form element.
+- Using formAction: React's formAction prop allows handling button, input type="submit", and input type="image" elements in a form.
+- Custom Invocation with startTransition: Invoke Server Actions without using action or formAction by using startTransition. This method disables Progressive Enhancement.
+
+## Benefits of Using Server Actions
+
+**Progressive Enhancement:**\
+Server Actions enable progressively enhanced forms, allowing the app to gracefully degrade in case of limited client-side JavaScript support.
+
+**Reduced Client-Side JavaScript:**\
+By offloading data mutations to the server, Server Actions help reduce the amount of client-side JavaScript, resulting in faster load times and better performance.
+
+**Simplified Data Fetching and Mutations:**\
+Server Actions provide a straightforward way to handle data fetching and mutations within the same component, making it easier to manage state and UI updates.
+
+## Drawbacks and Considerations
+
+**Alpha State:**\
+As mentioned earlier, the alpha state of Server Actions means that they are not yet fully stable and may undergo significant changes before being production-ready. Developers should proceed with caution and be prepared for potential breaking changes.
+
+**Limited Use Cases:**\
+While Server Actions can simplify certain tasks, they may not be suitable for all use cases, particularly when it comes to complex client-side interactions and state management.
+
+## Conclusion
+
+Next.js Server Actions are a promising experimental feature that can improve the way developers handle server-side data mutations and client-side interactions in their Next.js app router app folder. By properly implementing Server Actions in server components and client components, developers can create more efficient and responsive applications.
+
+However, it's essential to remember that Server Actions are still in the alpha state, and developers should proceed with caution when using them in their projects. By staying informed about updates and changes to this feature, developers can ensure they are prepared for any potential breaking changes and can make the most out of the power and flexibility offered by Next.js Server Actions.

@@ -20,11 +20,6 @@ const Post = defineDocumentType(() => ({
       description: "The description of the post",
       required: true,
     },
-    author: {
-      type: "string",
-      description: "The author of the post",
-      required: true,
-    },
     publishDate: {
       type: "date",
       description: "The date of the post",
@@ -40,6 +35,11 @@ const Post = defineDocumentType(() => ({
       description: "The src of the image",
       required: true,
     },
+    category: {
+      type: "string",
+      description: "What keyword does this blog post belong to the most?",
+      required: true,
+    },
     keyWords: {
       type: "string",
       description: "The keywords for the blog post",
@@ -50,7 +50,7 @@ const Post = defineDocumentType(() => ({
     readingTime: { type: "json", resolve: (doc) => readingTime(doc.body.raw) },
     url: {
       type: "string",
-      resolve: (doc) => `/posts/${doc._raw.flattenedPath}`,
+      resolve: (doc) => `/blog/${doc._raw.flattenedPath}`,
     },
   },
 }));

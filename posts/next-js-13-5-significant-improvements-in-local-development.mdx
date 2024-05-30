@@ -1,0 +1,47 @@
+---
+title: "Next.js 13.5: Faster Dev, Optimized Imports, Enhanced Images"
+description: "Next.js 13.5 brings faster server startup, improved HMR, optimized imports, and enhanced next/image. Upgrade now for a smoother development experience."
+publishDate: "Sept 20, 2023"
+imageAlt: ""
+imageSrc: "/blog/nextjs.avif"
+keyWords: "next.js, popular react framework, significant improvements, latest version, hot module replacement"
+category: "Tech"
+---
+
+Next.js, the popular React framework, has released its latest version, Next.js 13.5, with significant improvements in local development performance and reliability. This update brings a range of enhancements, including faster server startup, improved Hot Module Replacement (HMR), reduced memory usage, optimized package imports, and improvements to the next/image component. Additionally, over 438 bugs have been patched in this release. Let's dive into the details of these improvements and explore how they can benefit developers.
+
+## Improving Startup and Fast Refresh Time
+
+One of the key focus areas of Next.js 13.5 is enhancing local development performance. The team at Next.js has made impressive progress in this aspect, resulting in significant speed improvements. The local server startup time is now 22% faster, allowing developers to iterate more quickly. Additionally, the HMR (Fast Refresh) feature, which enables faster iterations when saving changes, has been optimized and is now 29% faster. These improvements make the development experience smoother and more efficient.
+
+To achieve these performance enhancements, Next.js has implemented various optimizations. They have reduced the amount of work done during server startup by caching or minimizing slow operations. Expensive file system operations have been optimized, and better incremental tree traversal has been introduced during compilation. Unnecessary blocking synchronous calls have been made lazy, further improving startup time and fast refresh.
+
+## Optimized Package Imports
+
+Next.js 13.5 introduces a breakthrough in optimizing package imports, which significantly improves local development performance and production cold starts. When using large icons or component libraries, or other dependencies that re-export hundreds or thousands of modules, Next.js now automatically optimizes the imports. This optimization results in faster updates and improved performance.
+
+Previously, developers had to configure imports using the modularizeImports option. However, Next.js 13.5 introduces a new and more convenient approach called optimizePackageImports. With this approach, developers no longer need to specify the mapping of imports manually. Libraries like @mui/icons-material, @mui/material, date-fns, lodash, lodash-es, ramda, react-bootstrap, @headlessui/react, @heroicons/react, and lucide-react are now automatically optimized. This optimization ensures that only the modules being used are loaded, while still allowing developers to write import statements with many named exports.
+
+## next/image Improvements
+
+Based on community feedback, Next.js 13.5 introduces several improvements to the next/image component. This component is widely used for optimizing images in Next.js applications. The latest version adds a new experimental function called unstable_getImgProps(), which allows advanced use cases without directly using the next/image component.
+
+Developers can now work with background-image or image-set using unstable_getImgProps(). It also enables working with canvas context.drawImage() or new Image(). Moreover, developers can use `<picture>` media queries to implement art direction or Light/Dark Mode images.
+
+Here's an example of how to use unstable_getImgProps():
+
+Additionally, the placeholder prop now supports providing arbitrary data:image/ for placeholder images that shouldn't be blurred.
+
+## Other Improvements
+
+Next.js 13.5 comes with numerous bug fixes and improvements, totaling over 438 patches. These fixes address various issues reported by the community, ensuring a more stable and reliable development experience. The Next.js team is committed to continuously improving the framework and addressing user feedback.
+
+## Upgrade to Next.js 13.5
+
+Next.js 13.5 brings substantial performance and reliability improvements, making it an essential upgrade for developers. The faster local server startup, improved HMR, reduced memory usage, optimized package imports, and enhancements to the next/image component all contribute to a better development experience. Additionally, the numerous bug fixes and improvements provide a more stable foundation for building Next.js applications.
+
+To upgrade to Next.js 13.5, developers can run the following command:
+
+Next.js Conf, a conference dedicated to Next.js, is also on the horizon. It will take place on October 26, 2023, and offers an excellent opportunity to learn more about the latest advancements in Next.js.
+
+In conclusion, Next.js 13.5 is a significant release that brings substantial improvements to local development performance and reliability. Developers can benefit from faster server startup, improved HMR, optimized package imports, and enhanced next/image functionality. With over 438 bugs fixed, Next.js continues to provide a stable and reliable framework for building modern web applications. Upgrade to Next.js 13.5 and experience the improved development experience it offers.

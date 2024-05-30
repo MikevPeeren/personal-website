@@ -1,21 +1,14 @@
 ---
-title: "How to use Data Attributes"
-author: "Mike van Peeren"
-description: "In the world of web development, there are various ways to add extra information to HTML elements. Two popular methods are using data attributes and ARIA attributes."
+title: "Mastering Data Attributes in Web Development: A Comprehensive Guide"
+description: "Learn to use data attributes for enhanced web accessibility. This guide covers syntax, usage, benefits, and best practices, ensuring your web apps are user-friendly and inclusive."
 publishDate: "Sept 28, 2023"
 imageAlt: ""
-imageSrc: "/stocks/binary.jpeg"
+imageSrc: "/blog/matrix.avif"
 keyWords: "data attributes, aria attributes, web development, accessibility, data"
+category: "Tech"
 ---
 
-<figcaption>
-  <img className="mb-0" src="/stocks/binary.jpeg" />
-  Photo by [Geralt](https://pixabay.com/users/geralt-9301/)
-</figcaption>
-
 Note: This article is a comprehensive guide on how to use data attributes for web development. It covers the basics of data attributes, their syntax, usage, and benefits. The primary focus is on accessibility, as data attributes and ARIA attributes play a crucial role in improving the accessibility and usability of web applications.
-
-## Table of contents
 
 ## Introduction
 
@@ -42,11 +35,11 @@ In the example above, we have added three data attributes: data-category, data-a
 One of the significant advantages of data attributes is that they can be easily accessed and manipulated using JavaScript. There are multiple ways to retrieve the values of data attributes in JavaScript, but the most common method is using the getAttribute() function.
 
 ```js
-const article = document.querySelector('article');
+const article = document.querySelector("article");
 
-const category = article.getAttribute('data-category');
-const author = article.getAttribute('data-author');
-const date = article.getAttribute('data-date');
+const category = article.getAttribute("data-category");
+const author = article.getAttribute("data-author");
+const date = article.getAttribute("data-date");
 
 console.log(category); // Output: technology
 console.log(author); // Output: John Doe

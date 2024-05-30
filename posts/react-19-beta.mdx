@@ -1,0 +1,61 @@
+---
+title: "React 19 Beta: Exploring New Features & Enhanced Functionality"
+description: "Delve into React 19 Beta's latest advancements! Discover async transitions, powerful hooks like useActionState, and seamless form management with Actions. Get a comprehensive overview of React 19's capabilities."
+publishDate: "May 03, 2024"
+imageAlt: ""
+imageSrc: "/blog/react.avif"
+keyWords: ""
+category: "Updates"
+---
+
+## React 19 Beta: What's New?
+
+React 19 has just been released in beta form. In this article, I'll explain the key features and functionalities introduced in this updated version. The beta release allows libraries to adjust their code to take advantage of React 19. While I won't cover everything, I'll discuss the most important changes. For a complete list of updates, you can follow the link at the end of this article.
+
+### Actions and Async Transitions
+
+One of the common use cases in React apps is performing data mutations and updating the state in response. For example, when a user submits a form to change their email you typically make an API request and handle the response. In the past you had to manage the pending state, errors, optimistic updates, and sequential requests manually.
+
+Here's an example of how you might have handled this scenario before React 19:
+
+With React 19, you can use asynchronous transitions to handle pending states, errors, and optimistic updates automatically. For example, the new useTransition hook lets you manage transitions seamlessly:
+
+The async transition immediately sets the isPending state to true, performs the async calls, and then resets isPending to false after the transition is complete. This allows the UI to remain responsive and interactive while data is being updated.
+
+#### What Are Actions?
+
+By convention functions that use async transitions are called "Actions." Actions automatically manage data submission for you and provide several key benefits:
+
+Pending State: Actions provide a pending state that starts at the beginning of a request and resets automatically when the final state update is committed.
+
+Optimistic Updates: Actions support the new useOptimistic hook allowing you to give users instant feedback while requests are being processed.
+
+Error Handling: Actions manage error handling displaying error boundaries when a request fails and reverting optimistic updates if necessary.
+
+Forms: `<form>` elements now support passing functions to the action and formAction props. Passing functions to these props use Actions by default and reset the form automatically after submission.
+
+### useActionState A New Hook
+
+Formerly known as useFormState, the new hook useActionState accepts a function and returns a wrapper action that is called during the process. It returns the last result of the action and the pending state. You can still use it with forms but it's not always necessary.
+
+### Form Actions
+
+Forms now have an action property to which you can pass an Action. When the form is submitted this action is triggered. If the action fails or succeeds it will reset the uncontrolled components. If you need to reset the form manually you can always call requestFormReset however.
+
+### New Hook: useFormStatus
+
+useFormStatus reads the status of the parent form treating it like a context provider. This allows you to access the pending state which is useful for disabling a submit button, for example.
+
+### New Hook: useOptimistic
+
+Have you ever wished you could update your content while an API call is still in progress? useOptimistic lets you do just that. In the example below the new email is rendered optimistically. If the updateEmail call fails the content will also revert to its previous state.
+
+### New API use
+
+A new API called use allows you to read a promise and React will suspend everything until the promise resolves. For example, it can be used in a shopping cart context where it waits until the promise is completed before continuing.
+
+Keep in mind that use can also be used with contexts, enabling you to read them conditionally.
+
+## Want to Learn More?
+
+Want to read more in-depth about what these changes mean, or just want to view the other improvements made by the React team? Feel free to read their blog post about this update here.
