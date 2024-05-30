@@ -1,9 +1,8 @@
-import { allPosts } from "contentlayer/generated";
-import { format, parseISO, compareDesc, compareAsc } from "date-fns";
-import Image from "next/image";
-import NextLink from "./NextLink";
-import Link from "next/link";
+import { posts } from '@/.velite';
 import { cn } from "@/lib/utils";
+import { compareDesc, format, parseISO } from "date-fns";
+import Image from "next/image";
+import Link from "next/link";
 
 const BlogPostCTA = ({
   amount,
@@ -16,9 +15,9 @@ const BlogPostCTA = ({
   random?: boolean;
   removeLatestBlog?: boolean;
 }) => {
-  const posts = allPosts
+  const filteredPosts = posts
     .filter((post) =>
-      currentBlogSlug ? post._raw.flattenedPath !== currentBlogSlug : post,
+      currentBlogSlug ? post.slug !== currentBlogSlug : post,
     )
     .sort(
       (
@@ -30,22 +29,22 @@ const BlogPostCTA = ({
           : compareDesc(new Date(a.publishDate), new Date(b.publishDate)),
     );
 
-  removeLatestBlog && posts.shift();
+  removeLatestBlog && filteredPosts.shift();
 
-  return posts.slice(0, amount ?? posts.length)?.map((post) => (
+  return filteredPosts.slice(0, amount ?? posts.length)?.map((post) => (
     <Link
-      href={`/blog/${post._raw.flattenedPath}`}
+      href={`/blog/${post.slug}`}
       key={post.title}
       className="hover:cursor-pointer"
     >
       <div key={post.title} className="max-w-1/3 text-start h-full">
         <div className="flex flex-col gap-6 justify-between h-full">
           <div className="flex flex-col overflow-hidden w-full rounded-2xl justify-center items-start">
-            <div>
+            <div className="overflow-hidden rounded-2xl">
               <Image
                 src={post.imageSrc}
                 className={cn(
-                  "rounded-2xl hover:scale-110 transition duration-300 ease-in-out object-cover h-40 md:h-64  lg:max-h-64",
+                  "rounded-2xl hover:scale-110 transition duration-300 ease-in-out object-cover h-auto lg:max-h-64",
                   amount ? amount : 0 > 3 && "max-h-40",
                 )}
                 width={800}

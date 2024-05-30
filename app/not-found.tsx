@@ -4,7 +4,7 @@ import NextLink from "@/components/NextLink";
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col px-6 md:px-32 pt-48 gap-28 min-h-screen">
+    <div className="flex flex-col px-6 md:px-32 pt-48 gap-28 min-h-screen items-center justify-center">
       <div className="text-center items-center justify-center flex flex-col gap-8">
         <h2 className="max-w-max text-6xl">Oops, let&apos;s bring you back</h2>
         <h3 className="text-2xl">

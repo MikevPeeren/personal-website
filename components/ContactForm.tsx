@@ -15,7 +15,6 @@ const initialState = {
 const ContactForm = () => {
   const [state, formAction] = useFormState(sendEmail, initialState);
 
-  console.log(state);
   return state?.returnMessage ? (
     <p className="text-50 text-lg font-bold">{state?.returnMessage}</p>
   ) : (

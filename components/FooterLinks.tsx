@@ -1,8 +1,8 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { posts } from '@/.velite';
 import Link from "next/link";
-import { allPosts } from "@/.contentlayer/generated";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const FooterLinks = () => {
@@ -11,7 +11,7 @@ const FooterLinks = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    setRandomPost(allPosts[Math.floor(Math.random() * allPosts.length)]);
+    setRandomPost(posts[Math.floor(Math.random() * posts.length)]);
   }, [pathname]);
 
   return (
@@ -51,7 +51,7 @@ const FooterLinks = () => {
         </Link>
         <Link
           className={`link ${pathname === "/blog/" ? "font-bold text-[#FFFFFF]" : "font-medium text-[#FFFFFF]/60"}`}
-          href={`/blog/${randomPost._raw.flattenedPath}`}
+          href={`/blog/${randomPost.slug}`}
         >
           Blog Post
         </Link>

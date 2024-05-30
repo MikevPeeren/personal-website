@@ -1,11 +1,11 @@
-import { allPosts } from "@/.contentlayer/generated";
+import { posts } from '@/.velite';
 import BlogPostCTA from "@/components/BlogPostCTA";
 import BlogPostCard from "@/components/BlogPostCard";
 import SocialCard from "@/components/SocialCard";
-import { compareAsc, compareDesc } from "date-fns";
+import { compareDesc } from "date-fns";
 
 export default function Blog() {
-  const posts = allPosts.sort(
+  const sortedPosts = posts.sort(
     (
       a: { publishDate: string | number | Date },
       b: { publishDate: string | number | Date },
@@ -22,7 +22,7 @@ export default function Blog() {
       </div>
       <div className="flex gap-4 flex-col lg:flex-row justify-between">
         <div className="w-full">
-          <BlogPostCard blogPost={posts[0]} />
+          <BlogPostCard blogPost={sortedPosts[0]} />
         </div>
         <SocialCard />
       </div>

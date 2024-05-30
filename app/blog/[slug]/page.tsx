@@ -1,21 +1,20 @@
+import { posts } from '@/.velite';
 import BlogPostCTA from "@/components/BlogPostCTA";
+import { MDXContent } from '@/components/MDXContent';
 import NextLink from "@/components/NextLink";
 import SocialCard from "@/components/SocialCard";
 import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon";
-import ArrowRightIcon from "@/components/icons/ArrowRightIcon";
-import { allPosts } from "contentlayer/generated";
 import { format, parseISO } from "date-fns";
-import { getMDXComponent } from "next-contentlayer/hooks";
 
 export const generateStaticParams = async () =>
-  allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
+  posts.map((post) => ({ slug: post.slug }));
 
 export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
 }) {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+  const post = posts.find((post) => post.slug === params.slug);
 
   return {
     metadataBase: new URL("https://mikevpeeren.nl"),
@@ -31,9 +30,8 @@ export async function generateMetadata({
 }
 
 export default function Blog({ params }: { params: { slug: string } }) {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+  const post = posts.find((post) => post.slug === params.slug);
 
-  const Content = getMDXComponent(post?.body.code ?? "");
 
   return (
     <div className="flex flex-col px-6 md:px-32 pt-48 gap-28">
@@ -60,7 +58,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
 
           <div className="flex flex-col lg:flex-row md:flex-col-reverse w-full gap-12">
             <div className="flex gap-8 flex-col">
-              <Content />
+             <MDXContent body={post.body} />
             </div>
             <SocialCard />
           </div>

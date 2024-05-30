@@ -16,6 +16,30 @@ export const metadata: Metadata = {
   title: "Mike van Peeren - Passionate About UX & High-Quality Code",
   description:
     "Explore the world of front-end development with Mike van Peeren. Check out his blog, and projects!",
+  keywords: [
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Server Components",
+    "Blog",
+    "Portfolio",
+    "Projects",
+    "Mike van Peeren",
+    "Mike",
+    "van Peeren",
+    "Mikevpeeren",
+    "Mike van Peeren blog",
+    "Mike van Peeren portfolio",
+  ],
+  authors: [
+    {
+      name: "Mike van Peeren",
+      url: "https://mikevpeeren.nl",
+    },
+  ],
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

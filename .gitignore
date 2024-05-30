@@ -31,9 +31,6 @@ yarn.lock
 # vercel
 .vercel
 
-# contentlayer
-.contentlayer
-
 # mac
 .DS_Store
 
@@ -44,3 +41,6 @@ yarn.lock
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+.velite
+
+public/static

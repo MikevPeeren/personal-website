@@ -1,15 +1,16 @@
-import { allPosts } from "contentlayer/generated";
+
 import { compareDesc } from "date-fns";
+import { posts } from '@/.velite';
 
 const URL = "https://mikevpeeren.nl";
 
 export default async function sitemap() {
-  const sortedAllPosts = allPosts.sort((a, b) =>
+  const sortedAllPosts = posts.sort((a, b) =>
     compareDesc(new Date(a.publishDate), new Date(b.publishDate))
   );
 
-  const posts = sortedAllPosts.map(({ _raw, publishDate }) => ({
-    url: `${URL}/blog/${_raw.flattenedPath}`,
+  const allPosts = posts.map(({ slug, publishDate }) => ({
+    url: `${URL}/blog/${slug}`,
     lastModified: publishDate,
     changeFrequency: "daily",
   }));
@@ -20,5 +21,5 @@ export default async function sitemap() {
     changeFrequency: "daily",
   }));
 
-  return [...routes, ...posts];
+  return [...routes, ...allPosts];
 }

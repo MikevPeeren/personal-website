@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const BlogPostCard = ({ blogPost }: { blogPost: any }) => {
   return (
-    <Link key={blogPost.title} href={`/blog/${blogPost._raw.flattenedPath}`}>
+    <Link key={blogPost.title} href={`/blog/${blogPost.slug}`}>
       <div className="relative rounded-2xl w-full">
         <Image
           src={blogPost.imageSrc}
