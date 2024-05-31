@@ -1,12 +1,6 @@
-import rehypePrettyCode from 'rehype-pretty-code'
-import { defineCollection, defineConfig, s } from 'velite'
 
-const meta = s
-  .object({
-    title: s.string().optional(),
-    description: s.string().optional(),
-    keywords: s.array(s.string()).optional()
-  }).default({})
+import rehypeShiki from '@shikijs/rehype'
+import { defineCollection, defineConfig, s } from 'velite'
 
 const posts = defineCollection({
   name: 'Post',
@@ -14,16 +8,17 @@ const posts = defineCollection({
   schema: s
     .object({
       title: s.string().max(99),
+      description: s.string().max(999).optional(),
+      keywords: s.string().optional(),
       slug: s.slug('posts'),
       publishDate: s.isodate(),
       updated: s.isodate().optional(),
       imageSrc: s.string().max(99),
+      imageAlt: s.string().max(99).optional(),
       video: s.file().optional(),
-      description: s.string().max(999).optional(),
       draft: s.boolean().default(false),
       category: s.enum(['Tech', 'Leadership', 'Updates', "Product"]), 
       tags: s.array(s.string()).default([]),
-      meta: meta,
       toc: s.toc(),
       metadata: s.metadata(),
       excerpt: s.excerpt(),
@@ -42,8 +37,7 @@ export default defineConfig({
     clean: true
   },
   collections: { posts },
-  markdown: {
-    // https://rehype-pretty-code.netlify.app/
-    rehypePlugins: [rehypePrettyCode]
+  mdx: {
+    rehypePlugins: [[rehypeShiki as any, { theme: 'vitesse-dark' }]]
   }
 })

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.2.2",
+    "@shikijs/rehype": "^1.6.1",
     "autoprefixer": "^10.4.19",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
@@ -18,7 +19,7 @@
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "reading-time": "^1.5.0",
+    "reading-duration": "^1.1.2",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-pretty-code": "^0.13.2",
     "rehype-prism-plus": "^2.0.0",

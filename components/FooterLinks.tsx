@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { posts } from '@/.velite';
 
 const FooterLinks = () => {
-  const [randomPost, setRandomPost] = useState({ _raw: { flattenedPath: "" } });
+  const [randomPost, setRandomPost] = useState({slug:""});
 
   const pathname = usePathname();
 

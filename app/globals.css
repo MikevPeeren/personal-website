@@ -37,3 +37,7 @@ p {
 .white-50 {
   @apply text-[#FFFFFF]/50;
 }
+
+[data-rehype-pretty-code-figure] pre {
+  @apply p-4 rounded-2xl;
+}

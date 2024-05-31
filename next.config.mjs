@@ -1,5 +1,7 @@
+import { build } from 'velite'
+
 /** @type {import('next').NextConfig} */
-module.exports = {
+export default {
   reactStrictMode: true,
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   swcMinify: true,
@@ -22,7 +24,6 @@ class VeliteWebpackPlugin {
       if (VeliteWebpackPlugin.started) return
       VeliteWebpackPlugin.started = true
       const dev = compiler.options.mode === 'development'
-      const { build } = await import('velite')
       await build({ watch: dev, clean: !dev })
     })
   }
