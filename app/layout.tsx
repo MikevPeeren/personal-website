@@ -45,6 +45,21 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  openGraph: {
+    title: "Mike van Peeren - Passionate About UX & High-Quality Code",
+    siteName: `https://mikevpeeren.nl`,
+    images: ["/favicon.ico"],
+    description:
+      "Explore the world of front-end development with Mike van Peeren. Check out his blog, and projects!",
+    url: `https://mikevpeeren.nl/`,
+  },
+  twitter: {
+    title: "Mike van Peeren - Passionate About UX & High-Quality Code",
+    images: ["/favicon.ico"],
+    card: "summary",
+    description:
+      "Explore the world of front-end development with Mike van Peeren. Check out his blog, and projects!",
+  },
 };
 
 export default function RootLayout({

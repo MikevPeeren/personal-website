@@ -26,8 +26,10 @@ export async function generateMetadata({
     keywords: post?.keywords,
     openGraph: {
       title: post?.title,
+      siteName: `https://mikevpeeren.nl/blog/${post?.slug}`,
       images: [new URL("https://mikevpeeren.nl" + "/public" + post?.imageSrc)],
       description: post?.description,
+      url: `https://mikevpeeren.nl/blog/${post?.slug}`,
     },
   };
 }
