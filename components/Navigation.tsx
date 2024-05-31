@@ -12,6 +12,7 @@ export function Navigation() {
         <Link
           className="flex items-center gap-2 rounded-full border-2"
           href="/"
+          aria-label="return to the homepage"
         >
           <Image
             src="/logo.png"
