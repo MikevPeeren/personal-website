@@ -48,14 +48,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mike van Peeren - Passionate About UX & High-Quality Code",
     siteName: `https://mikevpeeren.nl`,
-    images: ["https://mikevpeeren.nl/public/blog.avif"],
+    images: ["https://mikevpeeren.nl/macbook.webp"],
     description:
       "Explore the world of front-end development with Mike van Peeren. Check out his blog, and projects!",
     url: `https://mikevpeeren.nl/`,
   },
   twitter: {
     title: "Mike van Peeren - Passionate About UX & High-Quality Code",
-    images: ["https://mikevpeeren.nl/public/blog.avif"],
+    images: ["https://mikevpeeren.nl/macbook.webp"],
     card: "summary",
     description:
       "Explore the world of front-end development with Mike van Peeren. Check out his blog, and projects!",
