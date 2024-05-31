@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import Footer from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 import PageWrapper from "@/components/PageWrapper";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { cn } from "../lib/utils";
 
@@ -60,7 +61,10 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider enableSystem={false} attribute="class">
-          <main className="flex min-h-screen flex-col items-center justify-between m-2.5">
+          <main
+            className="flex min-h-screen flex-col items-center justify-between m-2.5"
+            role="main"
+          >
             <PageWrapper>
               <Navigation />
               <div className="h-full w-full pb-20">{children}</div>

@@ -16,21 +16,21 @@ const SocialCard = () => {
           redirectHref="/"
           redirectTarget="_self"
           variant="tertiary"
-          aria-label="redirect to the home page"
+          ariaLabel="redirect to the home page"
           icon={<HomeIcon />}
         />
         <NextLink
           redirectHref="https://github.com/MikevPeeren"
           redirectTarget="_blank"
           variant="tertiary"
-          aria-label="redirect to my personal Github"
+          ariaLabel="redirect to my personal Github"
           icon={<GithubIcon />}
         />
         <NextLink
           redirectHref="https://www.linkedin.com/in/mikevpeeren/"
           redirectTarget="_blank"
           variant="tertiary"
-          aria-label="redirect to my personal LinkedIn"
+          ariaLabel="redirect to my personal LinkedIn"
           icon={<LinkedInIcon />}
         />
       </div>

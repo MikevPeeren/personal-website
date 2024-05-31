@@ -11,6 +11,7 @@ const NextLink = ({
   variant = "primary",
   redirectTarget = "_self",
   additionalClassNames,
+  ariaLabel,
 }: {
   redirectHref: string;
   linkText?: string;
@@ -20,6 +21,7 @@ const NextLink = ({
   variant?: "primary" | "secondary" | "tertiary";
   redirectTarget?: "_blank" | "_self";
   additionalClassNames?: string;
+  ariaLabel?: string;
 }) => {
   return (
     <Link
@@ -33,6 +35,7 @@ const NextLink = ({
       )}
       href={redirectHref}
       target={redirectTarget}
+      aria-label={ariaLabel}
     >
       {iconLeft && iconLeft}
       {linkText ?? children}
