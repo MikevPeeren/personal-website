@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import Footer from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 import PageWrapper from "@/components/PageWrapper";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { cn } from "../lib/utils";
 
@@ -63,6 +64,7 @@ export default function RootLayout({
             <PageWrapper>
               <Navigation />
               <div className="h-full w-full pb-20">{children}</div>
+              <SpeedInsights />
             </PageWrapper>
             <Footer />
           </main>
