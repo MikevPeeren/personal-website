@@ -38,6 +38,6 @@ p {
   @apply text-[#FFFFFF]/50;
 }
 
-[data-rehype-pretty-code-figure] pre {
+pre {
   @apply p-4 rounded-2xl;
 }
