@@ -38,6 +38,6 @@ export default defineConfig({
   },
   collections: { posts },
   mdx: {
-    rehypePlugins: [[rehypeShiki as any, { theme: 'vitesse-dark' }]]
+    rehypePlugins: [[rehypeShiki as any, { theme: 'catppuccin-mocha' }]]
   }
 })

@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { posts } from '@/.velite';
+import { posts } from "@/.velite";
 
 const FooterLinks = () => {
-  const [randomPost, setRandomPost] = useState({slug:""});
+  const [randomPost, setRandomPost] = useState({ slug: "" });
 
   const pathname = usePathname();
 
