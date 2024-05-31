@@ -61,8 +61,9 @@ export default function About() {
           <div className="grid gap-4">
             <Image
               src={MacBook}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="h-full max-w-full rounded-2xl object-cover object-center"
-              alt={"Dachshund looking into the distance"}
+              alt={"View of MacBook"}
             />
             <Video
               src="/turnTableTwo.mp4"
@@ -72,15 +73,17 @@ export default function About() {
 
           <Image
             src={BBQ}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="h-full max-w-full rounded-2xl object-cover object-center"
-            alt={"Dachshund looking into the distance"}
+            alt={"Nice bbq meat"}
           />
 
           <div className="grid gap-4">
             <Image
               src={PostIts}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="h-full max-w-full rounded-2xl object-cover object-center"
-              alt={"Dachshund looking into the distance"}
+              alt={"Post its on a board"}
             />
             <Video
               src="/turnTable.mp4"
@@ -91,19 +94,22 @@ export default function About() {
           <div className="grid col-span-3 grid-cols-2 w-full gap-4">
             <Image
               src={NiceView}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="h-full w-full max-w-full rounded-2xl object-cover object-center"
-              alt={"Dachshund looking into the distance"}
+              alt={"View of mountain and water"}
             />
             <div className="grid gap-4">
               <Image
                 src={Leader}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="h-full w-full max-w-full rounded-2xl object-cover object-center"
-                alt={"Dachshund looking into the distance"}
+                alt={"Leader with followers"}
               />
               <Image
                 src={Mountain}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="h-full w-full max-w-full rounded-2xl object-cover object-center"
-                alt={"Dachshund looking into the distance"}
+                alt={"Mountain view"}
               />
             </div>
           </div>

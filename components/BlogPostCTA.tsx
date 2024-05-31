@@ -50,6 +50,7 @@ const BlogPostCTA = ({
                     "rounded-2xl hover:scale-110 transition duration-300 ease-in-out object-cover h-auto lg:max-h-64",
                     amount ? amount : 0 > 3 && "max-h-40",
                   )}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   width={800}
                   height={800}
                   alt={post.imageAlt ?? ""}

@@ -13,6 +13,7 @@ const Avatar = ({
       alt={alt}
       width={76}
       height={76}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       className="rounded-full border-2"
     />
   );

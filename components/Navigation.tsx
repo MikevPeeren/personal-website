@@ -17,6 +17,7 @@ export function Navigation() {
           <Image
             src="/logo.png"
             className="rounded-full"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
             width={48}
             height={48}
