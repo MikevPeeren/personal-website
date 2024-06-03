@@ -1,9 +1,11 @@
-import { JSX, SVGProps } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import NavBarMenu from "./NavBarMenu";
+// import SearchBar from "./SearchBar";
 import ThemeSwitcher from "./ThemeSwitcher";
+
+import Logo from "@/public/logo.png";
 
 export function Navigation() {
   return (
@@ -15,18 +17,23 @@ export function Navigation() {
           aria-label="return to the homepage"
         >
           <Image
-            src="/logo.png"
+            src={Logo}
             className="rounded-full"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            priority
-            width={48}
-            height={48}
+            placeholder="blur"
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "50px",
+            }}
+            width={50}
+            height={30}
             alt={""}
           />
         </Link>
-        <nav className="flex items-start gap-4 py-2">
-          <ThemeSwitcher />
 
+        <nav className="flex items-start gap-4 py-2">
+          {/* <SearchBar /> */}
+          <ThemeSwitcher />
           <NavBarMenu />
         </nav>
       </header>
