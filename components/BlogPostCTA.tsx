@@ -40,39 +40,37 @@ const BlogPostCTA = ({
         key={post.title}
         className="hover:cursor-pointer"
       >
-        <div key={post.title} className="max-w-1/3 text-start h-full">
-          <div className="flex flex-col gap-6 justify-between h-full">
-            <div className="flex flex-col overflow-hidden w-full rounded-2xl justify-center items-start">
-              <div className="overflow-hidden rounded-2xl">
-                <Image
-                  src={post.imageSrc}
-                  className={cn(
-                    "rounded-2xl hover:scale-110 transition duration-300 ease-in-out object-cover h-auto lg:max-h-64",
-                    amount ? amount : 0 > 3 && "max-h-40",
-                  )}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  width={800}
-                  height={800}
-                  alt={post.imageAlt ?? ""}
-                />
-              </div>
-
-              <h3
-                className={cn(
-                  "text-2xl w-full lg:w-3/4 pt-6",
-                  amount ? amount : 0 > 3 && "text-lg",
-                )}
-              >
-                {post.title}
-              </h3>
-            </div>
-            <div className="items-start justify-end flex flex-col gap-2">
-              <span>{readingTime}</span>
-              <div className="flex flex-row items-center gap-6 text-50 text-sm">
-                <time dateTime={post.publishDate}>
-                  {format(parseISO(post.publishDate), "LLLL d, yyyy")}
-                </time>
-                <span>{post.category}</span>
+        <div className="flex flex-col justify-between">
+          <div className="overflow-hidden rounded-2xl">
+            <Image
+              src={post.imageSrc}
+              className="w-full h-48 object-cover rounded-2xl"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              width={500}
+              height={200}
+              loading="lazy"
+              alt={post.imageAlt ?? ""}
+            />
+            <h3
+              className={cn(
+                "text-2xl w-full pt-6 text-wrap truncate",
+                amount ? amount : 0 > 3 && "text-lg",
+              )}
+            >
+              {post.title}
+            </h3>
+          </div>
+          <div key={post.title}>
+            <div className="flex flex-col gap-6 justify-between h-full">
+              <div className="flex flex-col overflow-hidden w-full rounded-2xl justify-center items-start"></div>
+              <div className="items-start justify-end flex flex-col gap-2">
+                <span>{readingTime}</span>
+                <div className="flex flex-row items-center gap-6 text-50 text-sm">
+                  <time dateTime={post.publishDate}>
+                    {format(parseISO(post.publishDate), "LLLL d, yyyy")}
+                  </time>
+                  <span>{post.category}</span>
+                </div>
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@ import BlogPostCard from "@/components/BlogPostCard";
 import BlogPostCTA from "@/components/BlogPostCTA";
 import SocialCard from "@/components/SocialCard";
 
-import { posts } from '@/.velite';
+import { posts } from "@/.velite";
 
 export default function Blog() {
   const sortedPosts = posts.sort(
@@ -22,14 +22,14 @@ export default function Blog() {
           Posts about Next.js, tech news and personal insights
         </h2>
       </div>
-      <div className="flex gap-4 flex-col lg:flex-row justify-between">
+      <div className="flex gap-4 flex-col xl:flex-row justify-between">
         <div className="w-full">
           <BlogPostCard blogPost={sortedPosts[0]} />
         </div>
         <SocialCard />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 rounded-xl">
         <BlogPostCTA removeLatestBlog />
       </div>
     </div>
