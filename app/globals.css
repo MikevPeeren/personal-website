@@ -28,6 +28,10 @@ h3 {
 
 p {
   @apply text-base text-50 max-w-5xl;
+
+  a {
+    @apply font-bold;
+  }
 }
 
 .text-50 {
