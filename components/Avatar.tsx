@@ -11,9 +11,14 @@ const Avatar = ({
     <Image
       src={src}
       alt={alt}
-      width={76}
-      height={76}
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      placeholder="blur"
+      sizes="100vw"
+      style={{
+        width: "100%",
+        height: "50px",
+      }}
+      width={500}
+      height={300}
       className="rounded-full border-2"
     />
   );

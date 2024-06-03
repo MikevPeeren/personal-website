@@ -22,8 +22,8 @@ const Footer = () => {
               width: "100%",
               height: "50px",
             }}
-            width={500}
-            height={300}
+            width={50}
+            height={30}
             alt={""}
           />
         </div>
