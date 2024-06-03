@@ -29,7 +29,7 @@ export default function Blog() {
         <SocialCard />
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 rounded-xl">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 rounded-xl">
         <BlogPostCTA removeLatestBlog />
       </div>
     </div>
