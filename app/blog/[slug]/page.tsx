@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 import { format, parseISO } from "date-fns";
 
 import BlogPostCTA from "@/components/BlogPostCTA";
@@ -37,7 +39,8 @@ export async function generateMetadata({
 export default function Blog({ params }: { params: { slug: string } }) {
   const post = posts.find((post) => post.slug === params.slug);
 
-  if (!post) return <></>;
+  console.log(post);
+  if (!post) return notFound();
 
   const readingTime = getReadingTime(post.body);
 
