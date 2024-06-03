@@ -8,13 +8,15 @@ import LinkedInIcon from "@/components/icons/LinkedInIcon";
 import FooterLinks from "./FooterLinks";
 import NextLink from "./NextLink";
 
+import Logo from "@/public/logo.png";
+
 const Footer = () => {
   return (
     <div className="w-full h-auto flex flex-col-reverse md:flex-col px-6 md:px-32 py-8 gap-12">
       <div className="flex flex-col md:flex-row items-center justify-between w-full gap-4">
         <div className="flex items-center gap-4">
           <Image
-            src="/logo.png"
+            src={Logo}
             className="rounded-full"
             placeholder="blur"
             sizes="100vw"
