@@ -16,9 +16,14 @@ const Footer = () => {
           <Image
             src="/logo.png"
             className="rounded-full"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            width={48}
-            height={48}
+            placeholder="blur"
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "50px",
+            }}
+            width={500}
+            height={300}
             alt={""}
           />
         </div>
