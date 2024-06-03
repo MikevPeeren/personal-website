@@ -55,12 +55,13 @@ export default function Home() {
           <Image
             src={Belle}
             className="rounded-2xl"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            width={800}
-            height={800}
+            sizes="100vw"
+            placeholder="blur"
+            width={500}
+            height={300}
             style={{
               width: "100%",
-              height: "100%",
+              height: "auto",
               maxHeight: "500px",
               objectFit: "cover",
             }}

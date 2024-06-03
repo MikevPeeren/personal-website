@@ -31,7 +31,7 @@ p {
 }
 
 .text-50 {
-  @apply dark:text-[#FFFFFF]/50 text-[#000000]/50;
+  @apply dark:text-[#FFFFFF]/70 text-[#000000]/70;
 }
 
 .white-50 {
