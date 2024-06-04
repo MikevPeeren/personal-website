@@ -1,11 +1,17 @@
 import { MetadataRoute } from "next";
 
+import { compareDesc } from "date-fns";
+
 import { posts } from "@/.velite";
 
 const URL = "https://mikevpeeren.nl";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const allPosts = posts.map(({ slug, publishDate }) => ({
+  const sortedAllPosts = posts.sort((a, b) =>
+    compareDesc(new Date(a.publishDate), new Date(b.publishDate)),
+  );
+
+  const allPosts = sortedAllPosts.map(({ slug, publishDate }) => ({
     url: `${URL}/blog/${slug}`,
     lastModified: publishDate,
     changeFrequency: "daily",
