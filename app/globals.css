@@ -43,5 +43,5 @@ p {
 }
 
 pre {
-  @apply p-4 rounded-2xl;
+  @apply p-4 rounded-2xl break-words overflow-auto;
 }

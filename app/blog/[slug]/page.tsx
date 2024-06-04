@@ -66,7 +66,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
             </div>
           </div>
 
-          <div className="flex flex-col lg:flex-row md:flex-col-reverse w-full gap-12">
+          <div className="flex flex-col xl:flex-row md:flex-col-reverse w-full gap-12">
             <div className="flex gap-8 flex-col">
               <MDXContent body={post.body} />
             </div>

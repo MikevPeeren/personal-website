@@ -18,7 +18,6 @@ const Footer = () => {
           <Image
             src={Logo}
             className="rounded-full"
-            placeholder="blur"
             sizes="100vw"
             style={{
               width: "100%",
