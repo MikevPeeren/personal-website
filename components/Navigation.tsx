@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import NavBarMenu from "./NavBarMenu";
-// import SearchBar from "./SearchBar";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 import Logo from "@/public/logo.png";
@@ -31,7 +30,6 @@ export function Navigation() {
         </Link>
 
         <nav className="flex items-start gap-4 py-2">
-          {/* <SearchBar /> */}
           <ThemeSwitcher />
           <NavBarMenu />
         </nav>

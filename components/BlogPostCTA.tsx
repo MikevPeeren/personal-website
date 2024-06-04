@@ -11,13 +11,29 @@ const BlogPostCTA = ({
   currentBlogSlug,
   random = false,
   removeLatestBlog = false,
+  searchedPosts,
 }: {
   amount?: number;
   currentBlogSlug?: string;
   random?: boolean;
   removeLatestBlog?: boolean;
+  searchedPosts?: [
+    {
+      slug: string;
+      title: string;
+      description: string;
+      body: string;
+      imageSrc: string;
+      imageAlt: string;
+      publishDate: string | number | Date;
+      category: string;
+    },
+  ];
 }) => {
-  const filteredPosts = posts
+  const postArray =
+    searchedPosts && searchedPosts.length > 0 ? searchedPosts : posts;
+
+  const filteredPosts = postArray
     .filter((post) => (currentBlogSlug ? post.slug !== currentBlogSlug : post))
     .sort(
       (
@@ -29,7 +45,7 @@ const BlogPostCTA = ({
           : compareDesc(new Date(a.publishDate), new Date(b.publishDate)),
     );
 
-  removeLatestBlog && filteredPosts.shift();
+  !searchedPosts?.length && removeLatestBlog && filteredPosts.shift();
 
   return filteredPosts.slice(0, amount ?? posts.length)?.map((post) => {
     const readingTime = getReadingTime(post.body);
@@ -65,8 +81,11 @@ const BlogPostCTA = ({
               <div className="items-start justify-end flex flex-col gap-2">
                 <span>{readingTime}</span>
                 <div className="flex flex-row items-center gap-6 text-50 text-sm">
-                  <time dateTime={post.publishDate}>
-                    {format(parseISO(post.publishDate), "LLLL d, yyyy")}
+                  <time dateTime={post.publishDate as string}>
+                    {format(
+                      parseISO(post.publishDate as string),
+                      "LLLL d, yyyy",
+                    )}
                   </time>
                   <span>{post.category}</span>
                 </div>

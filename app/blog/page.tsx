@@ -1,8 +1,9 @@
 import { compareDesc } from "date-fns";
 
-import BlogPostCard from "@/components/BlogPostCard";
-import BlogPostCTA from "@/components/BlogPostCTA";
 import SocialCard from "@/components/SocialCard";
+
+import BlogPostCard from "./BlogPostCard";
+import BlogPostCTABlog from "./BlogPostCTABlog";
 
 import { posts } from "@/.velite";
 
@@ -29,9 +30,7 @@ export default function Blog() {
         <SocialCard />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 rounded-xl">
-        <BlogPostCTA removeLatestBlog />
-      </div>
+      <BlogPostCTABlog />
     </div>
   );
 }
