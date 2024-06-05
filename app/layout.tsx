@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     "Mike van Peeren blog",
     "Mike van Peeren portfolio",
   ],
+  publisher: "Mike van Peeren",
   robots: { index: true, follow: true },
   alternates: {
     canonical: "https://mikevpeeren.nl/",
