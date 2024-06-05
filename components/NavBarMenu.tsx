@@ -22,6 +22,7 @@ const NavBarMenu = () => {
           >
             <Link
               href="/"
+              title={"visit the homepage"}
               className={cn(
                 "hover:dark:text-[#000000] hover:text-[#FFFFFF]/50",
                 pathname === "/" &&
@@ -32,6 +33,7 @@ const NavBarMenu = () => {
             </Link>
             <Link
               href="/blog"
+              title={"visit my blog page"}
               className={cn(
                 "hover:dark:text-[#000000] hover:text-[#FFFFFF]/50",
                 pathname.includes("/blog") &&
@@ -42,6 +44,7 @@ const NavBarMenu = () => {
             </Link>
             <Link
               href="/projects"
+              title={"visit my projects page"}
               className={cn(
                 "hover:dark:text-[#000000] hover:text-[#FFFFFF]/50",
                 pathname === "/projects" &&
@@ -52,6 +55,7 @@ const NavBarMenu = () => {
             </Link>
             <Link
               href="/about"
+              title={"visit my about page"}
               className={cn(
                 "hover:dark:text-[#000000] hover:text-[#FFFFFF]/50",
                 pathname === "/about" &&
@@ -62,6 +66,7 @@ const NavBarMenu = () => {
             </Link>
             <Link
               href="/contact"
+              title={"visit my contact page"}
               className={cn(
                 "hover:dark:text-[#000000] hover:text-[#FFFFFF]/50",
                 pathname === "/contact" &&

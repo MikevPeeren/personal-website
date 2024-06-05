@@ -25,6 +25,7 @@ export function Navigation() {
             }}
             width={50}
             height={30}
+            title={""}
             alt={""}
           />
         </Link>

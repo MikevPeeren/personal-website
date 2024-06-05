@@ -6,6 +6,7 @@ const NextLink = ({
   redirectHref,
   linkText,
   children,
+  title,
   icon,
   iconLeft,
   variant = "primary",
@@ -16,6 +17,7 @@ const NextLink = ({
   redirectHref: string;
   linkText?: string;
   children?: JSX.Element;
+  title?: string;
   icon?: JSX.Element;
   iconLeft?: JSX.Element;
   variant?: "primary" | "secondary" | "tertiary";
@@ -34,6 +36,7 @@ const NextLink = ({
         additionalClassNames,
       )}
       href={redirectHref}
+      title={title}
       target={redirectTarget}
       aria-label={ariaLabel}
     >

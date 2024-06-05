@@ -13,6 +13,7 @@ const Avatar = ({
     <Image
       src={src}
       alt={alt}
+      title={alt}
       placeholder="blur"
       sizes="100vw"
       width={100}

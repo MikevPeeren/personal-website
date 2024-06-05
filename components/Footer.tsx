@@ -25,6 +25,7 @@ const Footer = () => {
             }}
             width={50}
             height={30}
+            title={""}
             alt={""}
           />
         </div>

@@ -38,6 +38,7 @@ export default function Projects() {
           <NextLink
             redirectHref="/contact"
             linkText="Contact me!"
+            title={"contact me"}
             icon={<MailBox />}
           />
         </div>

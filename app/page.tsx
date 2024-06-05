@@ -65,6 +65,7 @@ export default function Home() {
               maxHeight: "500px",
               objectFit: "cover",
             }}
+            title={""}
             alt={"Dachshund looking into the distance"}
           />
         </div>

@@ -20,18 +20,21 @@ const FooterLinks = () => {
       <div className="flex flex-col gap-4">
         <Link
           className={`link ${pathname === "/" ? "font-bold text-[#FFFFFF]" : "font-medium text-[#FFFFFF]/60"}`}
+          title="visit the homepage"
           href="/"
         >
           Home
         </Link>
         <Link
           className={`link ${pathname === "/about" ? "font-bold text-[#FFFFFF]" : "font-medium text-[#FFFFFF]/60"}`}
+          title="visit the about page"
           href="/about"
         >
           About
         </Link>
         <Link
           className={`link ${pathname === "/contact" ? "font-bold text-[#FFFFFF]" : "font-medium text-[#FFFFFF]/60"}`}
+          title="visit the contact page"
           href="/contact"
         >
           Contact
@@ -40,18 +43,21 @@ const FooterLinks = () => {
       <div className="flex flex-col gap-4">
         <Link
           className={`link ${pathname === "/projects" ? "font-bold text-[#FFFFFF]" : "font-medium text-[#FFFFFF]/60"}`}
+          title="visit the projects page"
           href="/projects"
         >
           Projects
         </Link>
         <Link
           className={`link ${pathname === "/blog" ? "font-bold text-[#FFFFFF]" : "font-medium text-[#FFFFFF]/60"}`}
+          title="visit the blog page"
           href="/blog"
         >
           Blog
         </Link>
         <Link
           className={`link ${pathname === "/blog/" ? "font-bold text-[#FFFFFF]" : "font-medium text-[#FFFFFF]/60"}`}
+          title="visit a random blog page"
           href={`/blog/${randomPost.slug}`}
         >
           Blog Post

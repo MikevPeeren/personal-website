@@ -31,11 +31,13 @@ export default function About() {
             redirectTarget="_blank"
             linkText="LinkedIn"
             variant="secondary"
+            title={"visit my LinkedIn profile"}
             icon={<LinkedInIcon />}
           />
           <NextLink
             redirectHref="mailto:mikevpeeren@hotmail.com?subject=Hey%20Mike"
             linkText="Email"
+            title={"send an email to me"}
             icon={<EmailIcon />}
           />
         </div>
@@ -63,6 +65,7 @@ export default function About() {
               src={MacBook}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="h-full max-w-full rounded-2xl object-cover object-center"
+              title={"View of MacBook"}
               alt={"View of MacBook"}
             />
             <Video
@@ -75,6 +78,7 @@ export default function About() {
             src={BBQ}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="h-full max-w-full rounded-2xl object-cover object-center"
+            title={"Nice bbq meat"}
             alt={"Nice bbq meat"}
           />
 
@@ -83,6 +87,7 @@ export default function About() {
               src={PostIts}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="h-full max-w-full rounded-2xl object-cover object-center"
+              title={"Post its on a board"}
               alt={"Post its on a board"}
             />
             <Video
@@ -96,6 +101,7 @@ export default function About() {
               src={NiceView}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="h-full w-full max-w-full rounded-2xl object-cover object-center"
+              title={"View of mountain and water"}
               alt={"View of mountain and water"}
             />
             <div className="grid gap-4">
@@ -103,12 +109,14 @@ export default function About() {
                 src={Leader}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="h-full w-full max-w-full rounded-2xl object-cover object-center"
+                title={"Leader with followers"}
                 alt={"Leader with followers"}
               />
               <Image
                 src={Mountain}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="h-full w-full max-w-full rounded-2xl object-cover object-center"
+                title={"Mountain view"}
                 alt={"Mountain view"}
               />
             </div>

@@ -15,6 +15,7 @@ const CTAContact = () => {
       <NextLink
         redirectHref="mailto:mikevpeeren@hotmail.com?subject=Hey%20Mike"
         linkText="Email"
+        title="send an email to me"
         icon={<EmailIcon />}
       />
     </div>
