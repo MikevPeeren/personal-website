@@ -21,7 +21,11 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   title: "Mike van Peeren - Passionate About UX & High-Quality Code",
   description:
-    "Explore the world of front-end development with Mike van Peeren. Check out his blog, and projects!",
+    "Explore the world of front-end development with Mike van Peeren. Check out his blog posts about Next.js, tech news and personal insights, and projects!",
+  authors: {
+    name: "Mike van Peeren",
+    url: "https://mikevpeeren.nl",
+  },
   keywords: [
     "Next.js",
     "React",
@@ -37,12 +41,10 @@ export const metadata: Metadata = {
     "Mike van Peeren blog",
     "Mike van Peeren portfolio",
   ],
-  authors: [
-    {
-      name: "Mike van Peeren",
-      url: "https://mikevpeeren.nl",
-    },
-  ],
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: "https://mikevpeeren.nl/",
+  },
   icons: {
     icon: "/favicon.ico",
   },
