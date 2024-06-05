@@ -30,7 +30,7 @@ p {
   @apply text-base text-50 max-w-5xl;
 
   a {
-    @apply font-bold;
+    @apply font-bold underline;
   }
 }
 
@@ -44,4 +44,8 @@ p {
 
 pre {
   @apply p-4 rounded-2xl break-words overflow-auto;
+}
+
+ul {
+  @apply list-disc pl-5 text-50;
 }

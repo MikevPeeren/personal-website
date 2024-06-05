@@ -1,0 +1,180 @@
+---
+title: "Refactoring ContentLayer to Velite"
+description: ""
+publishDate: "June 04, 2024"
+imageAlt: ""
+imageSrc: "/blog/velite.avif"
+keywords: "contentlayer, velite, blog, posts, refactoring"
+slug: "refactoring-contentlayer-to-velite"
+category: "Tech"
+---
+
+As you might have heard already contentlayer is in a bit of a pickle with the amount of support the project is getting, you can read more about it [here](https://github.com/contentlayerdev/contentlayer/issues/109).
+I've been using contentlayer for a while now for this blog and I've been really enjoying it, in my search for a new tool that handles content management I came across velite and I decided to give it a try.
+
+## What is Velite?
+
+[Velite](https://velite.js.org/) is a tool for building type-safe data layer, turn Markdown / MDX, YAML, JSON, or other files into app's data layer with Zod schema.
+## Why should I use Velite?
+
+There are a few reasons why I would recommend using Velite over contentlayer:
+
+- **Easy to use:** Move your contents into content folder, define collections schema, run velite, then use the output data in your application.
+- **Type-safe:** Contents schema validation by Zod, and generate type inference for TypeScript.
+- **Framework Agnostic:** JSON & Entry & DTS output, out of the box support for any JavaScript framework or library.
+- **Light-weight:** Choose more native APIs instead of bloated NPM modules, less runtime dependencies, so it is fast and efficiently.
+- **Still powerful:** Built-in Markdown / MDX, YAML, JSON support, relative files & images processing, schema validation, etc.
+- **Configurable:** Both input and output directories can be customized, and support for custom loaders, hooks, etc.
+- **Extensible:** Support any file types by custom loaders, Custom field validation and transform by custom schema, and any output formats by hooks.
+
+## Quick Start
+
+In order to get started with Velite, follow these steps. I have found it very easy and very similar to contentlayer.
+Which for me was the reason to pick this as an alternatives as opposed to other tools like [@next/mdx](https://www.npmjs.com/package/@next/mdx), [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote) or [mdxts](https://github.com/souporserious/mdxts/)
+
+### Installation
+To get started with Velite, you'll need to install it and set up your project.
+
+```bash
+yarn add velite -D
+```
+
+### Configure
+
+Then create a `velite.config.ts` file in your project root directory and add the following code:
+
+```ts
+import rehypeShiki from '@shikijs/rehype'
+import { defineCollection, defineConfig, s } from 'velite'
+
+const posts = defineCollection({
+  name: 'Post',
+  pattern: 'posts/**/*.mdx',
+  schema: s
+    .object({
+      title: s.string().max(99),
+      description: s.string().max(999).optional(),
+      keywords: s.string().optional(),
+      slug: s.slug('posts'),
+      publishDate: s.isodate(),
+      updated: s.isodate().optional(),
+      imageSrc: s.string().max(99),
+      imageAlt: s.string().max(99).optional(),
+      video: s.file().optional(),
+      draft: s.boolean().default(false),
+      category: s.enum(['Tech', 'Leadership', 'Updates', "Product"]), 
+      tags: s.array(s.string()).default([]),
+      toc: s.toc(),
+      metadata: s.metadata(),
+      excerpt: s.excerpt(),
+      body: s.mdx()
+    })
+    .transform(data => ({ ...data, permalink: `/blog/${data.slug}` }))
+})
+
+export default defineConfig({
+  root: 'content',
+  output: {
+    data: '.velite',
+    assets: 'public/static',
+    base: '/static/',
+    name: '[name]-[hash:6].[ext]',
+    clean: true
+  },
+  collections: { posts },
+  mdx: {
+    rehypePlugins: [[rehypeShiki as any, { theme: 'catppuccin-mocha' }]]
+  }
+})
+```
+
+This code defines a collection called `posts` with the following schema:
+
+- **title**: A string with a maximum length of 99 characters.
+- **description**: An optional string with a maximum length of 999 characters.
+- **keywords**: An optional string.
+- **slug**: A slug with a maximum length of 99 characters.
+- **publishDate**: An ISO date string.
+- **updated**: An optional ISO date string.
+- **imageSrc**: A string with a maximum length of 99 characters.
+- **imageAlt**: An optional string with a maximum length of 99 characters.
+- **video**: An optional file.
+- **draft**: A boolean with a default value of `false`.
+- **category**: An enum with the possible values `Tech`, `Leadership`, `Updates`, and `Product`.
+- **tags**: An array of strings.
+- **toc**: A TOC object.
+- **metadata**: A metadata object.
+- **excerpt**: An excerpt object.
+- **body**: An MDX object.
+
+Further more i have also added a `rehypeShiki` plugin to the `mdx` object in the config file in order to add syntax highlighting to my code blocks.
+
+If you wish to know more about the the field schema's available options, you can check out the [Velite documentation](https://velite.js.org/docs/schema).
+
+As I am using Next.js I also had to add some addition configuration in my next.config.mjs file in order to make it work.
+Feel free to check that out [here](https://velite.js.org/guide/with-nextjs).
+
+### Write content
+
+Now that you have set up your Velite project, you can start writing content.
+You can create a new post by creating a new file in the `content/posts` directory with the `.mdx` extension.
+
+For example, you can create a new post called `my-first-post.mdx` with the following content:
+
+```mdx
+---
+title: "My First Post"
+description: "This is my first post."
+publishDate: "2023-01-01"
+imageAlt: ""
+imageSrc: "/blog/velite.avif"
+keywords: "contentlayer, deprecated, refactoring, velite, blog, posts"
+slug: "my-first-post"
+category: "Tech"
+---
+
+# My First Post
+
+This is my first post.
+```
+
+### Build your content
+
+You can then run the `velite` command to build the content and generate the site.
+
+```bash
+yarn velite
+```
+
+this will give you the following output:
+
+```js
+ root
++├── .velite
++│   ├── posts.json                  # posts collection output
++│   ├── index.d.ts                  # typescript dts file
++│   └── index.js                    # javascript entry file (esm)
+ ├── content
+ │   ├── posts
+ │   │   ├── hello-world.md
+ │   │   └── other.md
+ ├── public
++│   └── static
++│       ├── img-2hd8f3sd.jpg        # from content reference
++│       ├── plain-37d62h1s.txt      # from content reference
+ ├── package.json
+ └── velite.config.js
+```
+
+You can the use the above output to build your site and display your blog posts for example, like this:
+
+```tsx
+import { posts } from './.velite'
+
+console.log(posts);
+```
+
+## Conclusion
+
+The setup of Velite was nice and quick, some minor adjustments had to be made related to contentlayer but overall it was a great experience.
+Keep in mind that Velite is still in an early stage of development and there are still some things to improve, but for now it is a great tool to get started with if you enjoyed working with contentlayer
