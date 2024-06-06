@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import GithubIcon from "@/components/icons/GithubIcon";
 import HomeIcon from "@/components/icons/HomeIcon";
 import LinkedInIcon from "@/components/icons/LinkedInIcon";
+import MediumIcon from "@/components/icons/MediumIcon";
 
 import FooterLinks from "./FooterLinks";
 import NextLink from "./NextLink";
@@ -38,18 +38,25 @@ const Footer = () => {
             icon={<HomeIcon />}
           />
           <NextLink
-            redirectHref="https://github.com/MikevPeeren"
-            redirectTarget="_blank"
-            variant="tertiary"
-            ariaLabel="redirect to my personal Github"
-            icon={<GithubIcon />}
-          />
-          <NextLink
             redirectHref="https://www.linkedin.com/in/mikevpeeren/"
             redirectTarget="_blank"
             variant="tertiary"
             ariaLabel="redirect to my personal LinkedIn"
             icon={<LinkedInIcon />}
+          />
+          <NextLink
+            redirectHref="https://medium.com/@mikevpeeren/"
+            redirectTarget="_blank"
+            variant="tertiary"
+            ariaLabel="redirect to my personal Medium"
+            icon={<MediumIcon additionalClassNames="fill-white" />}
+          />
+          <NextLink
+            redirectHref="https://github.com/MikevPeeren"
+            redirectTarget="_blank"
+            variant="tertiary"
+            ariaLabel="redirect to my personal Github"
+            icon={<GithubIcon />}
           />
         </div>
       </div>

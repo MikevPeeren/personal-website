@@ -2,6 +2,7 @@ import GithubIcon from "@/components/icons/GithubIcon";
 import HomeIcon from "@/components/icons/HomeIcon";
 import LinkedInIcon from "@/components/icons/LinkedInIcon";
 
+import MediumIcon from "./icons/MediumIcon";
 import Avatar from "./Avatar";
 import NextLink from "./NextLink";
 
@@ -17,21 +18,34 @@ const SocialCard = () => {
           redirectTarget="_self"
           variant="tertiary"
           ariaLabel="redirect to the home page"
-          icon={<HomeIcon />}
-        />
-        <NextLink
-          redirectHref="https://github.com/MikevPeeren"
-          redirectTarget="_blank"
-          variant="tertiary"
-          ariaLabel="redirect to my personal Github"
-          icon={<GithubIcon />}
+          icon={<HomeIcon additionalClassNames="text-black dark:text-white" />}
         />
         <NextLink
           redirectHref="https://www.linkedin.com/in/mikevpeeren/"
           redirectTarget="_blank"
           variant="tertiary"
           ariaLabel="redirect to my personal LinkedIn"
-          icon={<LinkedInIcon />}
+          icon={
+            <LinkedInIcon additionalClassNames="fill-black dark:fill-white" />
+          }
+        />
+        <NextLink
+          redirectHref="https://medium.com/@mikevpeeren/"
+          redirectTarget="_blank"
+          variant="tertiary"
+          ariaLabel="redirect to my personal Medium"
+          icon={
+            <MediumIcon additionalClassNames="fill-black dark:fill-white" />
+          }
+        />
+        <NextLink
+          redirectHref="https://github.com/MikevPeeren"
+          redirectTarget="_blank"
+          variant="tertiary"
+          ariaLabel="redirect to my personal Github"
+          icon={
+            <GithubIcon additionalClassNames="fill-black dark:fill-white" />
+          }
         />
       </div>
     </div>

@@ -32,7 +32,7 @@ const NextLink = ({
         variant === "primary" && "bg-transparant",
         variant === "secondary" &&
           "bg-[#1C1C1C] text-white dark:bg-white dark:text-black border-[#1C1C1C] dark:border-white",
-        variant === "tertiary" && "border-none border-0 shadow-none",
+        variant === "tertiary" && "border-none border-0 shadow-none ",
         additionalClassNames,
       )}
       href={redirectHref}

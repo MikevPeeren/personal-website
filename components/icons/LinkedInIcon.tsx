@@ -1,4 +1,12 @@
-const LinkedInIcon = ({ size = "24" }: { size?: string }) => {
+import { cn } from "@/lib/utils";
+
+const LinkedInIcon = ({
+  size = "24",
+  additionalClassNames = "",
+}: {
+  size?: string;
+  additionalClassNames?: string;
+}) => {
   return (
     <svg
       aria-hidden="true"
@@ -7,7 +15,10 @@ const LinkedInIcon = ({ size = "24" }: { size?: string }) => {
       height={size}
       fill="currentColor"
       viewBox={`0 0 ${size} ${size}`}
-      className="transition-transform group-hover:translate-x-1"
+      className={cn(
+        "transition-transform group-hover:translate-x-1",
+        additionalClassNames,
+      )}
     >
       <path
         fillRule="evenodd"
@@ -18,4 +29,5 @@ const LinkedInIcon = ({ size = "24" }: { size?: string }) => {
     </svg>
   );
 };
+
 export default LinkedInIcon;

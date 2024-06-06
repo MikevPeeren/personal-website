@@ -26,7 +26,7 @@ const NavBarMenu = () => {
               className={cn(
                 "hover:dark:text-[#000000] hover:text-[#FFFFFF]/50",
                 pathname === "/" &&
-                  "dark:text-[#000000] text-[#FFFFFF]/50 font-bold",
+                  "dark:text-[#000000] text-[#FFFFFF] font-bold",
               )}
             >
               Homepage
@@ -37,7 +37,7 @@ const NavBarMenu = () => {
               className={cn(
                 "hover:dark:text-[#000000] hover:text-[#FFFFFF]/50",
                 pathname.includes("/blog") &&
-                  "dark:text-[#000000] text-[#FFFFFF]/50 font-bold",
+                  "dark:text-[#000000] text-[#FFFFFF] font-bold",
               )}
             >
               Blog
@@ -48,7 +48,7 @@ const NavBarMenu = () => {
               className={cn(
                 "hover:dark:text-[#000000] hover:text-[#FFFFFF]/50",
                 pathname === "/projects" &&
-                  "dark:text-[#000000] text-[#FFFFFF]/50 font-bold",
+                  "dark:text-[#000000] text-[#FFFFFF] font-bold",
               )}
             >
               Projects
@@ -59,7 +59,7 @@ const NavBarMenu = () => {
               className={cn(
                 "hover:dark:text-[#000000] hover:text-[#FFFFFF]/50",
                 pathname === "/about" &&
-                  "dark:text-[#000000] text-[#FFFFFF]/50 font-bold",
+                  "dark:text-[#000000] text-[#FFFFFF] font-bold",
               )}
             >
               About
@@ -70,7 +70,7 @@ const NavBarMenu = () => {
               className={cn(
                 "hover:dark:text-[#000000] hover:text-[#FFFFFF]/50",
                 pathname === "/contact" &&
-                  "dark:text-[#000000] text-[#FFFFFF]/50 font-bold",
+                  "dark:text-[#000000] text-[#FFFFFF] font-bold",
               )}
             >
               Contact

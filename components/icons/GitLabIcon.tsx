@@ -1,7 +1,18 @@
-const GitLabIcon = ({ size = "24" }: { size?: string }) => {
+import { cn } from "@/lib/utils";
+
+const GitLabIcon = ({
+  size = "24",
+  additionalClassNames = "",
+}: {
+  size?: string;
+  additionalClassNames?: string;
+}) => {
   return (
     <svg
-      className="transition-transform group-hover:translate-x-1"
+      className={cn(
+        "transition-transform group-hover:translate-x-1",
+        additionalClassNames,
+      )}
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       width={size}
