@@ -56,7 +56,7 @@ const BlogPostCTA = ({
         key={post.title}
         className="hover:cursor-pointer"
       >
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between h-full">
           <div className="overflow-hidden rounded-2xl">
             <Image
               src={post.imageSrc}
