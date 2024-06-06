@@ -20,11 +20,10 @@ export function Navigation() {
             className="rounded-full"
             sizes="100vw"
             style={{
-              width: "100%",
+              width: "auto",
               height: "50px",
             }}
-            width={50}
-            height={30}
+            priority
             title={""}
             alt={""}
           />

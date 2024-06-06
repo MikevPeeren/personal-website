@@ -12,7 +12,7 @@ const SocialCard = () => {
       <Avatar />
       <h3 className="text-xl font-bold">Also in Social</h3>
       <p>Feel free to reach me at any of social networks listed below:</p>
-      <div className="flex items-center gap-0 md:gap-12 text-white">
+      <div className="flex items-center justify-center md:justify-start flex-wrap md:flex-nowrap gap-0 md:gap-12 text-white">
         <NextLink
           redirectHref="/"
           redirectTarget="_self"

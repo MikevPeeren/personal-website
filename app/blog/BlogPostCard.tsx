@@ -11,6 +11,7 @@ const BlogPostCard = ({ blogPost }: { blogPost: any }) => {
             "rounded-2xl w-full hover:scale-110 transition duration-300 ease-in-out object-cover h-64 md:h-auto md:max-h-[600px]"
           }
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority
           width={500}
           height={300}
           alt={blogPost.imageAlt ?? ""}
