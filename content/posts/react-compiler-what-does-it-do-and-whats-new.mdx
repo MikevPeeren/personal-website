@@ -1,0 +1,102 @@
+---
+title: "React Compiler: what does it do and what's new?"
+description: "Delve into React 19 Beta's latest advancements! Discover async transitions, powerful hooks like useActionState, and seamless form management with Actions. Get a comprehensive overview of React 19's capabilities."
+publishDate: "June 10, 2024"
+imageAlt: ""
+imageSrc: "/blog/react-desktop.avif"
+keywords: "react, react compiler, compiler, rc, new"
+slug: "react-compiler-what-does-it-do-and-whats-new"
+category: "Updates"
+---
+
+## What is the React Compiler?
+
+The React Compiler is a experimental compiler that has been open sources to the community in order to receive feedback and ideas.
+As you can imagine this means it is not production ready yet. However, it is a great way to get a feel for what this compiler of React does and can do.
+Keep in mind that this experimental compiler needs React 19 to work.
+
+## What does the React Compiler do?
+
+The main purpose of the React Compiler is to memoize your application and make it thus faster and more efficient.
+In a lot of cases and projects the current way of working is to add common API's to your application and then use them in your components.
+API's like `useMemo`, `useCallback`, and `React.memo` are great in this aspect but hard to understand and maintain for a great part of the community, and let's be honest, they are not always the best solution.
+These API's are also often used in a incorrect way or are forgotten to be used. Thus the React team created the React Compiler to help you with this.
+
+Keep in mind that if your project is already correctly memoized that you might not see that any or little performance improvements.
+
+## What does the compiler assume?
+
+In the React team their own words the compiler assumes that your code:
+
+* Follows the Rules of React
+* Is correct and valid semantic JavaScript
+* Tests that nullable/optional values and properties are defined before accessing them (for example, by enabling strictNullChecks if using TypeScript), i.e., if (object.nullableProperty) { object.nullableProperty.foo } or with optional-chaining object.nullableProperty?.foo
+Follows the Rules of React
+
+## How can I experiment with the React Compiler?
+
+You can check if your codebase is compatible with the React Compiler by running the following command:
+
+```bash
+npx react-compiler-healthcheck@latest
+```
+
+What this script will do is check how many components can be successfully optimized, if <StrictMode> is used, and if incompatible libraries are used.
+
+An example of n output can be seen below:
+
+```bash
+❯ npx react-compiler-healthcheck@latest
+
+Successfully compiled 41 out of 41 components.
+StrictMode usage found.
+Found no usage of incompatible libraries.
+```
+
+There is also an eslint plugin available that you can use to check your codebase for compatibility with the React Compiler. You can install it with the following command:
+
+```bash
+npm install eslint-plugin-react-compiler
+```
+
+And then add it to your eslint config file:
+
+```json
+module.exports = {
+  plugins: [
+    'eslint-plugin-react-compiler',
+  ],
+  rules: {
+    'react-compiler/react-compiler': "error",
+  },
+}
+```
+
+This plugin is very helpful as it will display all the violations that can occur in your codebase with the React Compiler.
+If you see an error it means that the compiler has skipped optimization of that component, this will not block your application from running as the compiler will recover and continue.
+
+As I mostly write about Next.js I will not go into detail on how to enable it for your project that does not use Next.js. But you can read onward from [here](https://react.dev/learn/react-compiler#using-the-compiler-effectively) in order to set it up for your project.
+
+For Next.js however to setup to use the compiler do the following:
+
+```bash
+npm install next@canary babel-plugin-react-compiler
+```
+
+Then add the following to your `next.config.js` file:
+
+```js
+// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    reactCompiler: true,
+  },
+};
+
+module.exports = nextConfig;
+```
+
+## What tells me that my code has been optimized?
+
+The [React Devtools](https://react.dev/learn/react-developer-tools) version 5 has built-in support for React Compiler and will display a “Memo ✨” badge next to components that have been optimized by the compiler.
