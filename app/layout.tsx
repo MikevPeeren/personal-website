@@ -19,6 +19,7 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mikevpeeren.nl"),
   title: "Mike van Peeren - Passionate About UX & High-Quality Code",
   description:
     "Explore the world of front-end development with Mike van Peeren. Check out his blog posts about Next.js, tech news and personal insights, and projects!",
