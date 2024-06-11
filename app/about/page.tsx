@@ -35,7 +35,7 @@ export default function About() {
             icon={<LinkedInIcon />}
           />
           <NextLink
-            redirectHref="mailto:mikevpeeren@hotmail.com?subject=Hey%20Mike"
+            redirectHref="mailto:mikevpeeren@+@hotmail.com?subject=Hey%20Mike"
             linkText="Email"
             title={"send an email to me"}
             icon={<EmailIcon />}
