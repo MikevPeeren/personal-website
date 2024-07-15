@@ -15,20 +15,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${URL}/blog/${slug}`,
     lastModified: publishDate,
     changeFrequency: "daily",
-    priority: 0.8,
+    priority: 1,
   }));
 
   const dailyRoutes = ["/blog"].map((route) => ({
     url: `${URL}${route}`,
     lastModified: new Date().toISOString(),
     changeFrequency: "daily",
-    priority: 0.5,
+    priority: 1,
   }));
 
   const otherRoutes = ["", "/projects", "/about", "/contact"].map((route) => ({
     url: `${URL}${route}`,
     lastModified: new Date().toISOString(),
-    changeFrequency: "weekly",
+    changeFrequency: "daily",
     priority: 1,
   }));
 
