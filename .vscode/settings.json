@@ -2,5 +2,10 @@
   "typescript.tsdk": "./node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "files.autoSave": "off",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "always",
+    "source.sortMembers": "always"
+  }
 }
