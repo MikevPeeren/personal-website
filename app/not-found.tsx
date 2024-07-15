@@ -1,6 +1,6 @@
-import HomeIcon from "@/components/icons/HomeIcon";
-import MailBox from "@/components/icons/MailBox";
-import NextLink from "@/components/NextLink";
+import HomeIcon from "@/app/ui/icons/HomeIcon";
+import MailBox from "@/app/ui/icons/MailBox";
+import NextLink from "@/app/ui/NextLink";
 
 export default function NotFound() {
   return (

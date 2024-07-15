@@ -1,23 +1,17 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import Footer from "@/components/Footer";
-import { Navigation } from "@/components/Navigation";
-import PageWrapper from "@/components/PageWrapper";
-
-import { cn } from "../lib/utils";
-
 import "./globals.css";
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+import { cn } from "@/app/lib/utils";
+import { fontSans } from "@/app/ui/fonts";
+import Footer from "@/app/ui/Footer";
+import { Navigation } from "@/app/ui/Navigation";
+import PageWrapper from "@/app/ui/PageWrapper";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mikevpeeren.nl"),
@@ -78,7 +72,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen font-sans antialiased bg-black",
-          fontSans.variable,
+          fontSans.className,
         )}
       >
         <ThemeProvider enableSystem={false} attribute="class">

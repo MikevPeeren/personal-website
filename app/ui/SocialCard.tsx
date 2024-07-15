@@ -1,10 +1,10 @@
-import GithubIcon from "@/components/icons/GithubIcon";
-import HomeIcon from "@/components/icons/HomeIcon";
-import LinkedInIcon from "@/components/icons/LinkedInIcon";
-
-import MediumIcon from "./icons/MediumIcon";
 import Avatar from "./Avatar";
 import NextLink from "./NextLink";
+
+import GithubIcon from "@/app/ui/icons/GithubIcon";
+import HomeIcon from "@/app/ui/icons/HomeIcon";
+import LinkedInIcon from "@/app/ui/icons/LinkedInIcon";
+import MediumIcon from "@/app/ui/icons/MediumIcon";
 
 const SocialCard = () => {
   return (

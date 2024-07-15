@@ -1,13 +1,12 @@
 import Image from "next/image";
 
-import GithubIcon from "@/components/icons/GithubIcon";
-import HomeIcon from "@/components/icons/HomeIcon";
-import LinkedInIcon from "@/components/icons/LinkedInIcon";
-import MediumIcon from "@/components/icons/MediumIcon";
-
 import FooterLinks from "./FooterLinks";
 import NextLink from "./NextLink";
 
+import GithubIcon from "@/app/ui/icons/GithubIcon";
+import HomeIcon from "@/app/ui/icons/HomeIcon";
+import LinkedInIcon from "@/app/ui/icons/LinkedInIcon";
+import MediumIcon from "@/app/ui/icons/MediumIcon";
 import Logo from "@/public/logo.png";
 
 const Footer = () => {

@@ -4,11 +4,9 @@ import { useEffect, useState } from "react";
 
 import { useDebounce } from "use-debounce";
 
-import BlogPostCTA from "@/components/BlogPostCTA";
-
-import SearchBar from "./SearchBar";
-
 import { posts } from "@/.velite";
+import BlogPostCTA from "@/app/ui/BlogPostCTA";
+import SearchBar from "@/app/ui/SearchBar";
 
 const BlogPostCTABlog = () => {
   const [searchResults, setSearchResults] = useState<

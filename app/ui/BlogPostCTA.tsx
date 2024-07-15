@@ -4,7 +4,7 @@ import Link from "next/link";
 import { compareDesc, format, parseISO } from "date-fns";
 
 import { posts } from "@/.velite";
-import { cn, getReadingTime } from "@/lib/utils";
+import { cn, getReadingTime } from "@/app/lib/utils";
 
 const BlogPostCTA = ({
   amount,

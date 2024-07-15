@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-import EmailIcon from "@/components/icons/EmailIcon";
-import LinkedInIcon from "@/components/icons/LinkedInIcon";
-import NextLink from "@/components/NextLink";
-import Testimonials from "@/components/Testimonials";
-import Video from "@/components/Video";
-import WorkExperience from "@/components/WorkExperience";
+import NextLink from "@/app/ui/NextLink";
+import Testimonials from "@/app/ui/Testimonials";
+import Video from "@/app/ui/Video";
+import WorkExperience from "@/app/ui/WorkExperience";
 
+import EmailIcon from "@/app/ui/icons/EmailIcon";
+import LinkedInIcon from "@/app/ui/icons/LinkedInIcon";
 import BBQ from "@/public/bbq.webp";
 import Leader from "@/public/leader.webp";
 import MacBook from "@/public/macbook.webp";

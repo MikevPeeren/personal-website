@@ -2,14 +2,14 @@ import { notFound } from "next/navigation";
 
 import { format, parseISO } from "date-fns";
 
-import BlogPostCTA from "@/components/BlogPostCTA";
-import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon";
-import { MDXContent } from "@/components/MDXContent";
-import NextLink from "@/components/NextLink";
-import SocialCard from "@/components/SocialCard";
+import BlogPostCTA from "@/app/ui/BlogPostCTA";
+import ArrowLeftIcon from "@/app/ui/icons/ArrowLeftIcon";
+import { MDXContent } from "@/app/ui/MDXContent";
+import NextLink from "@/app/ui/NextLink";
+import SocialCard from "@/app/ui/SocialCard";
 
 import { posts } from "@/.velite";
-import { getReadingTime } from "@/lib/utils";
+import { getReadingTime } from "@/app/lib/utils";
 
 export const generateStaticParams = async () =>
   posts.map((post) => ({ slug: post.slug }));

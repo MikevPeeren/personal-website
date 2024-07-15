@@ -1,11 +1,11 @@
-import Button from "@/components/Button";
-import ContactForm from "@/components/ContactForm";
-import GithubIcon from "@/components/icons/GithubIcon";
-import GitLabIcon from "@/components/icons/GitLabIcon";
-import LinkedInIcon from "@/components/icons/LinkedInIcon";
-import MailBox from "@/components/icons/MailBox";
-import NextLink from "@/components/NextLink";
-import SocialCard from "@/components/SocialCard";
+import Button from "@/app/ui/Button";
+import ContactForm from "@/app/ui/ContactForm";
+import GithubIcon from "@/app/ui/icons/GithubIcon";
+import GitLabIcon from "@/app/ui/icons/GitLabIcon";
+import LinkedInIcon from "@/app/ui/icons/LinkedInIcon";
+import MailBox from "@/app/ui/icons/MailBox";
+import NextLink from "@/app/ui/NextLink";
+import SocialCard from "@/app/ui/SocialCard";
 
 export default function Contact() {
   return (

@@ -29,7 +29,7 @@ const SearchBar = ({
       <input
         type="search"
         placeholder="Search for a blog post"
-        className="w-full h-14 block ps-10 rounded-2xl dark:text-white font-bold text-black focus:outline-none p-4 px-4 placeholder:font-normal placeholder:text-50"
+        className="w-full h-14 block ps-10 rounded-2xl dark:text-white font-bold text-black focus:outline-none p-4 px-4 placeholder:font-normal placeholder:text-50 border border-[#000000]/10 dark:border-[#FFFFFF]/10"
         onChange={handleInputChange}
       />
     </div>
