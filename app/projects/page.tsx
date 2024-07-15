@@ -1,10 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-
 import MailBox from "@/app/ui/icons/MailBox";
 import NextLink from "@/app/ui/NextLink";
 import ProjectCard from "@/app/ui/ProjectCard";
-
 import NextJS from "@/public/projects/nextjs.jpg";
 import Svelte from "@/public/projects/svelte.png";
 

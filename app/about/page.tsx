@@ -1,12 +1,11 @@
 import Image from "next/image";
 
+import EmailIcon from "@/app/ui/icons/EmailIcon";
+import LinkedInIcon from "@/app/ui/icons/LinkedInIcon";
 import NextLink from "@/app/ui/NextLink";
 import Testimonials from "@/app/ui/Testimonials";
 import Video from "@/app/ui/Video";
 import WorkExperience from "@/app/ui/WorkExperience";
-
-import EmailIcon from "@/app/ui/icons/EmailIcon";
-import LinkedInIcon from "@/app/ui/icons/LinkedInIcon";
 import BBQ from "@/public/bbq.webp";
 import Leader from "@/public/leader.webp";
 import MacBook from "@/public/macbook.webp";
