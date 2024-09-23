@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -12,6 +11,7 @@ import { fontSans } from "@/app/ui/fonts";
 import Footer from "@/app/ui/Footer";
 import { Navigation } from "@/app/ui/Navigation";
 import PageWrapper from "@/app/ui/PageWrapper";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mikevpeeren.nl"),
@@ -90,7 +90,7 @@ export default function RootLayout({
           </main>
         </ThemeProvider>
       </body>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ?? ""} />
+      <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
     </html>
   );
 }
