@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
+import Script from "next/script";
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -11,7 +12,6 @@ import { fontSans } from "@/app/ui/fonts";
 import Footer from "@/app/ui/Footer";
 import { Navigation } from "@/app/ui/Navigation";
 import PageWrapper from "@/app/ui/PageWrapper";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mikevpeeren.nl"),
