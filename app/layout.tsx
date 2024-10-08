@@ -5,12 +5,13 @@ import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+import Navigation from "./ui/Navigation";
+
 import "./globals.css";
 
 import { cn } from "@/app/lib/utils";
 import { fontSans } from "@/app/ui/fonts";
 import Footer from "@/app/ui/Footer";
-import { Navigation } from "@/app/ui/Navigation";
 import PageWrapper from "@/app/ui/PageWrapper";
 
 export const metadata: Metadata = {

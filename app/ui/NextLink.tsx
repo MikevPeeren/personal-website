@@ -13,6 +13,7 @@ const NextLink = ({
   redirectTarget = "_self",
   additionalClassNames,
   ariaLabel,
+  onClick,
 }: {
   redirectHref: string;
   linkText?: string;
@@ -24,6 +25,7 @@ const NextLink = ({
   redirectTarget?: "_blank" | "_self";
   additionalClassNames?: string;
   ariaLabel?: string;
+  onClick?: () => void;
 }) => {
   return (
     <Link
@@ -39,6 +41,7 @@ const NextLink = ({
       title={title}
       target={redirectTarget}
       aria-label={ariaLabel}
+      onClick={onClick}
     >
       {iconLeft && iconLeft}
       {linkText ?? children}
