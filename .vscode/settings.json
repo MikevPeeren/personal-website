@@ -4,8 +4,6 @@
   "files.autoSave": "off",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": "always",
-    "source.organizeImports": "always",
-    "source.sortMembers": "always"
+    "source.fixAll": "always"
   }
 }
