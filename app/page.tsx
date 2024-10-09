@@ -9,7 +9,7 @@ import Belle from "@/public/belle.webp";
 
 export default function Home() {
   return (
-    <div className="flex flex-col px-6 md:px-32 pt-48 gap-10 md:gap-28">
+    <div className="flex flex-col px-6 xl:px-96 lg:px-40 md:px-32 pt-48 gap-10 md:gap-28">
       <div className="flex flex-col gap-10">
         <Avatar />
         <div className="flex gap-8 flex-col">

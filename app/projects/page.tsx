@@ -24,7 +24,7 @@ export default function Projects() {
     },
   ];
   return (
-    <div className="flex flex-col px-6 md:px-32 pt-48 gap-10 md:gap-28">
+    <div className="flex flex-col px-6 xl:px-96 lg:px-40 md:px-32 pt-48 gap-10 md:gap-28">
       <div className="flex gap-8 flex-col">
         <h1>Projects</h1>
         <h2 className=" text-50 text-xl">
@@ -39,7 +39,7 @@ export default function Projects() {
           />
         </div>
       </div>
-      <div className="flex gap-4 flex-col">
+      <div className="flex flex-col lg:flex-row gap-4">
         {projects.map((project) => {
           return <ProjectCard key={project.title} project={project} />;
         })}

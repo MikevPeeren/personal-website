@@ -18,13 +18,9 @@ const ProjectCard = ({
       <div className="relative rounded-2xl">
         <Image
           src={project.image}
-          className="rounded-2xl"
+          className="rounded-2xl w-[600px] h-[400px]"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           style={{
-            width: "100%",
-            height: "100%",
-            maxHeight: "600px",
-            minHeight: "300px",
             objectFit: "cover",
           }}
           alt={project.alt}

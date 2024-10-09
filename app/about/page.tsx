@@ -15,7 +15,7 @@ import PostIts from "@/public/postits.webp";
 
 export default function About() {
   return (
-    <div className="flex flex-col px-6 md:px-32 pt-48 gap-10 md:gap-28">
+    <div className="flex flex-col px-6 xl:px-96 lg:px-40 md:px-32 pt-48 gap-10 md:gap-28">
       <div className="flex gap-8 flex-col">
         <h1>
           I&apos;m a Frontend Development Lead Passionate About Exceptional User

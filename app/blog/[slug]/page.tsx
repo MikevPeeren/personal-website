@@ -43,7 +43,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
   const readingTime = getReadingTime(post.body);
 
   return (
-    <div className="flex flex-col px-6 md:px-32 pt-48 gap-28">
+    <div className="flex flex-col px-6 xl:px-96 lg:px-40 md:px-32 pt-48 gap-28">
       <div>
         <NextLink
           additionalClassNames="text-black/50 dark:text-white/50 pl-0"
