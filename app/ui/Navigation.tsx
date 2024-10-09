@@ -33,7 +33,6 @@ export default function Navigation() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  console.log(pathname);
   return (
     <div className="z-20 h-auto top-0 left-0 right-0 fixed flex-none opacity-90 bg-white dark:bg-[#1C1C1C]">
       <nav className="px-6 xl:px-96 lg:px-40 md:px-32 py-10 mx-4">
