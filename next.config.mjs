@@ -18,17 +18,9 @@ class VeliteWebpackPlugin {
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   reactStrictMode: true,
+  output: "standalone",
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-  swcMinify: true,
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-        port: "",
-        pathname: "/my-bucket/**",
-      },
-    ],
     formats: ["image/avif", "image/webp"],
   },
   webpack: (config) => {
