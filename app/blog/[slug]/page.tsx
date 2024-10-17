@@ -14,8 +14,11 @@ import SocialCard from "@/app/ui/SocialCard";
 export const generateStaticParams = async () =>
   posts.map((post) => ({ slug: post.slug }));
 
-// @ts-expect-error
-export async function generateMetadata({ params }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const post = posts.find((post) => post.slug === params.slug);
 
   return {
