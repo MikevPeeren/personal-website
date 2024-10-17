@@ -8,6 +8,7 @@ import BlogPostCTA from "@/app/ui/BlogPostCTA";
 import ArrowLeftIcon from "@/app/ui/icons/ArrowLeftIcon";
 import { MDXContent } from "@/app/ui/MDXContent";
 import NextLink from "@/app/ui/NextLink";
+import PageLayout from "@/app/ui/PageLayout";
 import SocialCard from "@/app/ui/SocialCard";
 
 export const generateStaticParams = async () =>
@@ -43,7 +44,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
   const readingTime = getReadingTime(post.body);
 
   return (
-    <div className="flex flex-col px-6 xl:px-96 lg:px-40 md:px-32 pt-48 gap-28">
+    <PageLayout gap="large">
       <div>
         <NextLink
           additionalClassNames="text-black/50 dark:text-white/50 pl-0"
@@ -80,6 +81,6 @@ export default function Blog({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 }
