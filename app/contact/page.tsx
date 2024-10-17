@@ -1,3 +1,5 @@
+import PageLayout from "../ui/PageLayout";
+
 import Button from "@/app/ui/Button";
 import ContactForm from "@/app/ui/ContactForm";
 import GithubIcon from "@/app/ui/icons/GithubIcon";
@@ -9,7 +11,7 @@ import SocialCard from "@/app/ui/SocialCard";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col px-6 xl:px-96 lg:px-40 md:px-32 pt-48 gap-10 md:gap-28">
+    <PageLayout gap="large">
       <div className="flex gap-8 flex-col">
         <h1>Let&apos;s Connect</h1>
         <h2 className="text-50 text-xl">
@@ -42,6 +44,6 @@ export default function Contact() {
         <ContactForm />
         <SocialCard />
       </div>
-    </div>
+    </PageLayout>
   );
 }

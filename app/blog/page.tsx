@@ -1,5 +1,7 @@
 import { compareDesc } from "date-fns";
 
+import PageLayout from "../ui/PageLayout";
+
 import { posts } from "@/.velite";
 import BlogPostCard from "@/app/ui/BlogPostCard";
 import BlogPostCTABlog from "@/app/ui/BlogPostCTABlog";
@@ -14,7 +16,7 @@ export default function Blog() {
   );
 
   return (
-    <div className="flex flex-col px-6 xl:px-96 lg:px-40 md:px-32 pt-48 gap-10 md:gap-28">
+    <PageLayout gap="large">
       <div className="flex gap-8 flex-col">
         <h1>Blog</h1>
         <h2 className="text-2xl text-50">
@@ -29,6 +31,6 @@ export default function Blog() {
       </div>
 
       <BlogPostCTABlog />
-    </div>
+    </PageLayout>
   );
 }

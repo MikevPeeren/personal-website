@@ -1,142 +1,156 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Menu, Moon, Sun, X } from "lucide-react";
 
-import NextLink from "./NextLink";
-
-import Logo from "@/public/logo.png";
-
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "Blog", href: "/blog" },
-  { name: "Projects", href: "/projects" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog" },
+  { name: "Projects", path: "/projects" },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
 ];
 
-export default function Navigation() {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-  const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
+const AnimatedLogo = () => (
+  <motion.svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 100 60"
+    className="w-auto h-8"
+    initial="hidden"
+    animate="visible"
+  >
+    <motion.path
+      d="M10 40 L30 10 L50 40 M70 10 L90 40"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      initial={{ pathLength: 0, opacity: 0 }}
+      animate={{ pathLength: 1, opacity: 1 }}
+      transition={{ duration: 2, ease: "easeInOut" }}
+    />
+    <motion.text
+      x="50"
+      y="55"
+      fontSize="16"
+      fontWeight="bold"
+      textAnchor="middle"
+      fill="currentColor"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1.5, duration: 0.5 }}
+    >
+      MVP
+    </motion.text>
+  </motion.svg>
+);
 
-  useEffect(() => {
+export default function Navigation() {
+  const pathname = usePathname();
+  const { setTheme, theme } = useTheme();
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
     setMounted(true);
   }, []);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-
   return (
-    <div className="z-20 h-auto top-0 left-0 right-0 fixed flex-none opacity-90 bg-white dark:bg-[#1C1C1C]">
-      <nav className="px-6 xl:px-96 lg:px-40 md:px-32 py-10 mx-4">
-        <div className="w-full mx-auto">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <motion.div
-                key={"logo"}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  className="flex items-center gap-2 rounded-full border-2"
-                  href="/"
-                  aria-label="return to the homepage"
-                >
-                  <Image
-                    src={Logo}
-                    className="rounded-full"
-                    sizes="100vw"
-                    style={{
-                      width: "auto",
-                      height: "50px",
-                    }}
-                    priority
-                    title={""}
-                    alt={""}
-                  />
-                </Link>
-              </motion.div>
-            </div>
-            <div className="hidden md:block">
-              <div className="flex items-baseline space-x-2 lg:space-x-4">
-                {navItems.map((item) => {
-                  const isActive =
-                    item.href === "/"
-                      ? pathname === "/"
-                      : pathname.startsWith(item.href);
-
-                  return (
-                    <motion.div
-                      key={item.name}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Link
-                        href={item.href}
-                        className={`px-3 py-2 rounded-md text-sm font-medium ${
-                          isActive
-                            ? "bg-black dark:bg-white dark:text-black text-white"
-                            : "text-gray-600 dark:text-gray-300 hover:text-primary"
-                        }`}
-                      >
-                        {item.name}
-                      </Link>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </div>
-            <div className="flex items-center">
-              <motion.button
-                className="p-2 rounded-md text-gray-600 dark:text-gray-300 focus:outline-none"
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                {mounted &&
-                  (theme === "dark" ? <Sun size={20} /> : <Moon size={20} />)}
-              </motion.button>
-              <div className="ml-4 md:hidden">
-                <motion.button
-                  onClick={toggleMenu}
-                  className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-primary focus:outline-none"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  {isOpen ? <X size={24} /> : <Menu size={24} />}
-                </motion.button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <motion.div
-          className={`md:hidden  ${isOpen ? "block" : "hidden"}`}
-          initial={{ opacity: 0, y: -60 }}
-          animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : -60 }}
-          transition={{ duration: 0.75 }}
-        >
-          <div className="pt-2 pb-3 space-y-1 sm:px-3">
+    <motion.nav
+      className="fixed left-0 top-0 z-50 w-full border-b-px  border-gray-200 bg-white dark:bg-[#1C1C1C] opacity-90"
+      initial={{ y: -140 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+    >
+      <div className="container mx-auto px-8 sm:px-6 lg:px-8">
+        <div className="flex h-28 items-center justify-between">
+          <Link href="/" className="flex items-center space-x-2">
+            <AnimatedLogo />
+            <span className="sr-only">Mike van Peeren</span>
+          </Link>
+          <div className="hidden md:flex md:items-center md:space-x-6">
             {navItems.map((item) => (
-              <NextLink
-                key={item.name}
-                variant="tertiary"
-                redirectHref={item.href}
-                additionalClassNames="block px-3 py-2 rounded-md text-base font-bold pl-0"
-                onClick={toggleMenu}
-                linkText={item.name}
-              />
+              <Link
+                key={item.path}
+                href={item.path}
+                className="flex items-center px-3 py-2 text-sm font-medium transition-colors text-gray-700 hover:text-slate-900 dark:text-gray-300 dark:hover:text-white"
+              >
+                {pathname === item.path && (
+                  <span className="mr-2 h-2 w-2 rounded-full bg-slate-900 dark:bg-white" />
+                )}
+                {item.name}
+              </Link>
             ))}
           </div>
-        </motion.div>
-      </nav>
-    </div>
+          <div className="flex items-center space-x-4">
+            {mounted && (
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.button
+                  key={theme}
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  className="rounded-full p-2 text-gray-500 transition-colors hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
+                  initial={{ opacity: 0, rotate: -180 }}
+                  animate={{ opacity: 1, rotate: 0 }}
+                  exit={{ opacity: 0, rotate: 180 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {theme === "dark" ? (
+                    <Sun className="h-5 w-5" />
+                  ) : (
+                    <Moon className="h-5 w-5" />
+                  )}
+                  <span className="sr-only">Toggle theme</span>
+                </motion.button>
+              </AnimatePresence>
+            )}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="rounded-full p-2 text-gray-500 transition-colors hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 md:hidden"
+            >
+              <Menu className="h-5 w-5" />
+              <span className="sr-only">Open menu</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden"
+          >
+            <div className="space-y-1 px-2 pb-3 pt-2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  href={item.path}
+                  className={`flex items-center rounded-md px-3 py-2 text-base transition-colors
+                  ${
+                    pathname === item.path
+                      ? "font-bold text-slate-900 dark:text-white"
+                      : "font-medium text-gray-700 hover:bg-gray-50 hover:text-slate-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {pathname === item.path && (
+                    <span className="mr-2 h-2 w-2 rounded-full bg-slate-900 dark:bg-white" />
+                  )}
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 }

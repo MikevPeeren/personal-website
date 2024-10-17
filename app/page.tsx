@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import PageLayout from "./ui/PageLayout";
+
 import Avatar from "@/app/ui/Avatar";
 import BlogPostCTA from "@/app/ui/BlogPostCTA";
 import CTAContact from "@/app/ui/CTAContact";
@@ -9,7 +11,7 @@ import Belle from "@/public/belle.webp";
 
 export default function Home() {
   return (
-    <div className="flex flex-col px-6 xl:px-96 lg:px-40 md:px-32 pt-48 gap-10 md:gap-28">
+    <PageLayout gap="large">
       <div className="flex flex-col gap-10">
         <Avatar />
         <div className="flex gap-8 flex-col">
@@ -89,6 +91,6 @@ export default function Home() {
       <div className="flex justify-between">
         <CTAContact />
       </div>
-    </div>
+    </PageLayout>
   );
 }

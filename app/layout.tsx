@@ -76,7 +76,11 @@ export default function RootLayout({
           fontSans.className,
         )}
       >
-        <ThemeProvider enableSystem={false} attribute="class">
+        <ThemeProvider
+          enableSystem={false}
+          attribute="class"
+          defaultTheme="system"
+        >
           <main
             className="flex min-h-screen flex-col items-center justify-between m-2.5"
             role="main"

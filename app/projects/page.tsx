@@ -1,3 +1,5 @@
+import PageLayout from "../ui/PageLayout";
+
 import MailBox from "@/app/ui/icons/MailBox";
 import NextLink from "@/app/ui/NextLink";
 import ProjectCard from "@/app/ui/ProjectCard";
@@ -24,7 +26,7 @@ export default function Projects() {
     },
   ];
   return (
-    <div className="flex flex-col px-6 xl:px-96 lg:px-40 md:px-32 pt-48 gap-10 md:gap-28">
+    <PageLayout gap="large">
       <div className="flex gap-8 flex-col">
         <h1>Projects</h1>
         <h2 className=" text-50 text-xl">
@@ -44,6 +46,6 @@ export default function Projects() {
           return <ProjectCard key={project.title} project={project} />;
         })}
       </div>
-    </div>
+    </PageLayout>
   );
 }
