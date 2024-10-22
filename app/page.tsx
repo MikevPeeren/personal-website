@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import PageLayout from "./ui/PageLayout";
+import TypewriterText from "./ui/TypeWriterText";
 
 import Avatar from "@/app/ui/Avatar";
 import BlogPostCTA from "@/app/ui/BlogPostCTA";
@@ -15,10 +16,8 @@ export default function Home() {
       <div className="flex flex-col gap-10">
         <Avatar />
         <div className="flex gap-8 flex-col">
-          <h1>
-            I&apos;m a Frontend Development Lead Passionate About Exceptional
-            User Experiences & High-Quality Code
-          </h1>
+          <TypewriterText />
+
           <p>
             My name is Mike van Peeren and I am driven by a passion for creating
             impactful applications with a social footprint, I aim to deliver
