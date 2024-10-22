@@ -29,7 +29,7 @@ export default function Home() {
           </p>
         </div>
         <div className="w-full md:w-auto">
-          <NextLink redirectHref="/contact" linkText="Contact me!" />
+          <NextLink redirectHref="/blog" linkText="View my blog!" />
         </div>
       </div>
 
