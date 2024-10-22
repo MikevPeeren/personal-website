@@ -61,6 +61,13 @@ export default function Navigation() {
     setMounted(true);
   }, []);
 
+  const isActive = (path: string) => {
+    if (path === "/") {
+      return pathname === path;
+    }
+    return pathname.startsWith(path);
+  };
+
   return (
     <motion.nav
       className="fixed left-0 top-0 z-50 w-full border-b-px  border-gray-200 bg-white dark:bg-[#1C1C1C] opacity-90"
@@ -79,9 +86,13 @@ export default function Navigation() {
               <Link
                 key={item.path}
                 href={item.path}
-                className="flex items-center px-3 py-2 text-sm font-medium transition-colors text-gray-700 hover:text-slate-900 dark:text-gray-300 dark:hover:text-white"
+                className={`flex items-center px-3 py-2 text-sm font-medium transition-colors ${
+                  isActive(item.path)
+                    ? "text-slate-900 dark:text-white"
+                    : "text-gray-700 hover:text-slate-900 dark:text-gray-300 dark:hover:text-white"
+                }`}
               >
-                {pathname === item.path && (
+                {isActive(item.path) && (
                   <span className="mr-2 h-2 w-2 rounded-full bg-slate-900 dark:bg-white" />
                 )}
                 {item.name}
@@ -134,14 +145,14 @@ export default function Navigation() {
                   key={item.path}
                   href={item.path}
                   className={`flex items-center rounded-md px-3 py-2 text-base transition-colors
-                  ${
-                    pathname === item.path
-                      ? "font-bold text-slate-900 dark:text-white"
-                      : "font-medium text-gray-700 hover:bg-gray-50 hover:text-slate-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
-                  }`}
+                ${
+                  isActive(item.path)
+                    ? "font-bold text-slate-900 dark:text-white"
+                    : "font-medium text-gray-700 hover:bg-gray-50 hover:text-slate-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
+                }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {pathname === item.path && (
+                  {isActive(item.path) && (
                     <span className="mr-2 h-2 w-2 rounded-full bg-slate-900 dark:bg-white" />
                   )}
                   {item.name}
