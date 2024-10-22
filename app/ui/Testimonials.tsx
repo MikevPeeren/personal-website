@@ -45,7 +45,7 @@ const Testimonials = () => {
       <h2 className="py-10">Testimonials</h2>
       <div className="flex flex-col h-[400px] w-full flex-nowrap overflow-hidden [mask-image:linear-gradient(to_top,transparent_0,_black_200px,_black_calc(100%-400px),transparent_100%)] group items-start">
         <div className="testimonial-wrapper">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial, _index) => (
             <div
               className="max-w-none flex flex-col gap-2 my-6 bg-[#262626]/10 dark:bg-[#262626] p-10 rounded-2xl border border-[#262626]/[.3] dark:border-[#FFFFFF]/[.16]"
               key={testimonial.name}
@@ -62,7 +62,7 @@ const Testimonials = () => {
           ))}
         </div>
         <div className="testimonial-wrapper" aria-hidden="true">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial, _index) => (
             <div
               className="max-w-none flex flex-col gap-2 my-6 bg-[#262626]/10 dark:bg-[#262626] p-10 rounded-2xl border border-[#262626]/[.3] dark:border-[#FFFFFF]/[.16]"
               key={testimonial.name}

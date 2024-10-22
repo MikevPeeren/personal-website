@@ -1,7 +1,20 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { Link } from "next-view-transitions";
 
-const BlogPostCard = ({ blogPost }: { blogPost: any }) => {
+const BlogPostCard = ({
+  blogPost,
+}: {
+  blogPost: {
+    slug: string;
+    title: string;
+    description: string;
+    body: string;
+    imageSrc: string;
+    imageAlt: string;
+    publishDate: string | number | Date;
+    category: string;
+  };
+}) => {
   return (
     <Link key={blogPost.title} href={`/blog/${blogPost.slug}`}>
       <div className="relative rounded-2xl w-full">

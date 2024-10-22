@@ -1,12 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
+import { Link } from "next-view-transitions";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { Menu, Moon, Sun } from "lucide-react";
 
 const navItems = [
   { name: "Home", path: "/" },

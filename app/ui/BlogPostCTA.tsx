@@ -45,6 +45,7 @@ const BlogPostCTA = ({
           : compareDesc(new Date(a.publishDate), new Date(b.publishDate)),
     );
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   !searchedPosts?.length && removeLatestBlog && filteredPosts.shift();
 
   return filteredPosts.slice(0, amount ?? posts.length)?.map((post) => {

@@ -39,11 +39,11 @@ export default function Home() {
           <div className="flex gap-8 flex-col">
             <h2>I believe in fostering growth and success.</h2>
             <p>
-              Driven by a passion for creating impactful applications with a
-              social footprint, I aim to deliver results through meaningful
-              work. My journey is fueled by a sense of purpose, and I&apos;m
-              eager to take on greater responsibilities, lead teams, and inspire
-              others.
+              Driven by a passion for creating impactful applicationFooterLinkss
+              with a social footprint, I aim to deliver results through
+              meaningful work. My journey is fueled by a sense of purpose, and
+              I&apos;m eager to take on greater responsibilities, lead teams,
+              and inspire others.
             </p>
           </div>
           <NextLink

@@ -1,10 +1,8 @@
 "use client";
 
 const SearchBar = ({
-  inputValue,
   handleInputChange,
 }: {
-  inputValue: string;
   handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (

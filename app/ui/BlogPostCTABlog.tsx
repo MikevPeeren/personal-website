@@ -33,7 +33,7 @@ const BlogPostCTABlog = () => {
 
   const fetchSearchResults = async (query: string) => {
     setSearchResults(
-      // @ts-expect-error
+      // @ts-expect-error will fix later
       posts
         ?.filter((post) => {
           if (post.title.toLowerCase().indexOf(query) !== -1) return post;
@@ -49,10 +49,7 @@ const BlogPostCTABlog = () => {
 
   return (
     <div className="flex flex-col w-full gap-8">
-      <SearchBar
-        inputValue={inputValue}
-        handleInputChange={handleInputChange}
-      />
+      <SearchBar handleInputChange={handleInputChange} />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 rounded-xl">
         <BlogPostCTA removeLatestBlog searchedPosts={searchResults} />

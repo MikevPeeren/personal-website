@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
+import { Link } from "next-view-transitions";
 
 import { posts } from "@/.velite";
 
