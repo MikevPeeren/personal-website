@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 const BlogPostCard = ({ blogPost }: { blogPost: any }) => {
   return (

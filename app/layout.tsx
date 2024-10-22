@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { ThemeProvider } from "next-themes";
+import { ViewTransitions } from "next-view-transitions";
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -69,33 +70,35 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen font-sans antialiased bg-black",
-          fontSans.className,
-        )}
-      >
-        <ThemeProvider
-          enableSystem={false}
-          attribute="class"
-          defaultTheme="system"
+    <ViewTransitions>
+      <html lang="en" suppressHydrationWarning>
+        <body
+          className={cn(
+            "min-h-screen font-sans antialiased bg-black",
+            fontSans.className,
+          )}
         >
-          <main
-            className="flex min-h-screen flex-col items-center justify-between m-2.5"
-            role="main"
+          <ThemeProvider
+            enableSystem={false}
+            attribute="class"
+            defaultTheme="system"
           >
-            <PageWrapper>
-              <Navigation />
-              <div className="h-full w-full pb-20">{children}</div>
-              <Analytics />
-              <SpeedInsights />
-            </PageWrapper>
-            <Footer />
-          </main>
-        </ThemeProvider>
-      </body>
-      <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
-    </html>
+            <main
+              className="flex min-h-screen flex-col items-center justify-between m-2.5"
+              role="main"
+            >
+              <PageWrapper>
+                <Navigation />
+                <div className="h-full w-full pb-20">{children}</div>
+                <Analytics />
+                <SpeedInsights />
+              </PageWrapper>
+              <Footer />
+            </main>
+          </ThemeProvider>
+        </body>
+        <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
+      </html>
+    </ViewTransitions>
   );
 }

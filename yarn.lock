@@ -4541,6 +4541,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next-view-transitions@npm:^0.3.2":
+  version: 0.3.2
+  resolution: "next-view-transitions@npm:0.3.2"
+  peerDependencies:
+    next: ^14.0.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: 10c0/b7e2869fb586cb40da1e3dee032bdd377039e748464e48a2fdf6a74284a0192e4a1100de2949e6c936513ebef1aff74f3b1808494800d216dba10e24d7cc1aa0
+  languageName: node
+  linkType: hard
+
 "next@npm:^14.2.15":
   version: 14.2.15
   resolution: "next@npm:14.2.15"
@@ -4931,6 +4942,7 @@ __metadata:
     lucide-react: "npm:^0.447.0"
     next: "npm:^14.2.15"
     next-themes: "npm:^0.3.0"
+    next-view-transitions: "npm:^0.3.2"
     postcss: "npm:^8.4.38"
     prettier: "npm:3.2.5"
     react: "npm:^18.3.1"
