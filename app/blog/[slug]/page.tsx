@@ -9,11 +9,13 @@ import { getEntries, getEntry, isResolvedAsset } from "@/lib/contentful";
 
 export const revalidate = 60; // revalidate this page every 60 seconds
 
-type Props = {
-  params: { slug: string };
-};
+type Params = Promise<{ slug: string }>;
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> {
   const { slug } = await params;
   const post = await getEntry(slug);
 
@@ -73,7 +75,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function BlogPost({ params }: Props) {
+export default async function BlogPost({ params }: { params: Params }) {
   const { slug } = await params;
 
   const post = await getEntry(slug);
