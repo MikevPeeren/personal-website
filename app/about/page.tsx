@@ -14,7 +14,7 @@ export default function About() {
         <div className="flex flex-col">
           <div>
             <h1>
-              I&aposm Mike van Peeren, Passionate About Exceptional User
+              I&apos;m Mike van Peeren, Passionate About Exceptional User
               Experiences & High-Quality Code
             </h1>
 
