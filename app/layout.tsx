@@ -73,13 +73,13 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
-        <NextTopLoader color="#1C1C1C" />
         <body
           className={cn(
             "min-h-screen font-sans antialiased bg-black",
             fontSans.className,
           )}
         >
+          <NextTopLoader color="#f92aad" />
           <ThemeProvider
             enableSystem={false}
             attribute="class"
