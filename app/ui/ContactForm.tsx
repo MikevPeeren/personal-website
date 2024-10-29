@@ -5,6 +5,7 @@ import { useFormState } from "react-dom";
 import Button from "./Button";
 
 import { sendEmail } from "@/actions/sendEmail";
+import { useActionState } from "react";
 
 const initialState = {
   name: "",
@@ -14,7 +15,7 @@ const initialState = {
 };
 
 const ContactForm = () => {
-  const [state, formAction] = useFormState(sendEmail, initialState);
+  const [state, formAction] = useActionState(sendEmail, initialState);
 
   return (
     <form className="flex gap-6 flex-col w-full" action={formAction}>

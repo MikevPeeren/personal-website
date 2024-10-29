@@ -1,19 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Link } from "next-view-transitions";
 
-import { posts } from "@/.velite";
-
 const FooterLinks = () => {
-  const [randomPost, setRandomPost] = useState({ slug: "" });
-
   const pathname = usePathname();
-
-  useEffect(() => {
-    setRandomPost(posts[Math.floor(Math.random() * posts.length)]);
-  }, [pathname]);
 
   return (
     <div className="flex flex-col md:flex-row gap-14 md:gap-24 text-center items-center">
@@ -54,13 +45,6 @@ const FooterLinks = () => {
           href="/blog"
         >
           Blog
-        </Link>
-        <Link
-          className={`link ${pathname === "/blog/" ? "font-bold text-[#FFFFFF]" : "font-medium text-[#FFFFFF]/60"}`}
-          title="visit a random blog page"
-          href={`/blog/${randomPost.slug}`}
-        >
-          Blog Post
         </Link>
       </div>
     </div>

@@ -1,36 +1,36 @@
-import { compareDesc } from "date-fns";
+import { BlogPostCard } from "@/components/BlogPostCard";
+import { BlogPostGrid } from "@/components/BlogPostGrid";
+import { CenteredLayout } from "@/components/CenteredLayout";
+import { PageWrapper } from "@/components/PageWrapper";
+import SocialCard from "@/components/SocialCard";
 
-import PageLayout from "../ui/PageLayout";
+import { getEntries } from "@/lib/contentful";
 
-import { posts } from "@/.velite";
-import BlogPostCard from "@/app/ui/BlogPostCard";
-import BlogPostCTABlog from "@/app/ui/BlogPostCTABlog";
-import SocialCard from "@/app/ui/SocialCard";
+export const revalidate = 60; // revalidate this page every 60 seconds
 
-export default function Blog() {
-  const sortedPosts = posts.sort(
-    (
-      a: { publishDate: string | number | Date },
-      b: { publishDate: string | number | Date },
-    ) => compareDesc(new Date(a.publishDate), new Date(b.publishDate)),
-  );
+export default async function BlogIndex() {
+  const posts = await getEntries();
+
+  const firstPost = posts[0];
+
+  posts.shift();
 
   return (
-    <PageLayout gap="large">
-      <div className="flex gap-8 flex-col">
-        <h1>Blog</h1>
-        <h2 className="text-2xl text-50">
-          Posts about Next.js, tech news and personal insights
-        </h2>
-      </div>
-      <div className="flex gap-4 flex-col xl:flex-row justify-between">
-        <div className="w-full">
-          <BlogPostCard blogPost={sortedPosts[0]} />
-        </div>
-        <SocialCard />
-      </div>
+    <PageWrapper>
+      <CenteredLayout>
+        <div className="flex gap-8 flex-col">
+          <div>
+            <h1 className="font-bold m-0">Blog</h1>
+            <h2 className="text-50 text-xl">
+              Posts about Next.js, tech news and personal insights
+            </h2>
+          </div>
 
-      <BlogPostCTABlog />
-    </PageLayout>
+          <BlogPostCard post={firstPost} />
+          <SocialCard />
+          <BlogPostGrid posts={posts} />
+        </div>
+      </CenteredLayout>
+    </PageWrapper>
   );
 }

@@ -1,37 +1,47 @@
 import { MetadataRoute } from "next";
 
-import { compareDesc } from "date-fns";
-
-import { posts } from "@/.velite";
+import { createClient } from "contentful";
 
 const URL = "https://mikevpeeren.nl";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const sortedAllPosts = posts.sort((a, b) =>
-    compareDesc(new Date(a.publishDate), new Date(b.publishDate)),
+// Contentful client setup
+export const client = createClient({
+  space: process.env.CONTENTFUL_SPACE_ID!,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
+});
+
+// Function to fetch all blog posts from Contentful
+async function getAllBlogPosts() {
+  const response = await client.getEntries({
+    content_type: "blogPost",
+    limit: 1000,
+  });
+
+  return response.items;
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  // Fetch all blog posts
+  const allPosts = await getAllBlogPosts();
+
+  // Generate sitemap entries for blog posts
+  const blogPosts = allPosts.map((post: any) => ({
+    url: `${URL}/blog/${post.fields.slug}`,
+    lastModified: post.sys.updatedAt,
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  // Static routes
+  const staticRoutes = ["", "/blog", "/projects", "/about", "/contact"].map(
+    (route) => ({
+      url: `${URL}${route}`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: "daily" as const,
+      priority: 1,
+    }),
   );
 
-  const allPosts = sortedAllPosts.map(({ slug, publishDate }) => ({
-    url: `${URL}/blog/${slug}`,
-    lastModified: publishDate,
-    changeFrequency: "daily",
-    priority: 1,
-  }));
-
-  const dailyRoutes = ["/blog"].map((route) => ({
-    url: `${URL}${route}`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: "daily",
-    priority: 1,
-  }));
-
-  const otherRoutes = ["", "/projects", "/about", "/contact"].map((route) => ({
-    url: `${URL}${route}`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: "daily",
-    priority: 1,
-  }));
-
-  // @ts-expect-error changeFrequency is correct
-  return [...otherRoutes, ...dailyRoutes, ...allPosts];
+  // Combine static routes and blog posts
+  return [...staticRoutes, ...blogPosts];
 }

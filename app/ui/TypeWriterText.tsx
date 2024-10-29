@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { motion, useAnimationControls } from "framer-motion";
 
@@ -11,14 +11,20 @@ interface TypewriterTextProps {
 
 export default function TypewriterText({
   text = "I'm Mike van Peeren, Passionate About Exceptional User Experiences & High-Quality Code",
-  typingSpeed = 80, // Default to 120ms per character
+  typingSpeed = 80, // Default to 80ms per character
 }: TypewriterTextProps) {
   const controls = useAnimationControls();
   const [displayedText, setDisplayedText] = useState("");
+  const isMounted = useRef(false);
 
   useEffect(() => {
+    isMounted.current = true;
+
     const typeText = async () => {
+      if (!isMounted.current) return;
+
       for (let i = 0; i <= text.length; i++) {
+        if (!isMounted.current) return;
         setDisplayedText(text.slice(0, i));
         await controls.start({ opacity: 1 });
         // Add a random variation to the typing speed
@@ -28,6 +34,10 @@ export default function TypewriterText({
     };
 
     typeText();
+
+    return () => {
+      isMounted.current = false;
+    };
   }, [text, controls, typingSpeed]);
 
   return (

@@ -1,4 +1,4 @@
-import Avatar from "./Avatar";
+import Avatar from "@/components/Avatar";
 import NextLink from "./NextLink";
 
 import GithubIcon from "@/app/ui/icons/GithubIcon";

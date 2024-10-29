@@ -76,57 +76,61 @@ export default function Navigation() {
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
       <div className="container mx-auto px-8 sm:px-6 lg:px-8">
-        <div className="flex h-28 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <AnimatedLogo />
-            <span className="sr-only">Mike van Peeren</span>
-          </Link>
-          <div className="hidden md:flex md:items-center md:space-x-6">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                href={item.path}
-                className={`flex items-center px-3 py-2 text-sm font-medium transition-colors ${
-                  isActive(item.path)
-                    ? "text-slate-900 dark:text-white"
-                    : "text-gray-700 hover:text-slate-900 dark:text-gray-300 dark:hover:text-white"
-                }`}
-              >
-                {isActive(item.path) && (
-                  <span className="mr-2 h-2 w-2 rounded-full bg-slate-900 dark:bg-white" />
-                )}
-                {item.name}
-              </Link>
-            ))}
-          </div>
-          <div className="flex items-center space-x-4">
-            {mounted && (
-              <AnimatePresence mode="wait" initial={false}>
-                <motion.button
-                  key={theme}
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="rounded-full p-2 text-gray-500 transition-colors hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
-                  initial={{ opacity: 0, rotate: -180 }}
-                  animate={{ opacity: 1, rotate: 0 }}
-                  exit={{ opacity: 0, rotate: 180 }}
-                  transition={{ duration: 0.3 }}
+        <div className="max-w-3xl mx-auto mt-6">
+          <div className="flex h-28 items-center justify-between">
+            <Link href="/" className="flex items-center space-x-2">
+              <AnimatedLogo />
+              <span className="sr-only">Mike van Peeren</span>
+            </Link>
+            <div className="hidden md:flex md:items-center md:space-x-6">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  href={item.path}
+                  className={`flex items-center px-3 py-2 text-sm font-medium transition-colors ${
+                    isActive(item.path)
+                      ? "text-slate-900 dark:text-white"
+                      : "text-gray-700 hover:text-slate-900 dark:text-gray-300 dark:hover:text-white"
+                  }`}
                 >
-                  {theme === "dark" ? (
-                    <Sun className="h-5 w-5" />
-                  ) : (
-                    <Moon className="h-5 w-5" />
+                  {isActive(item.path) && (
+                    <span className="mr-2 h-2 w-2 rounded-full bg-slate-900 dark:bg-white" />
                   )}
-                  <span className="sr-only">Toggle theme</span>
-                </motion.button>
-              </AnimatePresence>
-            )}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="rounded-full p-2 text-gray-500 transition-colors hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 md:hidden"
-            >
-              <Menu className="h-5 w-5" />
-              <span className="sr-only">Open menu</span>
-            </button>
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+            <div className="flex items-center space-x-4">
+              {mounted && (
+                <AnimatePresence mode="wait" initial={false}>
+                  <motion.button
+                    key={theme}
+                    onClick={() =>
+                      setTheme(theme === "dark" ? "light" : "dark")
+                    }
+                    className="rounded-full p-2 text-gray-500 transition-colors hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
+                    initial={{ opacity: 0, rotate: -180 }}
+                    animate={{ opacity: 1, rotate: 0 }}
+                    exit={{ opacity: 0, rotate: 180 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {theme === "dark" ? (
+                      <Sun className="h-5 w-5" />
+                    ) : (
+                      <Moon className="h-5 w-5" />
+                    )}
+                    <span className="sr-only">Toggle theme</span>
+                  </motion.button>
+                </AnimatePresence>
+              )}
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="rounded-full p-2 text-gray-500 transition-colors hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 md:hidden"
+              >
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Open menu</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

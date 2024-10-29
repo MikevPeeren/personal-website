@@ -1,6 +1,6 @@
 "use server";
 
-export async function sendEmail(_prevState: any, formData: FormData) {
+export async function sendEmail(_prevState: unknown, formData: FormData) {
   const rawFormData = {
     name: formData.get("name"),
     email: formData.get("email"),

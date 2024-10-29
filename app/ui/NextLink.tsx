@@ -1,6 +1,6 @@
 import { Link } from "next-view-transitions";
 
-import { cn } from "@/app/lib/utils";
+import { cn } from "@/lib/utils";
 
 const NextLink = ({
   redirectHref,

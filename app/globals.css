@@ -15,22 +15,22 @@
 }
 
 h1 {
-  @apply text-4xl md:text-6xl break-words max-w-4xl font-bold tracking-wider leading-none;
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight max-w-4xl mb-6 text-black dark:text-white;
 }
 
 h2 {
-  @apply text-2xl md:text-4xl break-words max-w-4xl font-bold tracking-wider leading-none;
+  @apply text-2xl md:text-3xl lg:text-4xl font-semibold tracking-normal leading-snug max-w-4xl mt-12 mb-4 text-black dark:text-white;
 }
 
 h3 {
-  @apply font-bold text-lg;
+  @apply text-xl md:text-2xl font-semibold leading-snug mt-8 mb-4;
 }
 
 p {
-  @apply text-base text-50 max-w-5xl;
+  @apply text-base md:text-lg max-w-3xl mb-6 leading-relaxed text-50;
 
   a {
-    @apply font-bold underline;
+    @apply font-medium underline transition-colors duration-200;
   }
 }
 
@@ -40,10 +40,6 @@ p {
 
 .white-50 {
   @apply text-[#FFFFFF]/50;
-}
-
-pre {
-  @apply p-4 rounded-2xl break-words overflow-auto;
 }
 
 ul {
