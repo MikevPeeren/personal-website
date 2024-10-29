@@ -1,13 +1,11 @@
-import Image from "next/image";
-
 import { CenteredLayout } from "@/components/CenteredLayout";
 import { PageWrapper } from "@/components/PageWrapper";
+import Testimonials from "@/components/Testimonials";
 
 import EmailIcon from "@/app/ui/icons/EmailIcon";
 import LinkedInIcon from "@/app/ui/icons/LinkedInIcon";
 import NextLink from "@/app/ui/NextLink";
 import WorkExperience from "@/app/ui/WorkExperience";
-import Testimonials from "@/components/Testimonials";
 
 export default function About() {
   return (
@@ -16,8 +14,8 @@ export default function About() {
         <div className="flex flex-col">
           <div>
             <h1>
-              I'm Mike van Peeren, Passionate About Exceptional User Experiences
-              & High-Quality Code
+              I&aposm Mike van Peeren, Passionate About Exceptional User
+              Experiences & High-Quality Code
             </h1>
 
             <p>

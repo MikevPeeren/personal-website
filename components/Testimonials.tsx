@@ -130,7 +130,7 @@ export default function TestimonialAccordionInteractive() {
                 className="px-4 pb-4"
               >
                 <p className="text-black dark:text-white text-sm italic font-medium">
-                  "{testimonial.content}"
+                  &quot;{testimonial.content}&quot;
                 </p>
               </motion.div>
             )}

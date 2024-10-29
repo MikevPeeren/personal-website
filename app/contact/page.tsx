@@ -1,12 +1,12 @@
 import { CenteredLayout } from "@/components/CenteredLayout";
+import { PageWrapper } from "@/components/PageWrapper";
+import SocialCard from "@/components/SocialCard";
 
 import ContactForm from "@/app/ui/ContactForm";
 import GithubIcon from "@/app/ui/icons/GithubIcon";
 import GitLabIcon from "@/app/ui/icons/GitLabIcon";
 import LinkedInIcon from "@/app/ui/icons/LinkedInIcon";
 import NextLink from "@/app/ui/NextLink";
-import { PageWrapper } from "@/components/PageWrapper";
-import SocialCard from "@/components/SocialCard";
 
 export default function Contact() {
   return (

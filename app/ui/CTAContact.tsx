@@ -1,5 +1,6 @@
-import EmailIcon from "./icons/EmailIcon";
 import Avatar from "@/components/Avatar";
+
+import EmailIcon from "./icons/EmailIcon";
 import NextLink from "./NextLink";
 
 const CTAContact = () => {
