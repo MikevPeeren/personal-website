@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { Link } from "next-view-transitions";
 
-import { AnimatePresence, motion } from "motion/react";
 import { Menu, Moon, Sun } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 const navItems = [
   { name: "Home", path: "/" },
