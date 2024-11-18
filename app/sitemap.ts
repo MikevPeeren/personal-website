@@ -26,7 +26,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Generate sitemap entries for blog posts
   const blogPosts = allPosts.map((post) => ({
-    url: `${URL}/blog/${post.fields.slug}`,
+    url: `${URL}/blog/${post.fields["slug"]}`,
     lastModified: post.sys.updatedAt,
     changeFrequency: "weekly" as const,
     priority: 0.7,

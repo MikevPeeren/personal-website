@@ -11,11 +11,11 @@ interface CodeBlockProps {
 }
 
 export default function CodeBlock({ language, code }: CodeBlockProps) {
-  console.log(code);
   const [codeString, setCodeString] = React.useState<string>("");
 
   React.useEffect(() => {
     if (React.isValidElement(code)) {
+      // @ts-expect-error code is a React element
       setCodeString(ReactDOMServer.renderToStaticMarkup(code));
     } else if (typeof code === "string") {
       setCodeString(code);

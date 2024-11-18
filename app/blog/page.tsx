@@ -26,7 +26,7 @@ export default async function BlogIndex() {
             </h2>
           </div>
 
-          <BlogPostCard post={firstPost} />
+          {firstPost && <BlogPostCard post={firstPost} />}
           <SocialCard />
           <BlogPostGrid posts={posts} />
         </div>

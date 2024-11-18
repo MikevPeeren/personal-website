@@ -45,10 +45,10 @@ export default function BlogPostRenderer({ post }: BlogPostRendererProps) {
     renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: (node) => (
         <Image
-          src={`https:${node.data.target.fields.file.url}`}
-          width={node.data.target.fields.file.details.image.width}
-          height={node.data.target.fields.file.details.image.height}
-          alt={node.data.target.fields.title}
+          src={`https:${node.data["target"].fields.file.url}`}
+          width={node.data["target"].fields.file.details.image.width}
+          height={node.data["target"].fields.file.details.image.height}
+          alt={node.data["target"].fields.title}
           className="rounded-lg my-8"
         />
       ),

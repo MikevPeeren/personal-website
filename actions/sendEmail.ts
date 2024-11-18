@@ -7,7 +7,7 @@ export async function sendEmail(_prevState: unknown, formData: FormData) {
     message: formData.get("message"),
   };
 
-  const response = await fetch(process.env.FORM_SPARK_ACTION_URL ?? "", {
+  const response = await fetch(process.env["FORM_SPARK_ACTION_URL"] ?? "", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
