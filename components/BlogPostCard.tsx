@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import { Document } from "@contentful/rich-text-types";
 import { Entry } from "contentful";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 import { BlogPostSkeleton, isResolvedAsset } from "@/lib/contentful";
 import {

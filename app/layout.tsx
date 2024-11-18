@@ -79,7 +79,7 @@ export default function RootLayout({
             fontSans.className,
           )}
         >
-          <NextTopLoader color="#f92aad" />
+          <NextTopLoader color="#f92aad" showSpinner={false} />
           <ThemeProvider
             enableSystem={false}
             attribute="class"

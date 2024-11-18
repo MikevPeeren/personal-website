@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 import Boyd from "@/public/testimonials/boyd.jpeg";
 import Henro from "@/public/testimonials/henro.jpeg";

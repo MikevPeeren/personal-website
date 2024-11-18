@@ -1,7 +1,7 @@
 "use client";
 
 import { Entry } from "contentful";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 import { BlogPostCard } from "./BlogPostCard";
 

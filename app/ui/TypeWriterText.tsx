@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { motion, useAnimationControls } from "framer-motion";
+import { motion, useAnimationControls } from "motion/react";
 
 interface TypewriterTextProps {
   text?: string;
