@@ -10,7 +10,7 @@ const Button = ({
 }: {
   buttonText: string;
   handleClick?: () => void;
-  icon?: JSX.Element;
+  icon?: React.ReactNode;
   variant?: "primary" | "secondary" | "tertiary";
   type?: "button" | "submit" | "reset";
   size?: "md" | "lg";

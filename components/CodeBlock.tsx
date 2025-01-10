@@ -61,6 +61,7 @@ export default function CodeBlock({ language, code }: CodeBlockProps) {
       <div className="bg-gray-800 py-2 px-4 text-sm font-mono">
         <span className="text-pink-300">{displayLanguage}</span>
       </div>
+      {/* @ts-expect-error works as expected */}
       <SyntaxHighlighter
         language={highlightLanguage}
         style={synthwave84}

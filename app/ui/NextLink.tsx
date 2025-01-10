@@ -17,10 +17,10 @@ const NextLink = ({
 }: {
   redirectHref: string;
   linkText?: string;
-  children?: JSX.Element;
+  children?: React.ReactNode;
   title?: string;
-  icon?: JSX.Element;
-  iconLeft?: JSX.Element;
+  icon?: React.ReactNode;
+  iconLeft?: React.ReactNode;
   variant?: "primary" | "secondary" | "tertiary";
   redirectTarget?: "_blank" | "_self";
   additionalClassNames?: string;
