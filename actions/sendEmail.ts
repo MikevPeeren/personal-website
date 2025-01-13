@@ -1,5 +1,3 @@
-"use server";
-
 export async function sendEmail(_prevState: unknown, formData: FormData) {
   const rawFormData = {
     name: formData.get("name"),
@@ -7,13 +5,17 @@ export async function sendEmail(_prevState: unknown, formData: FormData) {
     message: formData.get("message"),
   };
 
-  const response = await fetch(process.env["FORM_SPARK_ACTION_URL"] ?? "", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
+  const response = await fetch(
+    `https://formspree.io/f/${process.env["FORMSPREE_FORM_ID"]}`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(rawFormData),
     },
-    body: JSON.stringify(rawFormData),
-  });
+  );
 
   return {
     returnMessage: response.ok
