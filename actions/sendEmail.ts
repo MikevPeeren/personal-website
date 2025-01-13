@@ -6,7 +6,7 @@ export async function sendEmail(_prevState: unknown, formData: FormData) {
   };
 
   const response = await fetch(
-    `https://formspree.io/f/${process.env["FORMSPREE_FORM_ID"]}`,
+    `https://formspree.io/f/${process.env["NEXT_PUBLIC_FORMSPREE_FORM_ID"]}`,
     {
       method: "POST",
       headers: {
