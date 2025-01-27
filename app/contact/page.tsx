@@ -5,8 +5,8 @@ import SocialCard from "@/components/SocialCard";
 import ContactForm from "@/app/ui/ContactForm";
 import GithubIcon from "@/app/ui/icons/GithubIcon";
 import LinkedInIcon from "@/app/ui/icons/LinkedInIcon";
-import NextLink from "@/app/ui/NextLink";
 import MediumIcon from "@/app/ui/icons/MediumIcon";
+import NextLink from "@/app/ui/NextLink";
 
 export default function Contact() {
   return (
