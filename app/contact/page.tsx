@@ -4,7 +4,6 @@ import SocialCard from "@/components/SocialCard";
 
 import ContactForm from "@/app/ui/ContactForm";
 import GithubIcon from "@/app/ui/icons/GithubIcon";
-import GitLabIcon from "@/app/ui/icons/GitLabIcon";
 import LinkedInIcon from "@/app/ui/icons/LinkedInIcon";
 import NextLink from "@/app/ui/NextLink";
 import MediumIcon from "../ui/icons/MediumIcon";
