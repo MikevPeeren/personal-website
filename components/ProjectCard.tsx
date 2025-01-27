@@ -37,7 +37,7 @@ export function ProjectCard({
               objectFit="cover"
               className="transition-transform duration-300 ease-in-out group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent" />
           </div>
           <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
             <h3 className="text-xl font-bold mb-2">{title}</h3>
@@ -55,7 +55,7 @@ export function ProjectCard({
               ))}
             </div>
           </div>
-          <div className="absolute top-2 right-2 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <div className="absolute top-2 right-2 bg-white/20 backdrop-blur-xs rounded-full p-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

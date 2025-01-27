@@ -7,6 +7,7 @@ import GithubIcon from "@/app/ui/icons/GithubIcon";
 import GitLabIcon from "@/app/ui/icons/GitLabIcon";
 import LinkedInIcon from "@/app/ui/icons/LinkedInIcon";
 import NextLink from "@/app/ui/NextLink";
+import MediumIcon from "../ui/icons/MediumIcon";
 
 export default function Contact() {
   return (
@@ -23,20 +24,23 @@ export default function Contact() {
             </div>
             <div className="w-full md:w-auto gap-4 flex flex-col md:flex-row">
               <NextLink
-                redirectHref="/contact"
+                redirectHref="https://github.com/MikevPeeren"
                 linkText="Github"
+                redirectTarget="_blank"
                 icon={<GithubIcon />}
                 variant="secondary"
               />
               <NextLink
-                redirectHref="/contact"
-                linkText="GitLab"
-                icon={<GitLabIcon />}
+                redirectHref="https://medium.com/@mikevpeeren/"
+                linkText="Medium"
+                redirectTarget="_blank"
+                icon={<MediumIcon />}
                 variant="secondary"
               />
               <NextLink
-                redirectHref="/contact"
+                redirectHref="https://www.linkedin.com/in/mikevpeeren/"
                 linkText="LinkedIn"
+                redirectTarget="_blank"
                 icon={<LinkedInIcon />}
                 variant="secondary"
               />

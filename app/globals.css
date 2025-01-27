@@ -1,38 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer utilities {
-  .paused {
-    animation-play-state: paused;
-  }
-}
-
-@layer components {
-  .testimonial-wrapper {
-    @apply flex flex-col animate-infinite-scroll items-center justify-center md:justify-start group-hover:paused;
-  }
-}
-
-h1 {
-  @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight max-w-4xl mb-6 text-black dark:text-white;
-}
-
-h2 {
-  @apply text-2xl md:text-3xl lg:text-4xl font-semibold tracking-normal leading-snug max-w-4xl mt-12 mb-4 text-black dark:text-white;
-}
-
-h3 {
-  @apply text-xl md:text-2xl font-semibold leading-snug mt-8 mb-4;
-}
-
-p {
-  @apply text-base md:text-lg max-w-3xl mb-6 leading-relaxed text-50;
-
-  a {
-    @apply font-medium underline transition-colors duration-200;
-  }
-}
+@config '../tailwind.config.ts';
 
 .text-50 {
   @apply dark:text-[#FFFFFF]/70 text-[#000000]/70;
@@ -42,6 +10,60 @@ p {
   @apply text-[#FFFFFF]/50;
 }
 
-ul {
-  @apply list-disc pl-5 text-50;
+@utility text-50 {
+  @apply dark:text-[#FFFFFF] text-[#000000]/70;
+}
+
+@utility white-50 {
+  @apply text-[#FFFFFF]/50;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight max-w-4xl mb-6 text-black dark:text-white;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl font-semibold tracking-normal leading-snug max-w-4xl mt-12 mb-4 text-black dark:text-white;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-semibold leading-snug mt-8 mb-4;
+  }
+
+  p {
+    @apply text-base md:text-lg max-w-3xl mb-6 leading-relaxed text-50;
+
+    a {
+      @apply font-medium underline transition-colors duration-200;
+    }
+  }
+
+  ul {
+    @apply list-disc pl-5 text-50;
+  }
+}
+
+@utility paused {
+  animation-play-state: paused;
+}
+
+@utility testimonial-wrapper {
+  @apply flex flex-col animate-infinite-scroll items-center justify-center md:justify-start group-hover:paused;
 }

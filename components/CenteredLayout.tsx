@@ -19,7 +19,7 @@ export function CenteredLayout({
     <motion.div
       className={cn(
         "container mx-auto px-2 md:px-0 py-0 lg:py-8 mt-28",
-        !marginTop && "!mt-0",
+        !marginTop && "mt-0!",
       )}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

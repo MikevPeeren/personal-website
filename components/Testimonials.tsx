@@ -89,7 +89,8 @@ export default function TestimonialAccordionInteractive() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <h2>What people say about me</h2>
+      <h2 className="mt-12">What people say about me</h2>
+
       {testimonials.map((testimonial, index) => (
         <motion.div
           key={testimonial.id}
@@ -115,7 +116,7 @@ export default function TestimonialAccordionInteractive() {
               height={50}
               className="rounded-full mr-4"
             />
-            <div className="flex-grow">
+            <div className="grow">
               <h3 className="font-bold text-lg m-0">{testimonial.name}</h3>
               <p className="text-50 text-sm m-0">{testimonial.role}</p>
             </div>
@@ -129,7 +130,7 @@ export default function TestimonialAccordionInteractive() {
                 transition={{ duration: 0.3 }}
                 className="px-4 pb-4"
               >
-                <p className="text-black dark:text-white text-sm italic font-medium">
+                <p className="text-black dark:text-white text-sm italic font-medium mb-0 pb-0">
                   &quot;{testimonial.content}&quot;
                 </p>
               </motion.div>

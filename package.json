@@ -15,7 +15,6 @@
     "@contentful/rich-text-react-renderer": "^16.0.1",
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
-    "autoprefixer": "^10.4.20",
     "clsx": "^2.1.1",
     "contentful": "^11.4.2",
     "highlight.js": "^11.11.1",
@@ -28,9 +27,11 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-syntax-highlighter": "^15.6.1",
-    "tailwind-merge": "^2.6.0"
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss": "^4.0.0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.10.5",
     "@types/react": "^19.0.4",
@@ -48,7 +49,6 @@
     "lint-staged": "^15.3.0",
     "postcss": "^8.4.49",
     "prettier": "3.4.2",
-    "tailwindcss": "^3.4.17",
     "typescript": "^5.7.3"
   },
   "packageManager": "yarn@4.2.2"

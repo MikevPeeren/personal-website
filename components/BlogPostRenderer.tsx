@@ -93,7 +93,7 @@ export default function BlogPostRenderer({ post }: BlogPostRendererProps) {
         if (text && typeof text === "string" && text.length < 100) {
           return (
             <>
-              <code className="bg-gray-800 text-pink-300 rounded px-1 py-0.5">
+              <code className="bg-gray-800 text-pink-300 rounded-sm px-1 py-0.5">
                 {text}
               </code>
             </>
