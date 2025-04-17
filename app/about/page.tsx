@@ -19,13 +19,11 @@ export default function About() {
             </h1>
 
             <p>
-              I am driven by a passion for creating impactful applications with
-              a social footprint, I aim to deliver results through meaningful
-              work. My journey is fueled by a sense of purpose, and I&apos;m
-              eager to take on greater responsibilities, lead teams, and inspire
-              others. I stay current with industry innovations, constantly
-              learning from peers, and I believe in fostering growth and success
-              for the teams I lead.
+              I care about building digital experiences that make a real difference. My goal is to create products that work well and add value to people&apos;s lives.
+              <br/>
+              <br/>
+              I enjoy bringing direction to teams. I think in terms of strategy and long-term vision while staying close to the user. 
+              Leading with purpose means to me helping others grow, making things clear and turning ideas into results.
             </p>
             <div className="flex flex-col md:flex-row gap-6">
               <NextLink
