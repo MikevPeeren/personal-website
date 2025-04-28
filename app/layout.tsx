@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import PlausibleProvider from "next-plausible";
 import { ThemeProvider } from "next-themes";
 import { ViewTransitions } from "next-view-transitions";
 import NextTopLoader from "nextjs-toploader";
-import PlausibleProvider from "next-plausible";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
