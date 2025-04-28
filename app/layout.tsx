@@ -3,8 +3,8 @@ import Script from "next/script";
 import { ThemeProvider } from "next-themes";
 import { ViewTransitions } from "next-view-transitions";
 import NextTopLoader from "nextjs-toploader";
+import PlausibleProvider from "next-plausible";
 
-import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Navigation from "@/components/Navigation";
@@ -73,6 +73,7 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
+        <head></head>
         <body
           className={cn(
             "min-h-screen font-sans antialiased bg-black",
@@ -89,13 +90,14 @@ export default function RootLayout({
               className="flex min-h-screen flex-col items-center justify-between m-2.5"
               role="main"
             >
-              <Navigation />
-              <div className="bg-white dark:bg-[#1C1C1C] m-2.5 rounded-3xl w-full h-full z-10">
-                {children}
-              </div>
-              <Analytics />
-              <SpeedInsights />
-              <Footer />
+              <PlausibleProvider domain="mikevpeeren.nl">
+                <Navigation />
+                <div className="bg-white dark:bg-[#1C1C1C] m-2.5 rounded-3xl w-full h-full z-10">
+                  {children}
+                </div>
+                <SpeedInsights />
+                <Footer />
+              </PlausibleProvider>
             </main>
           </ThemeProvider>
         </body>

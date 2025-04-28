@@ -3926,6 +3926,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next-plausible@npm:^3.12.4":
+  version: 3.12.4
+  resolution: "next-plausible@npm:3.12.4"
+  peerDependencies:
+    next: "^11.1.0 || ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0 "
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/70f1efd90ed5dc63089cd916e630883a62a03ec3319fde0b3a2a2303704a5e60b1843cf9f821e1b918514e3a9d5b0594eb8af6925a01132cb8705219db3bc99a
+  languageName: node
+  linkType: hard
+
 "next-themes@npm:^0.4.4":
   version: 0.4.4
   resolution: "next-themes@npm:0.4.4"
@@ -4298,6 +4309,7 @@ __metadata:
     lucide-react: "npm:^0.469.0"
     motion: "npm:^11.16.4"
     next: "npm:^15.1.4"
+    next-plausible: "npm:^3.12.4"
     next-themes: "npm:^0.4.4"
     next-view-transitions: "npm:^0.3.4"
     nextjs-toploader: "npm:^3.7.15"
